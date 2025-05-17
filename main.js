@@ -3,8 +3,13 @@ import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60
 const texture = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg';
 
 const metadata = {
-  radius: 1
-}
+  radius: 1.2,
+  cOffset: [0.002, 0.0],
+  mOffset: [0.002, 0.004],
+  yOffset: [0.0, 0.05],
+  kOffset: [0.02, -0.002],
+  noiseAmp: 0.01
+};
 
 const vertexShader = /* glsl */`
     attribute vec2 a_position;
@@ -22,44 +27,81 @@ const fragmentShader = /* glsl */`
     uniform sampler2D u_image;
     uniform vec2      u_resolution;
     uniform float     u_radius;
+    uniform vec2      u_cOffset, u_mOffset, u_yOffset, u_kOffset;
+    uniform float     u_noiseAmp;
     varying vec2      v_texcoord;
 
+    float rand(vec2 co){
+      return fract(sin(dot(co,vec2(12.9898,78.233))) * 43758.5453);
+    }
+
+    vec3 toLinear(in vec3 srgb) {
+      return pow(srgb, vec3(2.2));
+    }
+    vec3 toSRGB(in vec3 linear) {
+      return pow(linear, vec3(1.0/2.2));
+    }
+
     float dotPattern(vec2 uv, float angle){
-        float r  = radians(angle);
-        vec2 c   = uv - .5;
-        vec2 rot = vec2(
-          c.x * cos(r) - c.y * sin(r),
-          c.x * sin(r) + c.y * cos(r)
-        );
-        vec2 g = rot * u_resolution / u_radius;
-        vec2 f = fract(g);
-        return length(f - .5);
+      float r = radians(angle);
+      vec2 c = uv - .5;
+      vec2 rot = vec2(
+        c.x*cos(r) - c.y*sin(r),
+        c.x*sin(r) + c.y*cos(r)
+      );
+      vec2 g = rot * u_resolution / u_radius;
+      vec2 f = fract(g);
+      return length(f - .5);
     }
 
-    void main(){
-        vec2 uv = v_texcoord;
-        vec4 baseColor  = texture2D(u_image,uv);
-        vec3 cmy = 1.0 - baseColor.rgb;
-        float k  = min(min(cmy.r,cmy.g),cmy.b);
-        cmy = (cmy - k) / (1.0 - k + 1e-5);
+  void main() {
+    vec2 uv = v_texcoord;
 
-        float dC = dotPattern(uv,15.0);
-        float dM = dotPattern(uv,75.0);
-        float dY = dotPattern(uv,0.0);
-        float dK = dotPattern(uv,45.0);
+    float nC = (rand(uv * 200.0) - 0.5) * u_noiseAmp;
+    float nM = (rand(uv * 300.0) - 0.5) * u_noiseAmp;
+    float nY = (rand(uv * 400.0) - 0.5) * u_noiseAmp;
+    float nK = (rand(uv * 500.0) - 0.5) * u_noiseAmp;
 
-        float C = step(cmy.r,dC);
-        float M = step(cmy.g,dM);
-        float Y = step(cmy.b,dY);
-        float K = step(k    ,dK);
+    vec3 sC_srgb = texture2D(u_image, uv + u_cOffset + nC).rgb;
+    vec3 sM_srgb = texture2D(u_image, uv + u_mOffset + nM).rgb;
+    vec3 sY_srgb = texture2D(u_image, uv + u_yOffset + nY).rgb;
+    vec3 sK_srgb = texture2D(u_image, uv + u_kOffset + nK).rgb;
+    vec3 sC = toLinear(sC_srgb);
+    vec3 sM = toLinear(sM_srgb);
+    vec3 sY = toLinear(sY_srgb);
+    vec3 sK = toLinear(sK_srgb);
 
-        vec3 ht = vec3(C,M,Y) * pow((1.0 - K), 2.0);
-        gl_FragColor = vec4(1.0 - ht - vec3(K),1.0);
-    }
+    vec3 cmy0 = vec3(1.0 - sC.r, 1.0 - sM.g, 1.0 - sY.b);
+    float k0  = min(min(cmy0.r,cmy0.g),cmy0.b);
+    vec3 cmy  = (cmy0 - k0) / (1.0 - k0 + 1e-5);
+
+    float Cval = cmy.r;
+    float Mval = cmy.g;
+    float Yval = cmy.b;
+    float Kval = k0;
+
+    float dC = dotPattern(uv + u_cOffset + nC, 15.0);
+    float dM = dotPattern(uv + u_mOffset + nM, 75.0);
+    float dY = dotPattern(uv + u_yOffset + nY,  0.0);
+    float dK = dotPattern(uv + u_kOffset + nK, 45.0);
+
+    float thresh = 0.5;
+
+    float C = 1.0 - smoothstep(Cval - thresh, Cval + thresh, dC);
+    float M = 1.0 - smoothstep(Mval - thresh, Mval + thresh, dM);
+    float Y = 1.0 - smoothstep(Yval - thresh, Yval + thresh, dY);
+    float K = 1.0 - smoothstep(Kval - thresh, Kval + thresh, dK);
+
+    vec3 dotMask = vec3(C, M, Y) * (1.0 - K);
+    vec3 cmykLin = dotMask + vec3(K);
+    vec3 rgbLin  = 1.0 - cmykLin;
+    vec3 rgb_srgb = toSRGB(rgbLin);
+    gl_FragColor = vec4(rgb_srgb, 1.0);
+}
 `;
 
 async function main(metadata) {
-  const canvas = setupDOM({ width: 512, height: 512, margin: 10 });
+  const canvas = setupDOM({ width: 1024, height: 1024, margin: 10 });
   const gl = canvas.getContext('webgl');
   if (!gl) throw new Error('WebGL not supported');
 
@@ -101,6 +143,11 @@ async function main(metadata) {
 
   const uRes = gl.getUniformLocation(prg, 'u_resolution');
   const uRad = gl.getUniformLocation(prg, 'u_radius');
+  const uCOff = gl.getUniformLocation(prg, 'u_cOffset');
+  const uMOff = gl.getUniformLocation(prg, 'u_mOffset');
+  const uYOff = gl.getUniformLocation(prg, 'u_yOffset');
+  const uKOff = gl.getUniformLocation(prg, 'u_kOffset');
+  const uNoise = gl.getUniformLocation(prg, 'u_noiseAmp');
 
   const resp = await fetch(texture, { mode: 'cors' });
   if (!resp.ok) throw new Error('failed to load image');
@@ -120,6 +167,11 @@ async function main(metadata) {
   gl.viewport(0, 0, canvas.width, canvas.height);
   gl.uniform2f(uRes, canvas.width, canvas.height);
   gl.uniform1f(uRad, metadata.radius);
+  gl.uniform2f(uCOff, ...metadata.cOffset);
+  gl.uniform2f(uMOff, ...metadata.mOffset);
+  gl.uniform2f(uYOff, ...metadata.yOffset);
+  gl.uniform2f(uKOff, ...metadata.kOffset);
+  gl.uniform1f(uNoise, metadata.noiseAmp);
   gl.drawArrays(gl.TRIANGLES, 0, 6);
 };
 
@@ -138,7 +190,14 @@ async function getMetadata() {
     const cborMetadata = await fetch(`/r/metadata/${currentId}`).then((res) => res.json());
     const uint8Metadata = hexToUint8Array(cborMetadata);
     const decoded = decode(uint8Metadata);
-    return { radius: decoded.radius };
+    return {
+      radius: decoded.radius || metadata.radius,
+      cOffset: decoded.cOffset || metadata.cOffset,
+      mOffset: decoded.mOffset || metadata.mOffset,
+      yOffset: decoded.yOffset || metadata.yOffset,
+      kOffset: decoded.kOffset || metadata.kOffset,
+      noiseAmp: decoded.noiseAmp || metadata.noiseAmp
+    };
   } catch {
     console.log('using default metadata');
     return metadata;
@@ -156,22 +215,22 @@ function setupDOM({ width = 512, height = 512, margin = 20 } = {}) {
 
   const container = document.createElement('div');
   container.id = 'container';
-  container.style.width  = '100%';
+  container.style.width = '100%';
   container.style.height = '100%';
   container.style.boxSizing = 'border-box';
   container.style.padding = `${margin}px`;
   container.style.display = 'flex';
   container.style.justifyContent = 'center';
   container.style.alignItems = 'center';
-  container.style.background = '#e5e5e5';
+  container.style.background = '#131516';
   body.appendChild(container);
 
   const canvas = document.createElement('canvas');
-  canvas.id     = 'glcanvas';
-  canvas.width  = width;
+
+  canvas.id = 'glcanvas';
+  canvas.width = width;
   canvas.height = height;
-  canvas.style.background = '#fff';
-  canvas.style.width  = '';
+  canvas.style.width = '';
   canvas.style.height = '';
   container.appendChild(canvas);
 
@@ -179,10 +238,10 @@ function setupDOM({ width = 512, height = 512, margin = 20 } = {}) {
     const cw = container.clientWidth - margin * 2;
     const ch = container.clientHeight - margin * 2;
     if (cw < ch) {
-      canvas.style.width  = `90%`;
+      canvas.style.width = `90%`;
       canvas.style.height = `auto`;
     } else {
-      canvas.style.width  = `auto`;
+      canvas.style.width = `auto`;
       canvas.style.height = `90%`;
     }
   }
@@ -194,7 +253,6 @@ function setupDOM({ width = 512, height = 512, margin = 20 } = {}) {
 
   return canvas;
 }
-
 
 getMetadata().then((metadata) => {
   main(metadata);
