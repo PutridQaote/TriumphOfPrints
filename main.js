@@ -1,5 +1,6 @@
-import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60a63a43eb925f28636i0';
-const texture = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0';
+// TODO: When doing a test inscribe remove the .js and .jpg from these paths
+import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60a63a43eb925f28636i0.js';
+const texture = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg';
 
 const metadata = {
   radius: 1
@@ -52,7 +53,7 @@ const fragmentShader = /* glsl */`
         float Y = step(cmy.b,dY);
         float K = step(k    ,dK);
 
-        vec3 ht = vec3(C,0.0,Y) * pow((1.0 - K), 2.0);
+        vec3 ht = vec3(C,M,Y) * pow((1.0 - K), 2.0);
         gl_FragColor = vec4(1.0 - ht - vec3(K),1.0);
     }
 `;
