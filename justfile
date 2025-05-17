@@ -1,3 +1,5 @@
+set shell := ["powershell.exe", "-NoLogo", "-Command"]
+
 dev:
   uv run server.py 
 
