@@ -3,7 +3,7 @@ import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60
 const texture = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg';
 
 const metadata = {
-  radius: 1.2,
+  radius: 1.0,
   cOffset: [0.002, 0.0],
   mOffset: [0.002, 0.004],
   yOffset: [0.0, 0.05],
