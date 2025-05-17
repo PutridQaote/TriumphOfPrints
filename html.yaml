@@ -1,0 +1,5 @@
+mode: separate-outputs
+inscriptions:
+  - file: ./inscribed.html
+    metadata:
+      radius: 6

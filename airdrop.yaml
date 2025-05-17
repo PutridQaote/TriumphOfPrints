@@ -1,0 +1,10 @@
+mode: separate-outputs
+parents:
+  - 
+inscriptions:
+  - file: ./inscribed.html
+    destination:
+    metadata:
+  - file: ./inscribed.html
+    destination:
+    metadata:

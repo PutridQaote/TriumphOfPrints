@@ -1,0 +1,3 @@
+mode: separate-outputs
+inscriptions:
+  - file: ./main.js 

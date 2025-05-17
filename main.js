@@ -1,0 +1,200 @@
+import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60a63a43eb925f28636i0';
+const texture = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0';
+
+const metadata = {
+  radius: 1
+}
+
+const vertexShader = /* glsl */`
+    attribute vec2 a_position;
+    attribute vec2 a_texcoord;
+    varying vec2 v_texcoord;
+    
+    void main(){
+        gl_Position = vec4(a_position,0,1);
+        v_texcoord = vec2(a_texcoord.x, 1.0 - a_texcoord.y);
+    }
+`;
+
+const fragmentShader = /* glsl */`
+    precision mediump float;
+    uniform sampler2D u_image;
+    uniform vec2      u_resolution;
+    uniform float     u_radius;
+    varying vec2      v_texcoord;
+
+    float dotPattern(vec2 uv, float angle){
+        float r  = radians(angle);
+        vec2 c   = uv - .5;
+        vec2 rot = vec2(
+          c.x * cos(r) - c.y * sin(r),
+          c.x * sin(r) + c.y * cos(r)
+        );
+        vec2 g = rot * u_resolution / u_radius;
+        vec2 f = fract(g);
+        return length(f - .5);
+    }
+
+    void main(){
+        vec2 uv = v_texcoord;
+        vec4 baseColor  = texture2D(u_image,uv);
+        vec3 cmy = 1.0 - baseColor.rgb;
+        float k  = min(min(cmy.r,cmy.g),cmy.b);
+        cmy = (cmy - k) / (1.0 - k + 1e-5);
+
+        float dC = dotPattern(uv,15.0);
+        float dM = dotPattern(uv,75.0);
+        float dY = dotPattern(uv,0.0);
+        float dK = dotPattern(uv,45.0);
+
+        float C = step(cmy.r,dC);
+        float M = step(cmy.g,dM);
+        float Y = step(cmy.b,dY);
+        float K = step(k    ,dK);
+
+        vec3 ht = vec3(C,0.0,Y) * pow((1.0 - K), 2.0);
+        gl_FragColor = vec4(1.0 - ht - vec3(K),1.0);
+    }
+`;
+
+async function main(metadata) {
+  const canvas = setupDOM({ width: 512, height: 512, margin: 10 });
+  const gl = canvas.getContext('webgl');
+  if (!gl) throw new Error('WebGL not supported');
+
+  function compile(type, src) {
+    const s = gl.createShader(type);
+    gl.shaderSource(s, src);
+    gl.compileShader(s);
+    if (!gl.getShaderParameter(s, gl.COMPILE_STATUS))
+      console.error(gl.getShaderInfoLog(s));
+    return s;
+  }
+
+  const vs = compile(gl.VERTEX_SHADER, vertexShader);
+  const fs = compile(gl.FRAGMENT_SHADER, fragmentShader);
+  const prg = gl.createProgram();
+
+  gl.attachShader(prg, vs);
+  gl.attachShader(prg, fs);
+  gl.linkProgram(prg);
+  gl.useProgram(prg);
+
+  const buf = gl.createBuffer();
+  gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+    -1, -1, 0, 0,
+    1, -1, 1, 0,
+    -1, 1, 0, 1,
+    -1, 1, 0, 1,
+    1, -1, 1, 0,
+    1, 1, 1, 1
+  ]), gl.STATIC_DRAW);
+
+  const aPos = gl.getAttribLocation(prg, 'a_position');
+  const aTex = gl.getAttribLocation(prg, 'a_texcoord');
+  gl.enableVertexAttribArray(aPos);
+  gl.vertexAttribPointer(aPos, 2, gl.FLOAT, false, 16, 0);
+  gl.enableVertexAttribArray(aTex);
+  gl.vertexAttribPointer(aTex, 2, gl.FLOAT, false, 16, 8);
+
+  const uRes = gl.getUniformLocation(prg, 'u_resolution');
+  const uRad = gl.getUniformLocation(prg, 'u_radius');
+
+  const resp = await fetch(texture, { mode: 'cors' });
+  if (!resp.ok) throw new Error('failed to load image');
+
+  const blob = await resp.blob();
+  const imageBitmap = await createImageBitmap(blob);
+
+  const tex = gl.createTexture();
+  gl.bindTexture(gl.TEXTURE_2D, tex);
+  gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 0);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+  gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, imageBitmap);
+
+  gl.viewport(0, 0, canvas.width, canvas.height);
+  gl.uniform2f(uRes, canvas.width, canvas.height);
+  gl.uniform1f(uRad, metadata.radius);
+  gl.drawArrays(gl.TRIANGLES, 0, 6);
+};
+
+async function getMetadata() {
+  let currentId = window.location.href.split("/").pop();
+
+  function hexToUint8Array(hex) {
+    const bytes = new Uint8Array(hex.length / 2);
+    for (let i = 0; i < hex.length; i += 2) {
+      bytes[i / 2] = parseInt(hex.substr(i, 2), 16);
+    }
+    return bytes;
+  };
+
+  try {
+    const cborMetadata = await fetch(`/r/metadata/${currentId}`).then((res) => res.json());
+    const uint8Metadata = hexToUint8Array(cborMetadata);
+    const decoded = decode(uint8Metadata);
+    return { radius: decoded.radius };
+  } catch {
+    console.log('using default metadata');
+    return metadata;
+  }
+}
+
+function setupDOM({ width = 512, height = 512, margin = 20 } = {}) {
+  const body = document.body;
+  body.style.margin = '0';
+  body.style.display = 'flex';
+  body.style.justifyContent = 'center';
+  body.style.alignItems = 'center';
+  body.style.height = '100vh';
+  body.style.background = '#222';
+
+  const container = document.createElement('div');
+  container.id = 'container';
+  container.style.width  = '100%';
+  container.style.height = '100%';
+  container.style.boxSizing = 'border-box';
+  container.style.padding = `${margin}px`;
+  container.style.display = 'flex';
+  container.style.justifyContent = 'center';
+  container.style.alignItems = 'center';
+  container.style.background = '#e5e5e5';
+  body.appendChild(container);
+
+  const canvas = document.createElement('canvas');
+  canvas.id     = 'glcanvas';
+  canvas.width  = width;
+  canvas.height = height;
+  canvas.style.background = '#fff';
+  canvas.style.width  = '';
+  canvas.style.height = '';
+  container.appendChild(canvas);
+
+  function resizeCanvas() {
+    const cw = container.clientWidth - margin * 2;
+    const ch = container.clientHeight - margin * 2;
+    if (cw < ch) {
+      canvas.style.width  = `90%`;
+      canvas.style.height = `auto`;
+    } else {
+      canvas.style.width  = `auto`;
+      canvas.style.height = `90%`;
+    }
+  }
+
+  window.addEventListener('resize', resizeCanvas);
+  new ResizeObserver(resizeCanvas).observe(container);
+
+  resizeCanvas();
+
+  return canvas;
+}
+
+
+getMetadata().then((metadata) => {
+  main(metadata);
+});
