@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Variation 311</title>
+  <style>
+    body { margin: 0; padding: 0; background: #000; }
+    #controls {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1000;
+      max-width: 300px;
+    }
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    button {
+      padding: 4px 8px;
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin: 3px;
+    }
+    button:hover {
+      background: #666;
+    }
+    .source-type {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 5px;
+      font-size: 0.8em;
+      background: {"#6b8e23" if source_type == "TOS" else "#4169e1"};
+    }
+  </style>
+  
+  <!-- Replace the texture in main.js before it loads -->
+  <script>
+    console.log('Setting up texture override: /content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg');
+    
+    // Store metadata for the getMetadata function to use
+    window.getMetadataOverride = {"radius": 0.01753999868779395, "cOffset": [-0.006498435443122958, 0.00029069209584567135], "mOffset": [0.0031542253004315643, -0.023083631705274908], "yOffset": [-0.0013865698311435145, -0.005640919947760397], "kOffset": [71.77487577919568, 85.11836572577428], "noiseAmp": -0.0035868472382103865, "sourceId": "806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0", "variationId": 311};
+    
+    // Override the getMetadata function
+    window.getMetadata = async function() {
+      console.log('Using variation metadata:', window.getMetadataOverride);
+      return window.getMetadataOverride;
+    };
+    
+    // The most direct approach - monkey patch the texture directly in main.js
+    // This creates a getter that will replace the const texture value
+    Object.defineProperty(window, 'TEXTURE_PATH_OVERRIDE', {
+      value: '/content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg',
+      writable: false
+    });
+    
+    // Simple error handling for missing images
+    window.addEventListener('error', function(e) {
+      if (e.target.tagName === 'IMG') {
+        console.error('Image failed to load:', e.target.src);
+        // Use a fallback image if available
+        e.target.src = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg';
+      }
+    }, true);
+  </script>
+</head>
+<body>
+  <div id="controls">
+    <h3>Variation 311 of 332</h3>
+    <div>
+      Source: 806d80e7...
+      <span class="source-type">TOS</span>
+    </div>
+    <div>
+      <small>Parameters:</small>
+      <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
+        radius: 0.017540,
+        cOffset: [-0.006498, 0.000291],
+        mOffset: [0.003154, -0.023084],
+        yOffset: [-0.001387, -0.005641],
+        kOffset: [71.77, 85.12],
+        noiseAmp: -0.00358685
+      }</pre>
+    </div>
+    
+    <div class="nav-buttons">
+      <!-- Enhanced navigation -->
+      <button onclick="window.location.href='/test?id=0'">First</button>
+      <button onclick="window.location.href='/test?id=211'">-100</button>
+      <button onclick="window.location.href='/test?id=301'">-10</button>
+      <button onclick="window.location.href='/test?id=306'">-5</button>
+      <button onclick="window.location.href='/test?id=310'">Prev</button>
+      <button onclick="window.location.href='/test?id=312'">Next</button>
+      <button onclick="window.location.href='/test?id=316'">+5</button>
+      <button onclick="window.location.href='/test?id=321'">+10</button>
+      <button onclick="window.location.href='/test?id=332'">+100</button>
+      <button onclick="window.location.href='/test?id=332'">Last</button>
+      <button onclick="window.location.href='/test?id=' + Math.floor(Math.random() * 333)">Random</button>
+    </div>
+  </div>
+  
+  <!-- Include main.js with module type -->
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

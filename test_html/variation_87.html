@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Variation 87</title>
+  <style>
+    body { margin: 0; padding: 0; background: #000; }
+    #controls {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1000;
+      max-width: 300px;
+    }
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    button {
+      padding: 4px 8px;
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin: 3px;
+    }
+    button:hover {
+      background: #666;
+    }
+  </style>
+  
+  <!-- Replace the texture in main.js before it loads -->
+  <script>
+    console.log('Setting up texture override: /content/a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0.jpg');
+    
+    // Store metadata for the getMetadata function to use
+    window.getMetadataOverride = {"radius": 0.030452757587418982, "cOffset": [0.006985325667716766, 0.004333073838492499], "mOffset": [0.0027924580415387853, 0.00333], "yOffset": [0.0022270903942961913, -0.0021081483405404108], "kOffset": [66.46218356251069, 67.64697156296035], "noiseAmp": 0.0002579266111652528, "sourceId": "a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0", "variationId": 87};
+    
+    // Override the getMetadata function
+    window.getMetadata = async function() {
+      console.log('Using variation metadata:', window.getMetadataOverride);
+      return window.getMetadataOverride;
+    };
+    
+    // The most direct approach - monkey patch the texture directly in main.js
+    // This creates a getter that will replace the const texture value
+    Object.defineProperty(window, 'TEXTURE_PATH_OVERRIDE', {
+      value: '/content/a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0.jpg',
+      writable: false
+    });
+    
+    // Handle script loading to patch the texture value
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load the main script but patch it first
+      const originalCreateElement = document.createElement;
+      document.createElement = function(tagName) {
+        const element = originalCreateElement.call(document, tagName);
+        if (tagName.toLowerCase() === 'script') {
+          const originalSetAttribute = element.setAttribute;
+          element.setAttribute = function(name, value) {
+            if (name === 'src' && value === '/main.js') {
+              console.log('Intercepting main.js load and adding texture override');
+              
+              // Add event listener to patch the code once it loads
+              element.addEventListener('load', function() {
+                console.log('Patching texture path with:', '/content/a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0.jpg');
+                
+                // Force override any texture fetch
+                const originalFetch = window.fetch;
+                window.fetch = function(url, options) {
+                  if (typeof url === 'string' && url.includes('.jpg')) {
+                    console.log('Redirecting texture fetch to:', '/content/a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0.jpg');
+                    return originalFetch('/content/a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0.jpg', options);
+                  }
+                  return originalFetch(url, options);
+                };
+              });
+            }
+            return originalSetAttribute.call(this, name, value);
+          };
+        }
+        return element;
+      };
+    });
+  </script>
+</head>
+<body>
+  <div id="controls">
+    <h3>Variation 87 of 332</h3>
+    <div>Source: a4fca8cd682834...</div>
+    <div>
+      <small>Parameters:</small>
+      <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
+        radius: 0.030453,
+        cOffset: [0.006985, 0.004333],
+        mOffset: [0.002792, 0.003330],
+        yOffset: [0.002227, -0.002108],
+        kOffset: [66.46, 67.65],
+        noiseAmp: 0.00025793
+      }</pre>
+    </div>
+    
+    <div class="nav-buttons">
+      <!-- Enhanced navigation -->
+      <button onclick="window.location.href='/test?id=0'">First</button>
+      <button onclick="window.location.href='/test?id=0'">-100</button>
+      <button onclick="window.location.href='/test?id=77'">-10</button>
+      <button onclick="window.location.href='/test?id=82'">-5</button>
+      <button onclick="window.location.href='/test?id=86'">Prev</button>
+      <button onclick="window.location.href='/test?id=88'">Next</button>
+      <button onclick="window.location.href='/test?id=92'">+5</button>
+      <button onclick="window.location.href='/test?id=97'">+10</button>
+      <button onclick="window.location.href='/test?id=187'">+100</button>
+      <button onclick="window.location.href='/test?id=332'">Last</button>
+      <button onclick="window.location.href='/test?id=' + Math.floor(Math.random() * 333)">Random</button>
+    </div>
+  </div>
+
+  <!-- For debugging purposes -->
+  <div id="debug" style="position:fixed; bottom:0; left:0; color:white; background:rgba(0,0,0,0.5); padding:5px; font-size:12px; display:none;"></div>
+  
+  <script>
+    // Debug helper
+    function debug(msg) {
+      const debugEl = document.getElementById('debug');
+      debugEl.style.display = 'block';
+      debugEl.innerHTML += msg + '<br>';
+      console.log(msg);
+    }
+    
+    // Check what's going on with main.js
+    window.addEventListener('error', function(e) {
+      debug('Error: ' + e.message + ' at ' + e.filename + ':' + e.lineno);
+    });
+    
+    debug('Using texture path: /content/a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0.jpg');
+  </script>
+
+  <!-- Include main.js with module type -->
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

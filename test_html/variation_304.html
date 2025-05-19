@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Variation 304</title>
+  <style>
+    body { margin: 0; padding: 0; background: #000; }
+    #controls {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1000;
+      max-width: 300px;
+    }
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    button {
+      padding: 4px 8px;
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #666;
+    }
+    .source-info {
+      font-size: 12px;
+      margin: 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div id="controls">
+    <h3>Variation 304 of 332</h3>
+    <div class="source-info">Source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843ad...</div>
+    
+    <div style="font-size: 12px; max-height: 120px; overflow-y: auto; margin: 5px 0;">
+      <pre>radius: 0.0091
+cOffset: [-0.0142, 0.0026]
+mOffset: [0.0036, 0.0333]
+yOffset: [0.0001, 0.0025]
+kOffset: [21.08, 49.95]
+noiseAmp: 0.00116421</pre>
+    </div>
+    
+    <div class="nav-buttons">
+      <!-- Quick jump navigation -->
+      <button onclick="window.location.href='/test?id=0'">First</button>
+      <button onclick="window.location.href='/test?id=204'">-100</button>
+      <button onclick="window.location.href='/test?id=254'">-50</button>
+      <button onclick="window.location.href='/test?id=294'">-10</button>
+      <button onclick="window.location.href='/test?id=299'">-5</button>
+      <button onclick="window.location.href='/test?id=303'">Prev</button>
+      <button onclick="window.location.href='/test?id=305'">Next</button>
+      <button onclick="window.location.href='/test?id=309'">+5</button>
+      <button onclick="window.location.href='/test?id=314'">+10</button>
+      <button onclick="window.location.href='/test?id=332'">+50</button>
+      <button onclick="window.location.href='/test?id=332'">+100</button>
+      <button onclick="window.location.href='/test?id=332'">Last</button>
+    </div>
+    
+    <!-- Random jump -->
+    <div style="margin-top: 5px;">
+      <button onclick="window.location.href='/test?id=' + Math.floor(Math.random() * 333)">Random</button>
+    </div>
+  </div>
+
+  <script>
+    // Override metadata for testing
+    window.getMetadataOverride = {"radius": 0.009059216372424156, "cOffset": [-0.014210313620418033, 0.0025638071269297076], "mOffset": [0.0036487841613487906, 0.0333], "yOffset": [0.00014325870260078512, 0.0024939444143948705], "kOffset": [21.08229528062611, 49.9536183753698], "noiseAmp": 0.0011642125526397098, "sourceId": "b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0", "variationId": 304};
+    
+    // Create a new module script that modifies the texture before the main.js runs
+    const scriptText = `
+      // Override the texture constant in main.js
+      const originalFetch = window.fetch;
+      window.fetch = function(url, options) {
+        if (url === '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg') {
+          console.log('Redirecting texture fetch to: /content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg');
+          return originalFetch('/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg', options);
+        }
+        return originalFetch(url, options);
+      };
+    `;
+    
+    const script = document.createElement('script');
+    script.textContent = scriptText;
+    document.head.appendChild(script);
+    
+    // Override getMetadata in main.js
+    async function getMetadata() {
+      console.log('Using test metadata:', window.getMetadataOverride);
+      return window.getMetadataOverride;
+    }
+  </script>
+  
+  <!-- Include the main JS that already has all the rendering code -->
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
+    

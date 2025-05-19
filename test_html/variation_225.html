@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Test Variation 225</title>
+  <style>
+    body { margin: 0; padding: 0; background: #000; }
+    #controls {
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      background: rgba(0,0,0,0.7);
+      color: white;
+      padding: 10px;
+      border-radius: 5px;
+      z-index: 1000;
+      max-width: 300px;
+    }
+    .nav-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+      margin-top: 10px;
+    }
+    button {
+      padding: 4px 8px;
+      background: #444;
+      color: white;
+      border: none;
+      border-radius: 3px;
+      cursor: pointer;
+      margin: 3px;
+    }
+    button:hover {
+      background: #666;
+    }
+  </style>
+  
+  <!-- Replace the texture in main.js before it loads -->
+  <script>
+    console.log('Setting up texture override: /content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg');
+    
+    // Store metadata for the getMetadata function to use
+    window.getMetadataOverride = {"radius": 0.024970627673124333, "cOffset": [-0.0050203934487766935, -0.0033690168960310045], "mOffset": [-0.003124290545745707, 0.00333], "yOffset": [0.007180573480036054, -0.0030370880865217727], "kOffset": [44.965373528989026, 36.210492507805036], "noiseAmp": 0.0006804397148827376, "sourceId": "ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0", "variationId": 225};
+    
+    // Override the getMetadata function
+    window.getMetadata = async function() {
+      console.log('Using variation metadata:', window.getMetadataOverride);
+      return window.getMetadataOverride;
+    };
+    
+    // The most direct approach - monkey patch the texture directly in main.js
+    // This creates a getter that will replace the const texture value
+    Object.defineProperty(window, 'TEXTURE_PATH_OVERRIDE', {
+      value: '/content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg',
+      writable: false
+    });
+    
+    // Handle script loading to patch the texture value
+    document.addEventListener('DOMContentLoaded', function() {
+      // Load the main script but patch it first
+      const originalCreateElement = document.createElement;
+      document.createElement = function(tagName) {
+        const element = originalCreateElement.call(document, tagName);
+        if (tagName.toLowerCase() === 'script') {
+          const originalSetAttribute = element.setAttribute;
+          element.setAttribute = function(name, value) {
+            if (name === 'src' && value === '/main.js') {
+              console.log('Intercepting main.js load and adding texture override');
+              
+              // Add event listener to patch the code once it loads
+              element.addEventListener('load', function() {
+                console.log('Patching texture path with:', '/content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg');
+                
+                // Force override any texture fetch
+                const originalFetch = window.fetch;
+                window.fetch = function(url, options) {
+                  if (typeof url === 'string' && url.includes('.jpg')) {
+                    console.log('Redirecting texture fetch to:', '/content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg');
+                    return originalFetch('/content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg', options);
+                  }
+                  return originalFetch(url, options);
+                };
+              });
+            }
+            return originalSetAttribute.call(this, name, value);
+          };
+        }
+        return element;
+      };
+    });
+  </script>
+</head>
+<body>
+  <div id="controls">
+    <h3>Variation 225 of 332</h3>
+    <div>Source: ff08f64a29c957...</div>
+    <div>
+      <small>Parameters:</small>
+      <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
+        radius: 0.024971,
+        cOffset: [-0.005020, -0.003369],
+        mOffset: [-0.003124, 0.003330],
+        yOffset: [0.007181, -0.003037],
+        kOffset: [44.97, 36.21],
+        noiseAmp: 0.00068044
+      }</pre>
+    </div>
+    
+    <div class="nav-buttons">
+      <!-- Enhanced navigation -->
+      <button onclick="window.location.href='/test?id=0'">First</button>
+      <button onclick="window.location.href='/test?id=125'">-100</button>
+      <button onclick="window.location.href='/test?id=215'">-10</button>
+      <button onclick="window.location.href='/test?id=220'">-5</button>
+      <button onclick="window.location.href='/test?id=224'">Prev</button>
+      <button onclick="window.location.href='/test?id=226'">Next</button>
+      <button onclick="window.location.href='/test?id=230'">+5</button>
+      <button onclick="window.location.href='/test?id=235'">+10</button>
+      <button onclick="window.location.href='/test?id=325'">+100</button>
+      <button onclick="window.location.href='/test?id=332'">Last</button>
+      <button onclick="window.location.href='/test?id=' + Math.floor(Math.random() * 333)">Random</button>
+    </div>
+  </div>
+
+  <!-- For debugging purposes -->
+  <div id="debug" style="position:fixed; bottom:0; left:0; color:white; background:rgba(0,0,0,0.5); padding:5px; font-size:12px; display:none;"></div>
+  
+  <script>
+    // Debug helper
+    function debug(msg) {
+      const debugEl = document.getElementById('debug');
+      debugEl.style.display = 'block';
+      debugEl.innerHTML += msg + '<br>';
+      console.log(msg);
+    }
+    
+    // Check what's going on with main.js
+    window.addEventListener('error', function(e) {
+      debug('Error: ' + e.message + ' at ' + e.filename + ':' + e.lineno);
+    });
+    
+    debug('Using texture path: /content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg');
+  </script>
+
+  <!-- Include main.js with module type -->
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

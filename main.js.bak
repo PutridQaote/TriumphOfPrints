@@ -1,18 +1,16 @@
 // TODO: When doing a test inscribe remove the .js and .jpg from these paths
 import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60a63a43eb925f28636i0.js';
-// const texture = window.TEXTURE_PATH_OVERRIDE || '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg'; // christian religion
-const texture = window.TEXTURE_PATH_OVERRIDE || 'content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg' // bitcoin
-// const texture = window.TEXTURE_PATH_OVERRIDE || 'content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
+const texture = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg'; // christian religion
+// const texture = 'content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg' // bitcoin
 // const texture = 'content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
 
 const metadata = {
-  radius: 0.015627,
+  radius: 0.015,
   cOffset: [-0.0, -0.0],
   mOffset: [0.0011, 0.0111],
   yOffset: [-0.0, -0.0],
   kOffset: [100, 100],
-  noiseAmp: 0.000005,
-  colorMode: 0
+  noiseAmp: 0.000005
   // noiseAmp: 0.0644 // good lvl for for abstract one
 };
 
@@ -34,7 +32,6 @@ const fragmentShader = /* glsl */`
     uniform float     u_radius;
     uniform vec2      u_cOffset, u_mOffset, u_yOffset, u_kOffset;
     uniform float     u_noiseAmp;
-    uniform float     u_colorMode;
     varying vec2      v_texcoord;
 
     float rand(vec2 co){
@@ -98,25 +95,7 @@ const fragmentShader = /* glsl */`
     float Y = 1.0 - smoothstep(Yval - thresh, Yval + thresh, dY);
     float K = 1.0 - smoothstep(Kval - thresh, Kval + thresh, dK);
 
-
-    vec3 dotMask;
-    int mode = int(u_colorMode);
-    
-
-    if (mode == 0) dotMask = vec3(C, M, Y) * (1.0 - K); // Standard (original)
-    else if (mode == 1) dotMask = vec3(C, K, K) * (1.0 - K); // Cyan and Black
-    else if (mode == 2) dotMask = vec3(K, C, C) * (1.0 - K); // cyan black other combo
-    else if (mode == 3) dotMask = vec3(C, M, Y) * (1.0 - Y); // black changed to Y
-    else if (mode == 4) dotMask = vec3(C, M, C) * (1.0 - K); // Magenta-Cyan
-    else if (mode == 5) dotMask = vec3(C, C, C) * (1.0 - K); // Magenta only - turns to black
-    else if (mode == 6) dotMask = vec3(C, C, C) * (1.0 - M); // cyan and M as K
-
-    else dotMask = vec3(C, M, Y) * (1.0 - K); // Fallback to standard
-    
-    // vec3 dotMask = vec3(C, C, C) * (1.0 - K);
-
-
-    
+    vec3 dotMask = vec3(C, M, Y) * (1.0 - K);
     vec3 cmykLin = dotMask + vec3(K);
     vec3 rgbLin  = 1.0 - cmykLin;
     vec3 rgb_srgb = toSRGB(rgbLin);
@@ -126,7 +105,6 @@ const fragmentShader = /* glsl */`
 
 async function main(metadata) {
   const canvas = setupDOM({ width: 1024, height: 1024, margin: 10 });
-  // const canvas = setupDOM({ width: 900, height: 860, margin: 10 });
   const gl = canvas.getContext('webgl');
   if (!gl) throw new Error('WebGL not supported');
 
@@ -173,7 +151,6 @@ async function main(metadata) {
   const uYOff = gl.getUniformLocation(prg, 'u_yOffset');
   const uKOff = gl.getUniformLocation(prg, 'u_kOffset');
   const uNoise = gl.getUniformLocation(prg, 'u_noiseAmp');
-  const uColorMode = gl.getUniformLocation(prg, 'u_colorMode');
 
   const resp = await fetch(texture, { mode: 'cors' });
   if (!resp.ok) throw new Error('failed to load image');
@@ -198,7 +175,6 @@ async function main(metadata) {
   gl.uniform2f(uYOff, ...metadata.yOffset);
   gl.uniform2f(uKOff, ...metadata.kOffset);
   gl.uniform1f(uNoise, metadata.noiseAmp);
-  gl.uniform1f(uColorMode, metadata.colorMode);
   gl.drawArrays(gl.TRIANGLES, 0, 6);
 };
 
@@ -235,8 +211,7 @@ async function getMetadata() {
       mOffset: decoded.mOffset || metadata.mOffset,
       yOffset: decoded.yOffset || metadata.yOffset,
       kOffset: decoded.kOffset || metadata.kOffset,
-      noiseAmp: decoded.noiseAmp || metadata.noiseAmp,
-      colorMode: decoded.colorMode || metadata.colorMode
+      noiseAmp: decoded.noiseAmp || metadata.noiseAmp
     };
   } catch {
     console.log('using default metadata');
@@ -252,7 +227,6 @@ function setupDOM({ width = 512, height = 512, margin = 20 } = {}) {
   body.style.alignItems = 'center';
   body.style.height = '100vh';
   body.style.background = '#222';
-  // body.style.background = '#9999';
 
   const container = document.createElement('div');
   container.id = 'container';
@@ -263,7 +237,6 @@ function setupDOM({ width = 512, height = 512, margin = 20 } = {}) {
   container.style.display = 'flex';
   container.style.justifyContent = 'center';
   container.style.alignItems = 'center';
-  // container.style.background = '#131516';
   container.style.background = '#131516';
   body.appendChild(container);
 
