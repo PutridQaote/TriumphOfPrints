@@ -35,14 +35,22 @@
     button:hover {
       background: #666;
     }
+    .source-type {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 5px;
+      font-size: 0.8em;
+      background: {"#6b8e23" if source_type == "TOS" else "#4169e1"};
+    }
   </style>
   
   <!-- Replace the texture in main.js before it loads -->
   <script>
-    console.log('Setting up texture override: /content/b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0.jpg');
+    console.log('Setting up texture override: /content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg');
     
     // Store metadata for the getMetadata function to use
-    window.getMetadataOverride = {"radius": 0.04597903995709168, "cOffset": [-0.0015428541215833994, 0.0025047978309953693], "mOffset": [-0.0019295703589994738, 0.00333], "yOffset": [0.0020704212906582824, 0.007654246227535882], "kOffset": [51.08706469761041, 31.761739514686084], "noiseAmp": 0.0009263380438312198, "sourceId": "b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0", "variationId": 298};
+    window.getMetadataOverride = {"radius": 2.0523496148386773, "cOffset": [0.004444054620201492, 0.0038587135514606525], "mOffset": [0.0012694277230699065, 0.003164968833875778], "yOffset": [0.003008252759349439, 0.0006634391292531732], "kOffset": [20000, 20000], "noiseAmp": 2.034808698537207e-06, "colorMode": 0, "sourceId": "b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0", "variationId": 298, "outliers": [], "isOutlier": false};
     
     // Override the getMetadata function
     window.getMetadata = async function() {
@@ -53,58 +61,37 @@
     // The most direct approach - monkey patch the texture directly in main.js
     // This creates a getter that will replace the const texture value
     Object.defineProperty(window, 'TEXTURE_PATH_OVERRIDE', {
-      value: '/content/b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0.jpg',
+      value: '/content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg',
       writable: false
     });
     
-    // Handle script loading to patch the texture value
-    document.addEventListener('DOMContentLoaded', function() {
-      // Load the main script but patch it first
-      const originalCreateElement = document.createElement;
-      document.createElement = function(tagName) {
-        const element = originalCreateElement.call(document, tagName);
-        if (tagName.toLowerCase() === 'script') {
-          const originalSetAttribute = element.setAttribute;
-          element.setAttribute = function(name, value) {
-            if (name === 'src' && value === '/main.js') {
-              console.log('Intercepting main.js load and adding texture override');
-              
-              // Add event listener to patch the code once it loads
-              element.addEventListener('load', function() {
-                console.log('Patching texture path with:', '/content/b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0.jpg');
-                
-                // Force override any texture fetch
-                const originalFetch = window.fetch;
-                window.fetch = function(url, options) {
-                  if (typeof url === 'string' && url.includes('.jpg')) {
-                    console.log('Redirecting texture fetch to:', '/content/b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0.jpg');
-                    return originalFetch('/content/b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0.jpg', options);
-                  }
-                  return originalFetch(url, options);
-                };
-              });
-            }
-            return originalSetAttribute.call(this, name, value);
-          };
-        }
-        return element;
-      };
-    });
+    // Simple error handling for missing images
+    window.addEventListener('error', function(e) {
+      if (e.target.tagName === 'IMG') {
+        console.error('Image failed to load:', e.target.src);
+        // Use a fallback image if available
+        e.target.src = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg';
+      }
+    }, true);
   </script>
 </head>
 <body>
   <div id="controls">
     <h3>Variation 298 of 332</h3>
-    <div>Source: b1ff3531357fc4...</div>
+    <div>
+      Source: b1ff3531...
+      <span class="source-type">TOS</span>
+    </div>
     <div>
       <small>Parameters:</small>
       <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
-        radius: 0.045979,
-        cOffset: [-0.001543, 0.002505],
-        mOffset: [-0.001930, 0.003330],
-        yOffset: [0.002070, 0.007654],
-        kOffset: [51.09, 31.76],
-        noiseAmp: 0.00092634
+        radius: 2.052350,
+        cOffset: [0.004444, 0.003859],
+        mOffset: [0.001269, 0.003165],
+        yOffset: [0.003008, 0.000663],
+        kOffset: [20000.00, 20000.00],
+        noiseAmp: 0.00000203,
+        colorMode: 0
       }</pre>
     </div>
     
@@ -123,27 +110,7 @@
       <button onclick="window.location.href='/test?id=' + Math.floor(Math.random() * 333)">Random</button>
     </div>
   </div>
-
-  <!-- For debugging purposes -->
-  <div id="debug" style="position:fixed; bottom:0; left:0; color:white; background:rgba(0,0,0,0.5); padding:5px; font-size:12px; display:none;"></div>
   
-  <script>
-    // Debug helper
-    function debug(msg) {
-      const debugEl = document.getElementById('debug');
-      debugEl.style.display = 'block';
-      debugEl.innerHTML += msg + '<br>';
-      console.log(msg);
-    }
-    
-    // Check what's going on with main.js
-    window.addEventListener('error', function(e) {
-      debug('Error: ' + e.message + ' at ' + e.filename + ':' + e.lineno);
-    });
-    
-    debug('Using texture path: /content/b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0.jpg');
-  </script>
-
   <!-- Include main.js with module type -->
   <script type="module" src="/main.js"></script>
 </body>

@@ -35,23 +35,24 @@ TOTAL_VARIATIONS = 333
 
 # Base metadata (your starting values)
 BASE_METADATA = {
-  "radius": 0.015,
+  "radius": 2.2,
   "cOffset": [0.0, 0.0],
   "mOffset": [0.00, 0.0],
   "yOffset": [0.0, 0.0],
-  "kOffset": [100, 100],
+  "kOffset": [20000, 20000],
   "noiseAmp": 0.0,
-  "colorMode": 0
+  "colorMode": 0,
+  "title": "placeholder :)"
 }
 
 # Allowed ± variance around each base value
 PARAMETER_VARIANCES = {
-  "radius": 0.005,
-  "cOffset": [0.0222, 0.00222],
+  "radius": 1.0,
+  "cOffset": [0.0222, 0.0222],
   "mOffset": [0.0333, 0.0333],
-  "yOffset": [0.0111, 0.0111],
-  "kOffset": [100, 100],
-  "noiseAmp": 0.00001,
+  "yOffset": [0.0222, 0.0222],
+  "kOffset": [0, 0],
+  "noiseAmp": 0.0000888,
   "colorMode": 0
 }
 
@@ -66,11 +67,11 @@ NORMAL_CLUSTERING_FACTOR = 8.88
 
 # Outlier base values - used when deciding to create an outlier
 OUTLIER_BASE_METADATA = {
-  "radius": 0.0666,                # Much larger radius than normal
+  "radius": 2.2,                    # No change for radius - outlier not used
   "cOffset": [0.0333, -0.0333],     # Significant offset for cyan
   "mOffset": [0.0333, -0.0333],       # Significant offset for magenta
   "yOffset": [0.0111, -0.0111],     # Significant offset for yellow
-  "kOffset": [100, 100],         
+  "kOffset": [20000, 20000],        # No change for kOffset - outlier not used
   "noiseAmp": 0.0111,               # Much more noise
   "colorMode": 0
 }
@@ -85,12 +86,12 @@ OUTLIER_VARIANCE_MULTIPLIERS = {
 
 # Probability (0.0-1.0) of using the outlier value for each parameter
 OUTLIER_PROBABILITIES = {
-  "radius": 0.0111,      
+  "radius": 0.0,                    # outlier not used  
   "cOffset": 0.0222,     
   "mOffset": 0.0222,     
   "yOffset": 0.0111,     
-  "kOffset": 0.0,      
-  "noiseAmp": 0.0111,
+  "kOffset": 0.0,                   # outlier not used
+  "noiseAmp": 0.0222,
   "colorMode": 0.0333  
 }
 
@@ -179,6 +180,12 @@ def generate_variation(base_metadata, variances, source_id, variation_id):
                 ]
 
     # record metadata
+    
+    if source_id in TOS_LIST:
+        variation["title"] = "Triumph of Science"
+    else:
+        variation["title"] = "Triumph of Bitcoin"
+
     variation["sourceId"] = source_id
     variation["variationId"] = variation_id
     variation["outliers"] = outliers_used

@@ -50,7 +50,7 @@
     console.log('Setting up texture override: /content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg');
     
     // Store metadata for the getMetadata function to use
-    window.getMetadataOverride = {"radius": 0.014022463404741824, "cOffset": [-0.00348734901351767, -0.0004667047513404967], "mOffset": [-0.0002580442930045706, -0.0027252101564561905], "yOffset": [0.0004399983773748362, 0.0005188870576035882], "kOffset": [97.54164475360719, 82.21634314819251], "noiseAmp": -5.265199054897902e-07, "sourceId": "5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0", "variationId": 59, "outliers": [], "isOutlier": false};
+    window.getMetadataOverride = {"radius": 2.413643279351877, "cOffset": [-0.002270157946768998, 0.002347517905309435], "mOffset": [-0.02162270903593419, -0.08709688352875614], "yOffset": [3.91872726944891e-05, 0.0024770534848014927], "kOffset": [20000, 20000], "noiseAmp": 1.3751115720485956e-05, "colorMode": 0, "sourceId": "5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0", "variationId": 59, "outliers": ["mOffset"], "isOutlier": true};
     
     // Override the getMetadata function
     window.getMetadata = async function() {
@@ -85,12 +85,12 @@
     <div>
       <small>Parameters:</small>
       <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
-        radius: 0.014022,
-        cOffset: [-0.003487, -0.000467],
-        mOffset: [-0.000258, -0.002725],
-        yOffset: [0.000440, 0.000519],
-        kOffset: [97.54, 82.22],
-        noiseAmp: -0.00000053
+        radius: 2.413643,
+        cOffset: [-0.002270, 0.002348],
+        mOffset: [-0.021623, -0.087097],
+        yOffset: [0.000039, 0.002477],
+        kOffset: [20000.00, 20000.00],
+        noiseAmp: 0.00001375
       }</pre>
     </div>
     

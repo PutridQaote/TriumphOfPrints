@@ -50,7 +50,7 @@
     console.log('Setting up texture override: /content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg');
     
     // Store metadata for the getMetadata function to use
-    window.getMetadataOverride = {"radius": 0.015619587265431513, "cOffset": [-0.00033222727824727205, 0.00021496178720001845], "mOffset": [0.0013914667945305445, 0.004410148785476734], "yOffset": [-6.626637779665128e-05, -0.0005783004423493798], "kOffset": [84.47795449138061, 117.86652164338254], "noiseAmp": 3.4031069016232595e-07, "sourceId": "806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0", "variationId": 316, "outliers": [], "isOutlier": false};
+    window.getMetadataOverride = {"radius": 2.2188757060405435, "cOffset": [0.004298769329884737, 0.0022846426038848682], "mOffset": [-0.0022151406166781096, -0.0008815631090908628], "yOffset": [0.05650744932661048, 0.05611126775865066], "kOffset": [20000, 20000], "noiseAmp": 1.4750346257426216e-05, "colorMode": 0, "title": "Triumph of Science", "sourceId": "806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0", "variationId": 316, "outliers": ["yOffset"], "isOutlier": true};
     
     // Override the getMetadata function
     window.getMetadata = async function() {
@@ -85,12 +85,14 @@
     <div>
       <small>Parameters:</small>
       <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
-        radius: 0.015620,
-        cOffset: [-0.000332, 0.000215],
-        mOffset: [0.001391, 0.004410],
-        yOffset: [-0.000066, -0.000578],
-        kOffset: [84.48, 117.87],
-        noiseAmp: 0.00000034
+        radius: 2.218876,
+        cOffset: [0.004299, 0.002285],
+        mOffset: [-0.002215, -0.000882],
+        yOffset: [0.056507, 0.056111],
+        kOffset: [20000.00, 20000.00],
+        noiseAmp: 0.00001475,
+        colorMode: 0
+        title: Triumph of Science
       }</pre>
     </div>
     

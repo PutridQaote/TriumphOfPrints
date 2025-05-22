@@ -6,14 +6,16 @@ const texture = window.TEXTURE_PATH_OVERRIDE || 'content/ff08f64a29c957c1f376ca1
 // const texture = 'content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
 
 const metadata = {
-  radius: 0.015627,
-  cOffset: [-0.0, -0.0],
-  mOffset: [0.0011, 0.0111],
-  yOffset: [-0.0, -0.0],
-  kOffset: [100, 100],
+  // radius: 0.02,
+  radius: 4.0,
+  cOffset: [-0.005, -0.005],
+  // mOffset: [0.0011, 0.0111],
+  mOffset: [0.0001, -0.0001],
+  yOffset: [-0.0001, -0.0001],
+  kOffset: [20000, 20000],
   noiseAmp: 0.000005,
-  colorMode: 0
-  // noiseAmp: 0.0644 // good lvl for for abstract one
+  colorMode: 0,
+  title: 'Triumph of Bitcoin'
 };
 
 const vertexShader = /* glsl */`
@@ -230,13 +232,14 @@ async function getMetadata() {
     const uint8Metadata = hexToUint8Array(cborMetadata);
     const decoded = decode(uint8Metadata);
     return {
-      radius: decoded.radius || metadata.radius,
-      cOffset: decoded.cOffset || metadata.cOffset,
-      mOffset: decoded.mOffset || metadata.mOffset,
-      yOffset: decoded.yOffset || metadata.yOffset,
-      kOffset: decoded.kOffset || metadata.kOffset,
-      noiseAmp: decoded.noiseAmp || metadata.noiseAmp,
-      colorMode: decoded.colorMode || metadata.colorMode
+      radius: decoded.radius        || metadata.radius,
+      cOffset: decoded.cOffset      || metadata.cOffset,
+      mOffset: decoded.mOffset      || metadata.mOffset,
+      yOffset: decoded.yOffset      || metadata.yOffset,
+      kOffset: decoded.kOffset      || metadata.kOffset,
+      noiseAmp: decoded.noiseAmp    || metadata.noiseAmp,
+      colorMode: decoded.colorMode  || metadata.colorMode,
+      title: decoded.title          || metadata.title
     };
   } catch {
     console.log('using default metadata');

@@ -50,7 +50,7 @@
     console.log('Setting up texture override: /content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg');
     
     // Store metadata for the getMetadata function to use
-    window.getMetadataOverride = {"radius": 0.015749160880723995, "cOffset": [-0.00036508437047928793, -7.362751124279913e-05], "mOffset": [-0.0020113358167291187, -0.0003519071986583234], "yOffset": [0.0013095310563125831, -0.0013868148106948495], "kOffset": [86.7413002164597, 95.25723872885835], "noiseAmp": 8.818386032749881e-07, "colorMode": 0, "sourceId": "63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0", "variationId": 31, "outliers": [], "isOutlier": false};
+    window.getMetadataOverride = {"radius": 2.1903684651815576, "cOffset": [-0.0036670004106851566, -0.0065868043944129154], "mOffset": [0.04969420864677487, 0.007426992927392503], "yOffset": [-0.0006126302436872403, 0.002379566874485381], "kOffset": [20000, 20000], "noiseAmp": 2.8456701293379573e-05, "colorMode": 4, "title": "Triumph of Bitcoin", "sourceId": "63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0", "variationId": 31, "outliers": ["colorMode", "mOffset"], "isOutlier": true};
     
     // Override the getMetadata function
     window.getMetadata = async function() {
@@ -85,12 +85,14 @@
     <div>
       <small>Parameters:</small>
       <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
-        radius: 0.015749,
-        cOffset: [-0.000365, -0.000074],
-        mOffset: [-0.002011, -0.000352],
-        yOffset: [0.001310, -0.001387],
-        kOffset: [86.74, 95.26],
-        noiseAmp: 0.00000088
+        radius: 2.190368,
+        cOffset: [-0.003667, -0.006587],
+        mOffset: [0.049694, 0.007427],
+        yOffset: [-0.000613, 0.002380],
+        kOffset: [20000.00, 20000.00],
+        noiseAmp: 0.00002846,
+        colorMode: 4
+        title: Triumph of Bitcoin
       }</pre>
     </div>
     

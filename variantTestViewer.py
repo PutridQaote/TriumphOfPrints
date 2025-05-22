@@ -130,7 +130,9 @@ def create_test_html(variation_id, variation_data):
         mOffset: [{variation_data["mOffset"][0]:.6f}, {variation_data["mOffset"][1]:.6f}],
         yOffset: [{variation_data["yOffset"][0]:.6f}, {variation_data["yOffset"][1]:.6f}],
         kOffset: [{variation_data["kOffset"][0]:.2f}, {variation_data["kOffset"][1]:.2f}],
-        noiseAmp: {variation_data["noiseAmp"]:.8f}
+        noiseAmp: {variation_data["noiseAmp"]:.8f},
+        colorMode: {variation_data["colorMode"]}
+        title: {variation_data["title"]}
       }}</pre>
     </div>
     
