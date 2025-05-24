@@ -43,6 +43,12 @@
       font-size: 0.8em;
       background: {"#6b8e23" if source_type == "TOS" else "#4169e1"};
     }
+    .debug-panel {
+      margin-top: 10px;
+      padding: 5px;
+      background: rgba(50,50,50,0.5);
+      border-radius: 3px;
+    }
   </style>
   
   <!-- Replace the texture in main.js before it loads -->
@@ -50,7 +56,7 @@
     console.log('Setting up texture override: /content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg');
     
     // Store metadata for the getMetadata function to use
-    window.getMetadataOverride = {"radius": 2.2009194315710854, "cOffset": [-0.00014251467398447616, 0.0007851127343490261], "mOffset": [0.000337321342532603, -0.0004236374100553858], "yOffset": [-0.0018497608399184265, 0.0014571807564679772], "kOffset": [20000, 20000], "noiseAmp": 2.468850872647311e-06, "colorMode": 0, "sourceId": "b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0", "variationId": 305, "outliers": [], "isOutlier": false};
+    window.getMetadataOverride = {"radius": 2.21, "cOffset": [-0.000386, 0.00175], "mOffset": [0.00614, 0.00219], "yOffset": [-0.00192, -0.00128], "kOffset": [20000, 20000], "noiseAmp": 8.95e-06, "colorMode": 0, "title": "Triumph of Science", "wear": 46.7, "sourceId": "b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0", "variationId": 305, "outliers": [], "isOutlier": false};
     
     // Override the getMetadata function
     window.getMetadata = async function() {
@@ -73,6 +79,13 @@
         e.target.src = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg';
       }
     }, true);
+    
+    // Add a debug helper function to test wear values directly
+    window.testWear = function(value) {
+      console.log("Testing wear value:", value);
+      window.getMetadataOverride.wear = Number(value);
+      document.location.reload();
+    }
   </script>
 </head>
 <body>
@@ -85,14 +98,28 @@
     <div>
       <small>Parameters:</small>
       <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
-        radius: 2.200919,
-        cOffset: [-0.000143, 0.000785],
-        mOffset: [0.000337, -0.000424],
-        yOffset: [-0.001850, 0.001457],
-        kOffset: [20000.00, 20000.00],
-        noiseAmp: 0.00000247,
-        colorMode: 0
+        radius: 2.21,
+        cOffset: [-0.00039, 0.0018],
+        mOffset: [0.0061, 0.0022],
+        yOffset: [-0.0019, -0.0013],
+        kOffset: [20000, 20000],
+        noiseAmp: 8.95e-06,
+        colorMode: 0,
+        title: Triumph of Science,
+        wear: 46.7
       }</pre>
+    </div>
+    
+    <!-- Add debug panel for testing wear values -->
+    <div class="debug-panel">
+      <div>Test Different Wear Values:</div>
+      <button onclick="testWear(10)">10</button>
+      <button onclick="testWear(50)">50</button>
+      <button onclick="testWear(100)">100</button>
+      <button onclick="testWear(200)">200</button>
+      <button onclick="testWear(500)">500</button>
+      <input type="number" id="customWear" style="width:60px" value="46.7" />
+      <button onclick="testWear(document.getElementById('customWear').value)">Apply</button>
     </div>
     
     <div class="nav-buttons">

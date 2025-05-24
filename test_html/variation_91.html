@@ -43,6 +43,12 @@
       font-size: 0.8em;
       background: {"#6b8e23" if source_type == "TOS" else "#4169e1"};
     }
+    .debug-panel {
+      margin-top: 10px;
+      padding: 5px;
+      background: rgba(50,50,50,0.5);
+      border-radius: 3px;
+    }
   </style>
   
   <!-- Replace the texture in main.js before it loads -->
@@ -50,7 +56,9 @@
     console.log('Setting up texture override: /content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg');
     
     // Store metadata for the getMetadata function to use
-    window.getMetadataOverride = {"radius": 0.015304173380487854, "cOffset": [-0.0025177878858872018, 0.0003630153889149225], "mOffset": [-0.0027058236413369896, 0.000429855819282688], "yOffset": [-0.00012260731671118088, -0.0009577921025468361], "kOffset": [92.21475369892492, 82.59454731580416], "noiseAmp": 2.784554665233576e-07, "colorMode": 0, "sourceId": "a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0", "variationId": 91, "outliers": [], "isOutlier": false};
+    window.getMetadataOverride = {"radius": 2.19, "cOffset": [-0.00482, 0.00343], "mOffset": [0.000963, -0.00371], "yOffset": [0.000509, 0.00267], "kOffset": [20000, 20000], "noiseAmp": 8.77e-06, "inkStatus": 0, "title": "Triumph of Bitcoin", "wear": 53.1, "sourceId": "a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0", "variationId": 91, "outliers": [], "isOutlier": false};
+    console.log('Loaded variation data:', window.getMetadataOverride);
+    console.log('Wear from JSON:', window.getMetadataOverride.wear);
     
     // Override the getMetadata function
     window.getMetadata = async function() {
@@ -85,12 +93,15 @@
     <div>
       <small>Parameters:</small>
       <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
-        radius: 0.015304,
-        cOffset: [-0.002518, 0.000363],
-        mOffset: [-0.002706, 0.000430],
-        yOffset: [-0.000123, -0.000958],
-        kOffset: [92.21, 82.59],
-        noiseAmp: 0.00000028
+        radius: 2.19,
+        cOffset: [-0.0048, 0.0034],
+        mOffset: [0.00096, -0.0037],
+        yOffset: [0.00051, 0.0027],
+        kOffset: [20000, 20000],
+        noiseAmp: 8.77e-06,
+        inkStatus: 0,
+        title: Triumph of Bitcoin,
+        wear: 53.1
       }</pre>
     </div>
     

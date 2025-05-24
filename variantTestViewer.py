@@ -38,6 +38,9 @@ def create_test_html(variation_id, variation_data):
     texture_path = get_image_path_for_source(source_id)
     source_type = get_source_type(source_id)
     
+    # Set default wear value if not present in the variation data
+    wear_value = variation_data.get("wear", 50)
+    
     html = f"""<!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,6 +86,12 @@ def create_test_html(variation_id, variation_data):
       font-size: 0.8em;
       background: {{"#6b8e23" if source_type == "TOS" else "#4169e1"}};
     }}
+    .debug-panel {{
+      margin-top: 10px;
+      padding: 5px;
+      background: rgba(50,50,50,0.5);
+      border-radius: 3px;
+    }}
   </style>
   
   <!-- Replace the texture in main.js before it loads -->
@@ -91,6 +100,8 @@ def create_test_html(variation_id, variation_data):
     
     // Store metadata for the getMetadata function to use
     window.getMetadataOverride = {json.dumps(variation_data)};
+    console.log('Loaded variation data:', window.getMetadataOverride);
+    console.log('Wear from JSON:', window.getMetadataOverride.wear);
     
     // Override the getMetadata function
     window.getMetadata = async function() {{
@@ -125,14 +136,15 @@ def create_test_html(variation_id, variation_data):
     <div>
       <small>Parameters:</small>
       <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{{
-        radius: {variation_data["radius"]:.6f},
-        cOffset: [{variation_data["cOffset"][0]:.6f}, {variation_data["cOffset"][1]:.6f}],
-        mOffset: [{variation_data["mOffset"][0]:.6f}, {variation_data["mOffset"][1]:.6f}],
-        yOffset: [{variation_data["yOffset"][0]:.6f}, {variation_data["yOffset"][1]:.6f}],
-        kOffset: [{variation_data["kOffset"][0]:.2f}, {variation_data["kOffset"][1]:.2f}],
-        noiseAmp: {variation_data["noiseAmp"]:.8f},
-        colorMode: {variation_data["colorMode"]}
-        title: {variation_data["title"]}
+        radius: {variation_data["radius"]:.3g},
+        cOffset: [{variation_data["cOffset"][0]:.2g}, {variation_data["cOffset"][1]:.2g}],
+        mOffset: [{variation_data["mOffset"][0]:.2g}, {variation_data["mOffset"][1]:.2g}],
+        yOffset: [{variation_data["yOffset"][0]:.2g}, {variation_data["yOffset"][1]:.2g}],
+        kOffset: [{int(variation_data["kOffset"][0])}, {int(variation_data["kOffset"][1])}],
+        noiseAmp: {variation_data["noiseAmp"]:.3g},
+        inkStatus: {variation_data.get("inkStatus", variation_data.get("colorMode", 0))},
+        title: {variation_data["title"]},
+        wear: {wear_value:.1f}
       }}</pre>
     </div>
     

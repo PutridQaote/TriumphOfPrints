@@ -43,6 +43,12 @@
       font-size: 0.8em;
       background: {"#6b8e23" if source_type == "TOS" else "#4169e1"};
     }
+    .debug-panel {
+      margin-top: 10px;
+      padding: 5px;
+      background: rgba(50,50,50,0.5);
+      border-radius: 3px;
+    }
   </style>
   
   <!-- Replace the texture in main.js before it loads -->
@@ -50,7 +56,9 @@
     console.log('Setting up texture override: /content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg');
     
     // Store metadata for the getMetadata function to use
-    window.getMetadataOverride = {"radius": 2.129692004013655, "cOffset": [-0.0015257515743283163, -0.006153318997295454], "mOffset": [0.0024969358872120864, 0.001503304893001484], "yOffset": [-5.700596491122334e-05, -0.00038230236999513354], "kOffset": [20000, 20000], "noiseAmp": 3.368443154653173e-06, "colorMode": 0, "title": "Triumph of Science", "sourceId": "806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0", "variationId": 326, "outliers": [], "isOutlier": false};
+    window.getMetadataOverride = {"radius": 2.35, "cOffset": [-0.000633, 0.00347], "mOffset": [0.002, -0.000738], "yOffset": [-0.000196, -0.00144], "kOffset": [20000, 20000], "noiseAmp": 5.85e-06, "inkStatus": 4, "title": "Triumph of Science", "wear": 42.0, "sourceId": "806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0", "variationId": 326, "outliers": ["inkStatus"], "isOutlier": true};
+    console.log('Loaded variation data:', window.getMetadataOverride);
+    console.log('Wear from JSON:', window.getMetadataOverride.wear);
     
     // Override the getMetadata function
     window.getMetadata = async function() {
@@ -85,14 +93,15 @@
     <div>
       <small>Parameters:</small>
       <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
-        radius: 2.129692,
-        cOffset: [-0.001526, -0.006153],
-        mOffset: [0.002497, 0.001503],
-        yOffset: [-0.000057, -0.000382],
-        kOffset: [20000.00, 20000.00],
-        noiseAmp: 0.00000337,
-        colorMode: 0
-        title: Triumph of Science
+        radius: 2.35,
+        cOffset: [-0.00063, 0.0035],
+        mOffset: [0.002, -0.00074],
+        yOffset: [-0.0002, -0.0014],
+        kOffset: [20000, 20000],
+        noiseAmp: 5.85e-06,
+        inkStatus: 4,
+        title: Triumph of Science,
+        wear: 42.0
       }</pre>
     </div>
     

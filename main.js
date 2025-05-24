@@ -1,21 +1,23 @@
 // TODO: When doing a test inscribe remove the .js and .jpg from these paths
 import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60a63a43eb925f28636i0.js';
 // const texture = window.TEXTURE_PATH_OVERRIDE || '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg'; // christian religion
-const texture = window.TEXTURE_PATH_OVERRIDE || 'content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg' // bitcoin
+// const texture = window.TEXTURE_PATH_OVERRIDE || 'content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg' // bitcoin
 // const texture = window.TEXTURE_PATH_OVERRIDE || 'content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
-// const texture = 'content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
+const texture = 'content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
+
+// TODO fix the aspect ratio of the main canvas so it's the original 900 x 860 aspect ratio
 
 const metadata = {
   // radius: 0.02,
   radius: 2.2,
   cOffset: [-0.00333, -0.00333],
-  // mOffset: [0.0011, 0.0111],
   mOffset: [0.0003, -0.0003],
   yOffset: [-0.0001, -0.0001],
   kOffset: [20000, 20000],
-  noiseAmp: 0.00000,
-  colorMode: 6,
-  title: ''
+  noiseAmp: 0.00001,
+  inkStatus: 3,
+  title: 'Triumph of Bitcoin',
+  wear: 150
 };
 
 const vertexShader = /* glsl */`
@@ -36,7 +38,7 @@ const fragmentShader = /* glsl */`
     uniform float     u_radius;
     uniform vec2      u_cOffset, u_mOffset, u_yOffset, u_kOffset;
     uniform float     u_noiseAmp;
-    uniform float     u_colorMode;
+    uniform float     u_inkStatus;
     varying vec2      v_texcoord;
 
     float rand(vec2 co){
@@ -101,13 +103,13 @@ const fragmentShader = /* glsl */`
     float K = 1.0 - smoothstep(Kval - thresh, Kval + thresh, dK);
 
     vec3 dotMask;
-    int mode = int(u_colorMode);
+    int mode = int(u_inkStatus);
     if (mode == 0) dotMask = vec3(C, M, Y) * (1.0 - K);
     else if (mode == 1) dotMask = vec3(C, K, K) * (1.0 - K);
     else if (mode == 2) dotMask = vec3(K, C, C) * (1.0 - K);
     else if (mode == 3) dotMask = vec3(C, M, Y) * (1.0 - Y);
     else if (mode == 4) dotMask = vec3(C, M, C) * (1.0 - K);
-    else if (mode == 5) dotMask = vec3(C, C, C) * (1.0 - K);
+    else if (mode == 5) dotMask = vec3(C, C, C) * (1.0 - Y);
     else if (mode == 6) dotMask = vec3(C, C, C) * (1.0 - M);
     else dotMask = vec3(C, M, Y) * (1.0 - K);
 
@@ -119,7 +121,8 @@ const fragmentShader = /* glsl */`
 
 async function main(metadata) {
   // 1. Create & style canvas
-  const canvas = setupDOM({ width: 1024, height: 1024, margin: 10 });
+  const canvas = setupDOM({width: 1024, height: 1024, margin: 10, wear: metadata.wear});
+
   const gl = canvas.getContext('webgl');
   if (!gl) throw new Error('WebGL not supported');
 
@@ -180,7 +183,7 @@ async function main(metadata) {
   const uYOff      = gl.getUniformLocation(program, 'u_yOffset');
   const uKOff      = gl.getUniformLocation(program, 'u_kOffset');
   const uNoise     = gl.getUniformLocation(program, 'u_noiseAmp');
-  const uColorMode = gl.getUniformLocation(program, 'u_colorMode');
+  const uInkStatus = gl.getUniformLocation(program, 'u_inkStatus');
 
   // Tell the shader to sample from texture unit 0
   gl.uniform1i(uImage, 0);
@@ -215,7 +218,7 @@ async function main(metadata) {
   gl.uniform2f(uYOff, ...metadata.yOffset);
   gl.uniform2f(uKOff, ...metadata.kOffset);
   gl.uniform1f(uNoise, metadata.noiseAmp);
-  gl.uniform1f(uColorMode, metadata.colorMode);
+  gl.uniform1f(uInkStatus, metadata.inkStatus);
 
   gl.drawArrays(gl.TRIANGLES, 0, 6);
 }
@@ -255,8 +258,9 @@ async function getMetadata() {
       yOffset: decoded.yOffset      || metadata.yOffset,
       kOffset: decoded.kOffset      || metadata.kOffset,
       noiseAmp: decoded.noiseAmp    || metadata.noiseAmp,
-      colorMode: decoded.colorMode  || metadata.colorMode,
-      title: decoded.title          || metadata.title
+      inkStatus: decoded.inkStatus  || metadata.inkStatus,
+      title: decoded.title          || metadata.title,
+      wear: decoded.wear            || metadata.wear
     };
   } catch {
     console.log('using default metadata');
@@ -264,7 +268,7 @@ async function getMetadata() {
   }
 }
 
-function setupDOM({ width = 512, height = 512, margin = 20 } = {}) {
+function setupDOM({ width = 512, height = 512, margin = 20, wear = 50 } = {}) {
   // Create an off-white background and paper texture filter
   const body = document.body;
   body.style.margin = '0';
@@ -273,6 +277,14 @@ function setupDOM({ width = 512, height = 512, margin = 20 } = {}) {
   body.style.alignItems = 'center';
   body.style.height = '100vh';
   body.style.background = '#f5f3e8';  // off-white background
+
+  // Clear any existing SVG filters and canvas elements
+  document.querySelectorAll('svg, #container').forEach(el => el.remove());
+
+  // Calculate offset compensation values based on wear
+  // Adjust the compensation factor to account for large wear values
+  const offsetX = -wear * 0.2; 
+  const offsetY = -wear * 0.2;
 
   // Define SVG filter for crumpled paper displacement
   const svgNS = 'http://www.w3.org/2000/svg';
@@ -298,15 +310,22 @@ function setupDOM({ width = 512, height = 512, margin = 20 } = {}) {
     <feDisplacementMap
       in="SourceGraphic"
       in2="smoothNoise"
-      scale="50"
+      scale="${wear}"
       xChannelSelector="R"
       yChannelSelector="G"
       result="displaced" />
+      
+    <!-- Add offset to compensate for displacement shift -->
+    <feOffset
+      in="displaced"
+      dx="${offsetX}"
+      dy="${offsetY}"
+      result="recentered" />
 
     <feDropShadow
-      in="displaced"
-      dx="12" dy="5"
-      stdDeviation="5"
+      in="recentered"
+      dx="25" dy="25"
+      stdDeviation="20"
       flood-color="black"
       flood-opacity="0.1" />
   </filter>
@@ -330,11 +349,10 @@ function setupDOM({ width = 512, height = 512, margin = 20 } = {}) {
   canvas.id = 'glcanvas';
   canvas.width = width;
   canvas.height = height;
-  // canvas.style.filter = 'url(#paperFilter) drop-shadow(30px 15px 25px rgba(14, 14, 14, 0.87))';
   canvas.style.filter =
   'url(#paperFilter) ' +
-  'drop-shadow(12px 12px 18px rgba(0, 0, 0, 0.333)) ' +
-  'drop-shadow(8px 6px 4px rgba(0, 0, 0, 0.333))';
+  'drop-shadow(40px 30px 18px rgba(0, 0, 0, .333)) ' +
+  'drop-shadow(15px 10px 10px rgba(0, 0, 0, 0.333))';
   container.appendChild(canvas);
 
   function resizeCanvas() {
@@ -357,4 +375,6 @@ function setupDOM({ width = 512, height = 512, margin = 20 } = {}) {
 
 getMetadata().then((metadata) => {
   main(metadata);
+  // Remove this second call to setupDOM which is causing the problem
+  // setupDOM({ width: 1024, height: 1024, margin: 10, wear: metadata.wear });
 });

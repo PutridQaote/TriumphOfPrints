@@ -1,26 +1,31 @@
 {
-  "radius": 2.100013289946263,
+  "radius": 2.17,
   "cOffset": [
-    0.001694354722108016,
-    0.0022121632377738645
+    -7.41e-05,
+    0.00429
   ],
   "mOffset": [
-    -0.002709048627752845,
-    0.0005210946940333031
+    -0.00477,
+    -0.00119
   ],
   "yOffset": [
-    0.0017826218719255598,
-    -0.0002626336245971603
+    0.00734,
+    0.0244
   ],
   "kOffset": [
     20000,
     20000
   ],
-  "noiseAmp": 2.0087805282207256e-07,
-  "colorMode": 0,
+  "noiseAmp": 4.55e-06,
+  "inkStatus": 5,
   "title": "Triumph of Science",
+  "wear": 49.5,
   "sourceId": "b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0",
   "variationId": 304,
-  "outliers": [],
-  "isOutlier": false
+  "outliers": [
+    "inkStatus",
+    "wear",
+    "yOffset"
+  ],
+  "isOutlier": true
 }

@@ -30,82 +30,98 @@
       border: none;
       border-radius: 3px;
       cursor: pointer;
+      margin: 3px;
     }
     button:hover {
       background: #666;
     }
-    .source-info {
-      font-size: 12px;
-      margin: 5px 0;
+    .source-type {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 5px;
+      font-size: 0.8em;
+      background: {"#6b8e23" if source_type == "TOS" else "#4169e1"};
+    }
+    .debug-panel {
+      margin-top: 10px;
+      padding: 5px;
+      background: rgba(50,50,50,0.5);
+      border-radius: 3px;
     }
   </style>
+  
+  <!-- Replace the texture in main.js before it loads -->
+  <script>
+    console.log('Setting up texture override: /content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg');
+    
+    // Store metadata for the getMetadata function to use
+    window.getMetadataOverride = {"radius": 2.24, "cOffset": [-0.00187, -0.00108], "mOffset": [-0.00661, 0.00818], "yOffset": [0.000352, 0.00156], "kOffset": [20000, 20000], "noiseAmp": 8.93e-06, "inkStatus": 0, "title": "Triumph of Bitcoin", "wear": 50, "sourceId": "ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0", "variationId": 178, "outliers": [], "isOutlier": false};
+    console.log('Loaded variation data:', window.getMetadataOverride);
+    console.log('Wear from JSON:', window.getMetadataOverride.wear);
+    
+    // Override the getMetadata function
+    window.getMetadata = async function() {
+      console.log('Using variation metadata:', window.getMetadataOverride);
+      return window.getMetadataOverride;
+    };
+    
+    // The most direct approach - monkey patch the texture directly in main.js
+    // This creates a getter that will replace the const texture value
+    Object.defineProperty(window, 'TEXTURE_PATH_OVERRIDE', {
+      value: '/content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg',
+      writable: false
+    });
+    
+    // Simple error handling for missing images
+    window.addEventListener('error', function(e) {
+      if (e.target.tagName === 'IMG') {
+        console.error('Image failed to load:', e.target.src);
+        // Use a fallback image if available
+        e.target.src = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg';
+      }
+    }, true);
+  </script>
 </head>
 <body>
   <div id="controls">
     <h3>Variation 178 of 332</h3>
-    <div class="source-info">Source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004...</div>
-    
-    <div style="font-size: 12px; max-height: 120px; overflow-y: auto; margin: 5px 0;">
-      <pre>radius: 0.0197
-cOffset: [-0.0094, 0.0071]
-mOffset: [-0.0214, 0.0333]
-yOffset: [-0.0047, 0.0051]
-kOffset: [22.65, 36.95]
-noiseAmp: 0.00021335</pre>
+    <div>
+      Source: ba4b8634...
+      <span class="source-type">TOB</span>
+    </div>
+    <div>
+      <small>Parameters:</small>
+      <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
+        radius: 2.24,
+        cOffset: [-0.0019, -0.0011],
+        mOffset: [-0.0066, 0.0082],
+        yOffset: [0.00035, 0.0016],
+        kOffset: [20000, 20000],
+        noiseAmp: 8.93e-06,
+        inkStatus: 0,
+        title: Triumph of Bitcoin,
+        wear: 50.0
+      }</pre>
     </div>
     
     <div class="nav-buttons">
-      <!-- Quick jump navigation -->
+      <!-- Enhanced navigation -->
       <button onclick="window.location.href='/test?id=0'">First</button>
       <button onclick="window.location.href='/test?id=78'">-100</button>
-      <button onclick="window.location.href='/test?id=128'">-50</button>
       <button onclick="window.location.href='/test?id=168'">-10</button>
       <button onclick="window.location.href='/test?id=173'">-5</button>
       <button onclick="window.location.href='/test?id=177'">Prev</button>
       <button onclick="window.location.href='/test?id=179'">Next</button>
       <button onclick="window.location.href='/test?id=183'">+5</button>
       <button onclick="window.location.href='/test?id=188'">+10</button>
-      <button onclick="window.location.href='/test?id=228'">+50</button>
       <button onclick="window.location.href='/test?id=278'">+100</button>
       <button onclick="window.location.href='/test?id=332'">Last</button>
-    </div>
-    
-    <!-- Random jump -->
-    <div style="margin-top: 5px;">
       <button onclick="window.location.href='/test?id=' + Math.floor(Math.random() * 333)">Random</button>
     </div>
   </div>
-
-  <script>
-    // Override metadata for testing
-    window.getMetadataOverride = {"radius": 0.01974133920064186, "cOffset": [-0.009354536350257752, 0.00706269943057437], "mOffset": [-0.021430276045773265, 0.0333], "yOffset": [-0.004741373026916091, 0.005112513330616434], "kOffset": [22.645082347027348, 36.947850691231714], "noiseAmp": 0.00021335297414254228, "sourceId": "ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0", "variationId": 178};
-    
-    // Create a new module script that modifies the texture before the main.js runs
-    const scriptText = `
-      // Override the texture constant in main.js
-      const originalFetch = window.fetch;
-      window.fetch = function(url, options) {
-        if (url === '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg') {
-          console.log('Redirecting texture fetch to: /content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg');
-          return originalFetch('/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg', options);
-        }
-        return originalFetch(url, options);
-      };
-    `;
-    
-    const script = document.createElement('script');
-    script.textContent = scriptText;
-    document.head.appendChild(script);
-    
-    // Override getMetadata in main.js
-    async function getMetadata() {
-      console.log('Using test metadata:', window.getMetadataOverride);
-      return window.getMetadataOverride;
-    }
-  </script>
   
-  <!-- Include the main JS that already has all the rendering code -->
+  <!-- Include main.js with module type -->
   <script type="module" src="/main.js"></script>
 </body>
 </html>
-    

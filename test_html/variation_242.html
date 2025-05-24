@@ -30,82 +30,89 @@
       border: none;
       border-radius: 3px;
       cursor: pointer;
+      margin: 3px;
     }
     button:hover {
       background: #666;
     }
-    .source-info {
-      font-size: 12px;
-      margin: 5px 0;
+    .source-type {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 5px;
+      font-size: 0.8em;
+      background: {"#6b8e23" if source_type == "TOS" else "#4169e1"};
     }
   </style>
+  
+  <!-- Replace the texture in main.js before it loads -->
+  <script>
+    console.log('Setting up texture override: /content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg');
+    
+    // Store metadata for the getMetadata function to use
+    window.getMetadataOverride = {"radius": 2.0063594103078812, "cOffset": [-0.003025097727339681, 0.0027769069726159205], "mOffset": [-0.0018820745164257115, -0.005101822008676301], "yOffset": [-0.0011019909109661213, -0.0004968558862104927], "kOffset": [20000, 20000], "noiseAmp": 5.61429212776195e-06, "colorMode": 0, "title": "Triumph of Bitcoin", "sourceId": "7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0", "variationId": 242, "outliers": [], "isOutlier": false};
+    
+    // Override the getMetadata function
+    window.getMetadata = async function() {
+      console.log('Using variation metadata:', window.getMetadataOverride);
+      return window.getMetadataOverride;
+    };
+    
+    // The most direct approach - monkey patch the texture directly in main.js
+    // This creates a getter that will replace the const texture value
+    Object.defineProperty(window, 'TEXTURE_PATH_OVERRIDE', {
+      value: '/content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg',
+      writable: false
+    });
+    
+    // Simple error handling for missing images
+    window.addEventListener('error', function(e) {
+      if (e.target.tagName === 'IMG') {
+        console.error('Image failed to load:', e.target.src);
+        // Use a fallback image if available
+        e.target.src = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg';
+      }
+    }, true);
+  </script>
 </head>
 <body>
   <div id="controls">
     <h3>Variation 242 of 332</h3>
-    <div class="source-info">Source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0...</div>
-    
-    <div style="font-size: 12px; max-height: 120px; overflow-y: auto; margin: 5px 0;">
-      <pre>radius: 0.0343
-cOffset: [-0.0009, 0.0079]
-mOffset: [-0.0018, 0.0033]
-yOffset: [0.0037, 0.0036]
-kOffset: [32.50, 30.02]
-noiseAmp: 0.00147515</pre>
+    <div>
+      Source: 7fcc33c4...
+      <span class="source-type">TOB</span>
+    </div>
+    <div>
+      <small>Parameters:</small>
+      <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
+        radius: 2.006359,
+        cOffset: [-0.003025, 0.002777],
+        mOffset: [-0.001882, -0.005102],
+        yOffset: [-0.001102, -0.000497],
+        kOffset: [20000.00, 20000.00],
+        noiseAmp: 0.00000561,
+        colorMode: 0
+        title: Triumph of Bitcoin
+      }</pre>
     </div>
     
     <div class="nav-buttons">
-      <!-- Quick jump navigation -->
+      <!-- Enhanced navigation -->
       <button onclick="window.location.href='/test?id=0'">First</button>
       <button onclick="window.location.href='/test?id=142'">-100</button>
-      <button onclick="window.location.href='/test?id=192'">-50</button>
       <button onclick="window.location.href='/test?id=232'">-10</button>
       <button onclick="window.location.href='/test?id=237'">-5</button>
       <button onclick="window.location.href='/test?id=241'">Prev</button>
       <button onclick="window.location.href='/test?id=243'">Next</button>
       <button onclick="window.location.href='/test?id=247'">+5</button>
       <button onclick="window.location.href='/test?id=252'">+10</button>
-      <button onclick="window.location.href='/test?id=292'">+50</button>
       <button onclick="window.location.href='/test?id=332'">+100</button>
       <button onclick="window.location.href='/test?id=332'">Last</button>
-    </div>
-    
-    <!-- Random jump -->
-    <div style="margin-top: 5px;">
       <button onclick="window.location.href='/test?id=' + Math.floor(Math.random() * 333)">Random</button>
     </div>
   </div>
-
-  <script>
-    // Override metadata for testing
-    window.getMetadataOverride = {"radius": 0.03428651222103665, "cOffset": [-0.0008923178383466127, 0.007883676688973289], "mOffset": [-0.0018203227418063309, 0.00333], "yOffset": [0.0036671204159278254, 0.00360145917246255], "kOffset": [32.502977521318975, 30.019336532236597], "noiseAmp": 0.001475147864956764, "sourceId": "7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0", "variationId": 242};
-    
-    // Create a new module script that modifies the texture before the main.js runs
-    const scriptText = `
-      // Override the texture constant in main.js
-      const originalFetch = window.fetch;
-      window.fetch = function(url, options) {
-        if (url === '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg') {
-          console.log('Redirecting texture fetch to: /content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg');
-          return originalFetch('/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg', options);
-        }
-        return originalFetch(url, options);
-      };
-    `;
-    
-    const script = document.createElement('script');
-    script.textContent = scriptText;
-    document.head.appendChild(script);
-    
-    // Override getMetadata in main.js
-    async function getMetadata() {
-      console.log('Using test metadata:', window.getMetadataOverride);
-      return window.getMetadataOverride;
-    }
-  </script>
   
-  <!-- Include the main JS that already has all the rendering code -->
+  <!-- Include main.js with module type -->
   <script type="module" src="/main.js"></script>
 </body>
 </html>
-    

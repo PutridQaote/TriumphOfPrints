@@ -35,6 +35,20 @@
     button:hover {
       background: #666;
     }
+    .source-type {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 5px;
+      font-size: 0.8em;
+      background: {"#6b8e23" if source_type == "TOS" else "#4169e1"};
+    }
+    .debug-panel {
+      margin-top: 10px;
+      padding: 5px;
+      background: rgba(50,50,50,0.5);
+      border-radius: 3px;
+    }
   </style>
   
   <!-- Replace the texture in main.js before it loads -->
@@ -42,7 +56,7 @@
     console.log('Setting up texture override: /content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg');
     
     // Store metadata for the getMetadata function to use
-    window.getMetadataOverride = {"radius": 0.02308341072570586, "cOffset": [-0.0047645534718502, -0.007042219654615593], "mOffset": [-0.0018484752766154647, 0.00333], "yOffset": [0.0073629049995160714, 0.002898609154716055], "kOffset": [64.7886136699178, 46.48558250299442], "noiseAmp": 0.0014318795869695876, "sourceId": "6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0", "variationId": 271};
+    window.getMetadataOverride = {"radius": 2.1, "cOffset": [0.00156, 0.00162], "mOffset": [-7.64e-05, 0.0011], "yOffset": [-0.00538, 0.000353], "kOffset": [20000, 20000], "noiseAmp": 6.14e-06, "colorMode": 0, "title": "Triumph of Science", "wear": 55.3, "sourceId": "6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0", "variationId": 271, "outliers": [], "isOutlier": false};
     
     // Override the getMetadata function
     window.getMetadata = async function() {
@@ -57,55 +71,55 @@
       writable: false
     });
     
-    // Handle script loading to patch the texture value
-    document.addEventListener('DOMContentLoaded', function() {
-      // Load the main script but patch it first
-      const originalCreateElement = document.createElement;
-      document.createElement = function(tagName) {
-        const element = originalCreateElement.call(document, tagName);
-        if (tagName.toLowerCase() === 'script') {
-          const originalSetAttribute = element.setAttribute;
-          element.setAttribute = function(name, value) {
-            if (name === 'src' && value === '/main.js') {
-              console.log('Intercepting main.js load and adding texture override');
-              
-              // Add event listener to patch the code once it loads
-              element.addEventListener('load', function() {
-                console.log('Patching texture path with:', '/content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg');
-                
-                // Force override any texture fetch
-                const originalFetch = window.fetch;
-                window.fetch = function(url, options) {
-                  if (typeof url === 'string' && url.includes('.jpg')) {
-                    console.log('Redirecting texture fetch to:', '/content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg');
-                    return originalFetch('/content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg', options);
-                  }
-                  return originalFetch(url, options);
-                };
-              });
-            }
-            return originalSetAttribute.call(this, name, value);
-          };
-        }
-        return element;
-      };
-    });
+    // Simple error handling for missing images
+    window.addEventListener('error', function(e) {
+      if (e.target.tagName === 'IMG') {
+        console.error('Image failed to load:', e.target.src);
+        // Use a fallback image if available
+        e.target.src = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg';
+      }
+    }, true);
+    
+    // Add a debug helper function to test wear values directly
+    window.testWear = function(value) {
+      console.log("Testing wear value:", value);
+      window.getMetadataOverride.wear = Number(value);
+      document.location.reload();
+    }
   </script>
 </head>
 <body>
   <div id="controls">
     <h3>Variation 271 of 332</h3>
-    <div>Source: 6461c2a49eba6c...</div>
+    <div>
+      Source: 6461c2a4...
+      <span class="source-type">TOS</span>
+    </div>
     <div>
       <small>Parameters:</small>
       <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
-        radius: 0.023083,
-        cOffset: [-0.004765, -0.007042],
-        mOffset: [-0.001848, 0.003330],
-        yOffset: [0.007363, 0.002899],
-        kOffset: [64.79, 46.49],
-        noiseAmp: 0.00143188
+        radius: 2.1,
+        cOffset: [0.0016, 0.0016],
+        mOffset: [-7.6e-05, 0.0011],
+        yOffset: [-0.0054, 0.00035],
+        kOffset: [20000, 20000],
+        noiseAmp: 6.14e-06,
+        colorMode: 0,
+        title: Triumph of Science,
+        wear: 55.3
       }</pre>
+    </div>
+    
+    <!-- Add debug panel for testing wear values -->
+    <div class="debug-panel">
+      <div>Test Different Wear Values:</div>
+      <button onclick="testWear(10)">10</button>
+      <button onclick="testWear(50)">50</button>
+      <button onclick="testWear(100)">100</button>
+      <button onclick="testWear(200)">200</button>
+      <button onclick="testWear(500)">500</button>
+      <input type="number" id="customWear" style="width:60px" value="55.3" />
+      <button onclick="testWear(document.getElementById('customWear').value)">Apply</button>
     </div>
     
     <div class="nav-buttons">
@@ -123,27 +137,7 @@
       <button onclick="window.location.href='/test?id=' + Math.floor(Math.random() * 333)">Random</button>
     </div>
   </div>
-
-  <!-- For debugging purposes -->
-  <div id="debug" style="position:fixed; bottom:0; left:0; color:white; background:rgba(0,0,0,0.5); padding:5px; font-size:12px; display:none;"></div>
   
-  <script>
-    // Debug helper
-    function debug(msg) {
-      const debugEl = document.getElementById('debug');
-      debugEl.style.display = 'block';
-      debugEl.innerHTML += msg + '<br>';
-      console.log(msg);
-    }
-    
-    // Check what's going on with main.js
-    window.addEventListener('error', function(e) {
-      debug('Error: ' + e.message + ' at ' + e.filename + ':' + e.lineno);
-    });
-    
-    debug('Using texture path: /content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg');
-  </script>
-
   <!-- Include main.js with module type -->
   <script type="module" src="/main.js"></script>
 </body>

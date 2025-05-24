@@ -30,82 +30,117 @@
       border: none;
       border-radius: 3px;
       cursor: pointer;
+      margin: 3px;
     }
     button:hover {
       background: #666;
     }
-    .source-info {
-      font-size: 12px;
-      margin: 5px 0;
+    .source-type {
+      display: inline-block;
+      padding: 2px 6px;
+      border-radius: 3px;
+      margin-left: 5px;
+      font-size: 0.8em;
+      background: {"#6b8e23" if source_type == "TOS" else "#4169e1"};
+    }
+    .debug-panel {
+      margin-top: 10px;
+      padding: 5px;
+      background: rgba(50,50,50,0.5);
+      border-radius: 3px;
     }
   </style>
+  
+  <!-- Replace the texture in main.js before it loads -->
+  <script>
+    console.log('Setting up texture override: /content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg');
+    
+    // Store metadata for the getMetadata function to use
+    window.getMetadataOverride = {"radius": 2.22, "cOffset": [-0.0012, 0.000448], "mOffset": [-0.00351, 0.00208], "yOffset": [0.002, 0.00228], "kOffset": [20000, 20000], "noiseAmp": 3.14e-06, "colorMode": 0, "title": "Triumph of Bitcoin", "wear": 77.0, "sourceId": "ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0", "variationId": 232, "outliers": [], "isOutlier": false};
+    console.log('Loaded variation data:', window.getMetadataOverride);
+    console.log('Wear from JSON:', window.getMetadataOverride.wear);
+    
+    // Override the getMetadata function
+    window.getMetadata = async function() {
+      console.log('Using variation metadata:', window.getMetadataOverride);
+      return window.getMetadataOverride;
+    };
+    
+    // The most direct approach - monkey patch the texture directly in main.js
+    // This creates a getter that will replace the const texture value
+    Object.defineProperty(window, 'TEXTURE_PATH_OVERRIDE', {
+      value: '/content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg',
+      writable: false
+    });
+    
+    // Simple error handling for missing images
+    window.addEventListener('error', function(e) {
+      if (e.target.tagName === 'IMG') {
+        console.error('Image failed to load:', e.target.src);
+        // Use a fallback image if available
+        e.target.src = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg';
+      }
+    }, true);
+    
+    // Add a debug helper function to test wear values directly
+    window.testWear = function(value) {
+      console.log("Testing wear value:", value);
+      window.getMetadataOverride.wear = Number(value);
+      document.location.reload();
+    }
+  </script>
 </head>
 <body>
   <div id="controls">
     <h3>Variation 232 of 332</h3>
-    <div class="source-info">Source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39...</div>
+    <div>
+      Source: ff08f64a...
+      <span class="source-type">TOB</span>
+    </div>
+    <div>
+      <small>Parameters:</small>
+      <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
+        radius: 2.22,
+        cOffset: [-0.0012, 0.00045],
+        mOffset: [-0.0035, 0.0021],
+        yOffset: [0.002, 0.0023],
+        kOffset: [20000, 20000],
+        noiseAmp: 3.14e-06,
+        colorMode: 0,
+        title: Triumph of Bitcoin,
+        wear: 77.0
+      }</pre>
+    </div>
     
-    <div style="font-size: 12px; max-height: 120px; overflow-y: auto; margin: 5px 0;">
-      <pre>radius: 0.0439
-cOffset: [-0.0069, 0.0081]
-mOffset: [0.0021, 0.0033]
-yOffset: [0.0035, 0.0011]
-kOffset: [39.30, 23.52]
-noiseAmp: 0.00110605</pre>
+    <!-- Add debug panel for testing wear values -->
+    <div class="debug-panel">
+      <div>Test Different Wear Values:</div>
+      <button onclick="testWear(10)">10</button>
+      <button onclick="testWear(50)">50</button>
+      <button onclick="testWear(100)">100</button>
+      <button onclick="testWear(200)">200</button>
+      <button onclick="testWear(500)">500</button>
+      <input type="number" id="customWear" style="width:60px" value="77.0" />
+      <button onclick="testWear(document.getElementById('customWear').value)">Apply</button>
     </div>
     
     <div class="nav-buttons">
-      <!-- Quick jump navigation -->
+      <!-- Enhanced navigation -->
       <button onclick="window.location.href='/test?id=0'">First</button>
       <button onclick="window.location.href='/test?id=132'">-100</button>
-      <button onclick="window.location.href='/test?id=182'">-50</button>
       <button onclick="window.location.href='/test?id=222'">-10</button>
       <button onclick="window.location.href='/test?id=227'">-5</button>
       <button onclick="window.location.href='/test?id=231'">Prev</button>
       <button onclick="window.location.href='/test?id=233'">Next</button>
       <button onclick="window.location.href='/test?id=237'">+5</button>
       <button onclick="window.location.href='/test?id=242'">+10</button>
-      <button onclick="window.location.href='/test?id=282'">+50</button>
       <button onclick="window.location.href='/test?id=332'">+100</button>
       <button onclick="window.location.href='/test?id=332'">Last</button>
-    </div>
-    
-    <!-- Random jump -->
-    <div style="margin-top: 5px;">
       <button onclick="window.location.href='/test?id=' + Math.floor(Math.random() * 333)">Random</button>
     </div>
   </div>
-
-  <script>
-    // Override metadata for testing
-    window.getMetadataOverride = {"radius": 0.04385520090300989, "cOffset": [-0.006871037084328344, 0.008103457583664144], "mOffset": [0.0020706134879260895, 0.00333], "yOffset": [0.003536754986070311, 0.0010863234523995286], "kOffset": [39.297856981261006, 23.52249247502406], "noiseAmp": 0.0011060496395434002, "sourceId": "ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0", "variationId": 232};
-    
-    // Create a new module script that modifies the texture before the main.js runs
-    const scriptText = `
-      // Override the texture constant in main.js
-      const originalFetch = window.fetch;
-      window.fetch = function(url, options) {
-        if (url === '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg') {
-          console.log('Redirecting texture fetch to: /content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg');
-          return originalFetch('/content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg', options);
-        }
-        return originalFetch(url, options);
-      };
-    `;
-    
-    const script = document.createElement('script');
-    script.textContent = scriptText;
-    document.head.appendChild(script);
-    
-    // Override getMetadata in main.js
-    async function getMetadata() {
-      console.log('Using test metadata:', window.getMetadataOverride);
-      return window.getMetadataOverride;
-    }
-  </script>
   
-  <!-- Include the main JS that already has all the rendering code -->
+  <!-- Include main.js with module type -->
   <script type="module" src="/main.js"></script>
 </body>
 </html>
-    

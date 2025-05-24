@@ -41,8 +41,9 @@ BASE_METADATA = {
   "yOffset": [0.0, 0.0],
   "kOffset": [20000, 20000],
   "noiseAmp": 0.0,
-  "colorMode": 0,
-  "title": "placeholder :)"
+  "inkStatus": 0,
+  "title": "placeholder will be set later",
+  "wear": 50  # Default wear value - smaller scale for better centering
 }
 
 # Allowed ± variance around each base value
@@ -53,7 +54,8 @@ PARAMETER_VARIANCES = {
   "yOffset": [0.0222, 0.0222],
   "kOffset": [0, 0],
   "noiseAmp": 0.0000888,
-  "colorMode": 0
+  "inkStatus": 0,
+  "wear": 80  # How much the wear can vary from base value
 }
 
 # Clustering factor for normal parameters (higher = tighter clustering)
@@ -69,11 +71,12 @@ NORMAL_CLUSTERING_FACTOR = 8.88
 OUTLIER_BASE_METADATA = {
   "radius": 2.2,                    # No change for radius - outlier not used
   "cOffset": [0.0333, -0.0333],     # Significant offset for cyan
-  "mOffset": [0.0333, -0.0333],       # Significant offset for magenta
+  "mOffset": [0.0333, -0.0333],     # Significant offset for magenta
   "yOffset": [0.0111, -0.0111],     # Significant offset for yellow
   "kOffset": [20000, 20000],        # No change for kOffset - outlier not used
   "noiseAmp": 0.0111,               # Much more noise
-  "colorMode": 0
+  "inkStatus": 0,
+  "wear": 70                       # Much more wear for outliers
 }
 
 OUTLIER_VARIANCE_MULTIPLIERS = {
@@ -81,7 +84,8 @@ OUTLIER_VARIANCE_MULTIPLIERS = {
     "mOffset": 5.0,  # 5x wider range for magenta offset outliers  
     "yOffset": 5.0,  # 5x wider range for yellow offset outliers
     "kOffset": 1.0,  # No change for kOffset
-    "noiseAmp": 4.20 # 4.2x wider range for noise amplitude outliers
+    "noiseAmp": 4.20, # 4.2x wider range for noise amplitude outliers
+    "wear": 1.2      # No change for wear
 }
 
 # Probability (0.0-1.0) of using the outlier value for each parameter
@@ -92,7 +96,8 @@ OUTLIER_PROBABILITIES = {
   "yOffset": 0.0111,     
   "kOffset": 0.0,                   # outlier not used
   "noiseAmp": 0.0222,
-  "colorMode": 0.0333  
+  "inkStatus": 0.0420,
+  "wear": 0.0222                   
 }
 
 OUTLIER_CASCADE_FACTOR = 4.20 # increases chances of subsequent outliers
@@ -101,7 +106,30 @@ OUTLIER_CASCADE_FACTOR = 4.20 # increases chances of subsequent outliers
 OUTLIER_CLUSTERING_FACTOR = 3.33  # Much more variance for outliers
 
 
-def be_random(base, delta, is_outlier=False):
+# def be_random(base, delta, is_outlier=False, direction="both"):
+#     """Return a normally-distributed random value centered on base,
+#        clamped to [base-delta, base+delta], with adjustable clustering.
+       
+#        direction: 'both' (default), 'up', or 'down' to control which way the value can go"""
+#     # Choose clustering factor based on whether this is an outlier
+#     clustering_factor = OUTLIER_CLUSTERING_FACTOR if is_outlier else NORMAL_CLUSTERING_FACTOR
+    
+#     # Calculate sigma based on clustering factor
+#     sigma = delta / clustering_factor
+#     val = random.gauss(base, sigma)
+    
+#     # Apply direction constraint
+#     if direction == "up":
+#         # Value can only go up from base, clamped to [base, base+delta]
+#         return max(base, min(base + delta, val))
+#     elif direction == "down":
+#         # Value can only go down from base, clamped to [base-delta, base]
+#         return max(base - delta, min(base, val))
+#     else:  # "both" - the default behavior
+#         # clamp to the allowed interval
+#         return max(base - delta, min(base + delta, val))
+
+def be_random(base, delta, is_outlier=False, direction="both"):
     """Return a normally-distributed random value centered on base,
        clamped to [base-delta, base+delta], with adjustable clustering."""
     # Choose clustering factor based on whether this is an outlier
@@ -120,22 +148,38 @@ def generate_variation(base_metadata, variances, source_id, variation_id):
     outlier_bonus = 1.0  # Starts at 1.0 (normal probability)
 
     # Create lists of all parameters by type
-    scalar_params = ["radius", "noiseAmp"]
+    scalar_params = ["radius", "noiseAmp"]  # Remove wear from scalar params
     vector_params = ["cOffset", "mOffset", "yOffset", "kOffset"]
     
-    # Combine and shuffle all parameters (except colorMode which is handled separately)
+    # Combine and shuffle all parameters (except inkStatus which is handled separately)
     all_params = scalar_params + vector_params
     random.shuffle(all_params)
     
-    # Handle colorMode first (or you could include it in the randomization if preferred)
-    base_probability = OUTLIER_PROBABILITIES["colorMode"]
+    # Handle inkStatus first (or you could include it in the randomization if preferred)
+    base_probability = OUTLIER_PROBABILITIES["inkStatus"]
     is_out = random.random() < (base_probability * outlier_bonus)
     if is_out:
-        variation["colorMode"] = random.randint(1, 6)
-        outliers_used.append("colorMode")
+        variation["inkStatus"] = random.randint(1, 6)
+        outliers_used.append("inkStatus")
         outlier_bonus = OUTLIER_CASCADE_FACTOR
     else:
-        variation["colorMode"] = 0
+        variation["inkStatus"] = 0
+    
+    # Handle wear parameter separately - only allow increases from base value
+    param = "wear"
+    base_probability = OUTLIER_PROBABILITIES[param]
+    is_out = random.random() < (base_probability * outlier_bonus)
+    if is_out:
+        outliers_used.append(param)
+        outlier_bonus = OUTLIER_CASCADE_FACTOR
+        base = OUTLIER_BASE_METADATA[param]
+        delta = variances[param]
+    else:
+        base = base_metadata[param]
+        delta = variances[param]
+    
+    # Apply the "up" direction constraint for wear
+    variation[param] = abs(be_random(base, delta, is_out, direction="up"))
     
     # Process all other parameters in random order
     for param in all_params:
@@ -185,6 +229,29 @@ def generate_variation(base_metadata, variances, source_id, variation_id):
         variation["title"] = "Triumph of Science"
     else:
         variation["title"] = "Triumph of Bitcoin"
+
+    # Format values to specified precision
+    # Round wear to one decimal place (tens place)
+    variation["wear"] = round(variation["wear"], 1)
+    
+    # Round radius to three significant digits
+    variation["radius"] = float(f"{variation['radius']:.3g}")
+    
+    # Round noiseAmp to three significant digits
+    variation["noiseAmp"] = float(f"{variation['noiseAmp']:.3g}")
+    
+    # Round offsets to two significant digits
+    for offset_key in ["cOffset", "mOffset", "yOffset"]:
+        variation[offset_key] = [
+            float(f"{variation[offset_key][0]:.3g}"), 
+            float(f"{variation[offset_key][1]:.3g}")
+        ]
+    
+    # Round kOffset to nearest integer
+    variation["kOffset"] = [
+        round(variation["kOffset"][0]), 
+        round(variation["kOffset"][1])
+    ]
 
     variation["sourceId"] = source_id
     variation["variationId"] = variation_id

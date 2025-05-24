@@ -50,7 +50,7 @@
     console.log('Setting up texture override: /content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg');
     
     // Store metadata for the getMetadata function to use
-    window.getMetadataOverride = {"radius": 0.013374087577652748, "cOffset": [-0.0034978252512438864, -0.00010756331551211146], "mOffset": [-0.010147452331534029, -0.0034711537162325974], "yOffset": [0.0029473974300878595, -0.0003609559629750754], "kOffset": [94.32066888973627, 100.33314257890225], "noiseAmp": -0.009645753610537744, "sourceId": "6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0", "variationId": 276};
+    window.getMetadataOverride = {"radius": 2.29, "cOffset": [0.00294, -0.00436], "mOffset": [-0.00269, -0.00418], "yOffset": [0.00246, 0.000511], "kOffset": [20000, 20000], "noiseAmp": 3.7e-08, "colorMode": 3, "title": "Triumph of Science", "wear": 56.1, "sourceId": "6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0", "variationId": 276, "outliers": ["colorMode", "wear"], "isOutlier": true};
     
     // Override the getMetadata function
     window.getMetadata = async function() {
@@ -85,12 +85,15 @@
     <div>
       <small>Parameters:</small>
       <pre style="font-size: 0.8em; max-height: 300px; overflow-y: auto;">{
-        radius: 0.013374,
-        cOffset: [-0.003498, -0.000108],
-        mOffset: [-0.010147, -0.003471],
-        yOffset: [0.002947, -0.000361],
-        kOffset: [94.32, 100.33],
-        noiseAmp: -0.00964575
+        radius: 2.29,
+        cOffset: [0.0029, -0.0044],
+        mOffset: [-0.0027, -0.0042],
+        yOffset: [0.0025, 0.00051],
+        kOffset: [20000, 20000],
+        noiseAmp: 3.7e-08,
+        colorMode: 3,
+        title: Triumph of Science,
+        wear: 56.1
       }</pre>
     </div>
     
