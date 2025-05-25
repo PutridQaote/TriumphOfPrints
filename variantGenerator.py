@@ -29,6 +29,10 @@ TOS_LIST = [
     "806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0",]
 
 
+METADATA_ORDER = [
+    'source', 'title', 'inkStatus', 'radius', 'noiseAmp',
+    'cOffset', 'mOffset', 'yOffset', 'kOffset']
+
 # Combine all source inscription IDs
 SOURCE_IDS = TOB_LIST + TOS_LIST
 TOTAL_VARIATIONS = 333
@@ -238,7 +242,7 @@ def generate_variation(base_metadata, variances, source_id, variation_id):
         round(variation["kOffset"][1])
     ]
 
-    variation["sourceId"] = source_id
+    variation["source"] = source_id
     variation["variationId"] = variation_id
     variation["outliers"] = outliers_used
     variation["isOutlier"] = bool(outliers_used)
@@ -279,7 +283,7 @@ def mainJson():
     # Variations per source
     sources_count = {}
     for var in all_vars:
-        sources_count[var["sourceId"]] = sources_count.get(var["sourceId"], 0) + 1
+        sources_count[var["source"]] = sources_count.get(var["source"], 0) + 1
     print("\nVariations per source:")
     for src, cnt in sources_count.items():
         print(f"   {src[:8]}... : {cnt}")
@@ -348,22 +352,17 @@ def mainYaml():
             # Generate the variation metadata
             v = generate_variation(BASE_METADATA, PARAMETER_VARIANCES, src, vid)
             
+            # Create ordered metadata dict following METADATA_ORDER
+            ordered_metadata = {}
             
-            # Create inscription entry
+            for key in METADATA_ORDER:
+                ordered_metadata[key] = v[key]
+            
+            # Create inscription entry with ordered metadata
             inscription = {
                 "file": "./inscribed.html",
                 "destination": None,
-                "metadata": {
-                    "radius": v["radius"],
-                    "cOffset": v["cOffset"],
-                    "mOffset": v["mOffset"],
-                    "yOffset": v["yOffset"],
-                    "kOffset": v["kOffset"],
-                    "noiseAmp": v["noiseAmp"],
-                    "inkStatus": v["inkStatus"],
-                    "title": v["title"],
-                    "sourceId": v["sourceId"]
-                }
+                "metadata": ordered_metadata
             }
             
             # Add to inscriptions list
@@ -372,7 +371,7 @@ def mainYaml():
             vid += 1
 
     # Write to YAML file
-    yaml_path = "all_variations.yaml"
+    yaml_path = "airdrop.yaml"
     with open(yaml_path, "w") as f:
         yaml.dump(yaml_data, f, default_flow_style=False, sort_keys=False)
     
@@ -381,12 +380,42 @@ def mainYaml():
     # Print outlier statistics
     print_outlier_stats(yaml_data["inscriptions"])
 
+
+
+
+def reorder_metadata(input_file, output_file, metadata_order=METADATA_ORDER):
+    # Read the existing YAML file
+    with open(input_file, 'r') as f:
+        data = yaml.safe_load(f)
+    
+    # Reorder metadata fields in each inscription
+    for inscription in data['inscriptions']:
+        if 'metadata' in inscription and inscription['metadata']:
+            # Create a new ordered metadata dictionary
+            metadata = inscription['metadata']
+            ordered_metadata = {}
+            
+            
+            for key in metadata_order:
+                if key in metadata:
+                    ordered_metadata[key] = metadata[key]
+            
+            # Replace the original metadata with ordered one
+            inscription['metadata'] = ordered_metadata
+    
+    # Write the reordered YAML
+    with open(output_file, 'w') as f:
+        yaml.dump(data, f, default_flow_style=False, sort_keys=False)
+    
+    print(f"Created {output_file} with reordered metadata fields")
+
+
 def print_outlier_stats(inscriptions):
     """Print statistics about the generated variations."""
     # Count variations per source
     sources_count = {}
     for insc in inscriptions:
-        src = insc["metadata"]["sourceId"]
+        src = insc["metadata"]["source"]
         sources_count[src] = sources_count.get(src, 0) + 1
     
     print("\nVariations per source:")
@@ -397,4 +426,6 @@ def print_outlier_stats(inscriptions):
 
 if __name__=="__main__":
     # mainJson()
-    mainYaml()
+    # mainYaml()
+
+    reorder_metadata("airdrop_SAFE_KEEP_20250524.yaml", "airdrop_yesterday_ordered.yaml")

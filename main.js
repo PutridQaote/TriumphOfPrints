@@ -1,23 +1,20 @@
 // TODO: When doing a test inscribe remove the .js and .jpg from these paths
 import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60a63a43eb925f28636i0';
-// const texture = window.TEXTURE_PATH_OVERRIDE || '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg'; // christian religion
-// const texture = window.TEXTURE_PATH_OVERRIDE || 'content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg' // bitcoin
-// const texture = window.TEXTURE_PATH_OVERRIDE || 'content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
-// const texture = 'content/6461c2a49eba6c8220bf4/72d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
-const texture = '/content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0' // bitcoin
 
-// TODO fix the aspect ratio of the main canvas so it's the original 900 x 860 aspect ratio
+// const texture = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg'; // christian religion
+// const texture = 'content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg' // bitcoin
+// const texture = 'content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
 
 const metadata = {
-  // radius: 0.02,
+  title: 'Triumph of Bitcoin',
+  inkStatus: 0,
   radius: 2.2,
+  noiseAmp: 0.0001,
   cOffset: [-0.00333, -0.00333],
   mOffset: [0.0003, -0.0003],
-  yOffset: [-0.0001, -0.0001],
+  yOffset: [-0.006, -0.006],
   kOffset: [20000, 20000],
-  noiseAmp: 0.00001,
-  inkStatus: 3,
-  title: 'Triumph of Bitcoin',
+  source: '/content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg' // bitcoin
 };
 
 const vertexShader = /* glsl */`
@@ -164,11 +161,13 @@ async function main(metadata) {
   // });
 
 
-  // 1. Create & style canvas
+  // // 1. Create & style canvas
   // const canvas = setupDOM({width, height, aspect: 1.04511, margin: 10});
   
   
   const canvas = setupDOM({width: 900, height: 860, aspect: 1.04511, margin: 10});
+
+
 
   const gl = canvas.getContext('webgl');
   if (!gl) throw new Error('WebGL not supported');
@@ -236,7 +235,7 @@ async function main(metadata) {
   gl.uniform1i(uImage, 0);
 
   // 8. Fetch & upload your image as a texture
-  const resp = await fetch(texture, { mode: 'cors' });
+  const resp = await fetch(metadata.source, { mode: 'cors' });
   if (!resp.ok) throw new Error('Image load error');
   const blob = await resp.blob();
   const imgBitmap = await createImageBitmap(blob);
@@ -288,6 +287,15 @@ async function getMetadata() {
     const uint8Metadata = hexToUint8Array(cborMetadata);
     const decoded = decode(uint8Metadata);
     console.log('decoded metadata', decoded);
+
+    // Ensure source path has the correct format
+    let source = decoded.source || 'ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0'; // use default if not provided
+    
+    // Add '/content/' prefix if it's not already there
+    if (!source.startsWith('/content/')) {
+      source = '/content/' + source;
+    }
+
     return {
       radius: decoded.radius,
       cOffset: decoded.cOffset,
@@ -296,7 +304,8 @@ async function getMetadata() {
       kOffset: decoded.kOffset,
       noiseAmp: decoded.noiseAmp,
       inkStatus: decoded.inkStatus,
-      title: decoded.title
+      title: decoded.title,
+      source: source
     };
   } catch {
     console.log('using default metadata');
