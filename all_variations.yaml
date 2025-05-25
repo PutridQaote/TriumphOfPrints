@@ -1,0 +1,6662 @@
+mode: separate-outputs
+inscriptions:
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.1
+    cOffset:
+    - 0.00199
+    - 0.00125
+    mOffset:
+    - -0.00298
+    - 0.00845
+    yOffset:
+    - -0.00745
+    - 0.000363
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.46e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.05
+    cOffset:
+    - -0.00171
+    - 0.00206
+    mOffset:
+    - 0.00238
+    - -0.00442
+    yOffset:
+    - -0.00228
+    - 0.00199
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.6e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.99
+    cOffset:
+    - 0.0032
+    - -0.000203
+    mOffset:
+    - -0.00268
+    - 0.00108
+    yOffset:
+    - -0.00065
+    - 0.00665
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.4e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.28
+    cOffset:
+    - 0.00439
+    - -0.00201
+    mOffset:
+    - -0.00488
+    - 0.00259
+    yOffset:
+    - -3.95e-05
+    - 0.00165
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.37e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.1
+    cOffset:
+    - 0.000293
+    - 0.00393
+    mOffset:
+    - 0.00435
+    - 0.0014
+    yOffset:
+    - 0.00113
+    - 0.00108
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.05e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.35
+    cOffset:
+    - 0.00283
+    - 0.00586
+    mOffset:
+    - -0.000843
+    - -0.00274
+    yOffset:
+    - -0.00204
+    - -0.00326
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.59e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.19
+    cOffset:
+    - 8.79e-05
+    - -0.00557
+    mOffset:
+    - -0.00249
+    - 0.00224
+    yOffset:
+    - 0.00246
+    - 0.000536
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.36e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.28
+    cOffset:
+    - 0.00205
+    - 3.44e-05
+    mOffset:
+    - 0.000807
+    - 0.0074
+    yOffset:
+    - -0.00172
+    - -0.000879
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.43e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.11
+    cOffset:
+    - -0.00228
+    - -0.00256
+    mOffset:
+    - 0.00472
+    - -0.00272
+    yOffset:
+    - -0.00202
+    - -0.000664
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.66e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.24
+    cOffset:
+    - 0.00536
+    - 6.02e-05
+    mOffset:
+    - 0.007
+    - 0.00118
+    yOffset:
+    - -0.00296
+    - 0.00166
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.16e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.05
+    cOffset:
+    - -0.00228
+    - 0.000931
+    mOffset:
+    - -0.00318
+    - -0.00346
+    yOffset:
+    - 0.00239
+    - 0.0017
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.21e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.26
+    cOffset:
+    - 0.00273
+    - 0.00106
+    mOffset:
+    - -0.00163
+    - 0.00502
+    yOffset:
+    - 0.0016
+    - 0.00188
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.05e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.04
+    cOffset:
+    - -0.00153
+    - 0.00345
+    mOffset:
+    - -0.00793
+    - 0.0132
+    yOffset:
+    - 0.00856
+    - -0.00314
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.53e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.29
+    cOffset:
+    - 0.000989
+    - -0.00342
+    mOffset:
+    - -0.00123
+    - -0.00252
+    yOffset:
+    - -0.0049
+    - 0.00138
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.16e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.58
+    cOffset:
+    - 0.00116
+    - 0.00318
+    mOffset:
+    - 0.00735
+    - 0.00534
+    yOffset:
+    - -0.00396
+    - 0.00262
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.93e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.04
+    cOffset:
+    - -0.00129
+    - 0.00414
+    mOffset:
+    - -0.000835
+    - 0.00194
+    yOffset:
+    - 0.000264
+    - -0.00026
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.1e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.19
+    cOffset:
+    - 0.0449
+    - -0.0343
+    mOffset:
+    - 0.00536
+    - 0.00332
+    yOffset:
+    - 0.00239
+    - -0.000678
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.35e-05
+    inkStatus: 3
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.1
+    cOffset:
+    - -0.00332
+    - 0.000572
+    mOffset:
+    - -0.000326
+    - 0.00266
+    yOffset:
+    - -0.000581
+    - -0.00445
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.26e-06
+    inkStatus: 4
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.13
+    cOffset:
+    - -0.00361
+    - 0.000372
+    mOffset:
+    - -0.003
+    - -0.00244
+    yOffset:
+    - -0.00357
+    - 0.00346
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.94e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.44
+    cOffset:
+    - -0.00127
+    - -0.00241
+    mOffset:
+    - 0.00338
+    - 0.00341
+    yOffset:
+    - -0.00386
+    - -0.00164
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.61e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.1
+    cOffset:
+    - 0.0016
+    - -0.00158
+    mOffset:
+    - 0.00102
+    - 0.00305
+    yOffset:
+    - -0.00171
+    - 0.00549
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.71e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - 0.00133
+    - -0.00484
+    mOffset:
+    - 0.0045
+    - -4.34e-05
+    yOffset:
+    - -0.000266
+    - 0.00234
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.04e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.92
+    cOffset:
+    - -0.0038
+    - 0.00208
+    mOffset:
+    - -0.00294
+    - 0.00427
+    yOffset:
+    - -0.00404
+    - 0.000412
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.12e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.01
+    cOffset:
+    - -0.00131
+    - 0.000759
+    mOffset:
+    - -0.00218
+    - 0.0016
+    yOffset:
+    - -0.00524
+    - 0.00322
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.38e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.47
+    cOffset:
+    - 9.96e-05
+    - -0.000814
+    mOffset:
+    - -0.00439
+    - 0.00772
+    yOffset:
+    - 0.000961
+    - -0.00412
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.58e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.22
+    cOffset:
+    - 0.000896
+    - -0.00234
+    mOffset:
+    - 0.0014
+    - -0.0104
+    yOffset:
+    - 0.00184
+    - -0.000631
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.59e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.49
+    cOffset:
+    - -0.00509
+    - 0.00123
+    mOffset:
+    - 0.0022
+    - -0.00407
+    yOffset:
+    - -0.00738
+    - 0.00076
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.44e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.29
+    cOffset:
+    - 0.00346
+    - 0.00128
+    mOffset:
+    - -0.00361
+    - 0.00335
+    yOffset:
+    - 0.00339
+    - 0.00307
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.29e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.3
+    cOffset:
+    - -0.000403
+    - 0.00148
+    mOffset:
+    - 0.0067
+    - -0.00121
+    yOffset:
+    - -0.00379
+    - 0.00113
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.09e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - 0.00512
+    - -0.00222
+    mOffset:
+    - 0.00444
+    - 0.00185
+    yOffset:
+    - 0.000357
+    - -0.00228
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.87e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - 0.00138
+    - -0.00191
+    mOffset:
+    - 0.00349
+    - -0.00326
+    yOffset:
+    - 0.00122
+    - 0.00125
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.11e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.16
+    cOffset:
+    - 0.00227
+    - 0.00378
+    mOffset:
+    - -0.0018
+    - 0.00199
+    yOffset:
+    - 0.000171
+    - -0.000892
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.47e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.14
+    cOffset:
+    - 0.0016
+    - -0.000792
+    mOffset:
+    - 0.0084
+    - -0.00427
+    yOffset:
+    - 0.00397
+    - 0.000265
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.4e-06
+    inkStatus: 1
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.32
+    cOffset:
+    - 0.00424
+    - 0.00694
+    mOffset:
+    - 0.00182
+    - -0.00035
+    yOffset:
+    - -0.00268
+    - 0.00136
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.38e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.49
+    cOffset:
+    - 0.00344
+    - 0.000255
+    mOffset:
+    - 0.00178
+    - -0.000123
+    yOffset:
+    - -0.00515
+    - 0.00123
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.0e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.1
+    cOffset:
+    - 0.00752
+    - -0.00177
+    mOffset:
+    - -0.00197
+    - -0.00397
+    yOffset:
+    - -0.00341
+    - -0.00243
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.66e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.19
+    cOffset:
+    - 0.000477
+    - -0.000643
+    mOffset:
+    - -0.00456
+    - -0.00117
+    yOffset:
+    - 0.00337
+    - -0.00323
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.75e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.2
+    cOffset:
+    - -0.0539
+    - 0.000907
+    mOffset:
+    - 0.0992
+    - -0.019
+    yOffset:
+    - -0.00509
+    - -0.000696
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.91e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.31
+    cOffset:
+    - 0.00404
+    - -8.41e-05
+    mOffset:
+    - 0.00476
+    - 0.000632
+    yOffset:
+    - 0.00122
+    - -0.00059
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.27e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.29
+    cOffset:
+    - 0.000448
+    - 0.00142
+    mOffset:
+    - 0.0028
+    - -0.0063
+    yOffset:
+    - 0.00472
+    - -0.000233
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.27e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.2
+    cOffset:
+    - -0.00316
+    - 0.00298
+    mOffset:
+    - 0.00174
+    - 0.00121
+    yOffset:
+    - 0.00297
+    - 0.00238
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.17e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.08
+    cOffset:
+    - 0.00381
+    - 6.49e-05
+    mOffset:
+    - -0.00497
+    - -0.00303
+    yOffset:
+    - 0.00111
+    - -0.00383
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.7e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.2
+    cOffset:
+    - -0.000184
+    - -0.00214
+    mOffset:
+    - -0.0104
+    - 0.00065
+    yOffset:
+    - -0.00208
+    - 0.00159
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.23e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.12
+    cOffset:
+    - 0.00119
+    - 0.00768
+    mOffset:
+    - -0.00446
+    - -0.00677
+    yOffset:
+    - -0.0245
+    - 0.041
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.88e-06
+    inkStatus: 3
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.25
+    cOffset:
+    - -0.00178
+    - -0.00297
+    mOffset:
+    - -0.00448
+    - -0.00196
+    yOffset:
+    - -0.00206
+    - 0.00464
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.71e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.47
+    cOffset:
+    - -0.000152
+    - 0.00108
+    mOffset:
+    - 0.00297
+    - -0.00432
+    yOffset:
+    - -0.00113
+    - -0.00274
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.97e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.41
+    cOffset:
+    - -0.000865
+    - 0.00087
+    mOffset:
+    - -0.000536
+    - -0.00261
+    yOffset:
+    - 0.0002
+    - 0.00159
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.57e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.08
+    cOffset:
+    - 0.000581
+    - 0.000208
+    mOffset:
+    - -0.0013
+    - -0.00171
+    yOffset:
+    - 0.00431
+    - 0.00177
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.01e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.04
+    cOffset:
+    - -0.00534
+    - -0.00632
+    mOffset:
+    - -0.00254
+    - 0.00959
+    yOffset:
+    - -0.00148
+    - -0.00555
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.43e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.23
+    cOffset:
+    - -0.00184
+    - -0.000607
+    mOffset:
+    - 0.00199
+    - 0.00274
+    yOffset:
+    - -0.0011
+    - 0.000416
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.39e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.23
+    cOffset:
+    - 0.00563
+    - 0.00239
+    mOffset:
+    - 0.012
+    - 0.00154
+    yOffset:
+    - 0.00185
+    - 0.0039
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.54e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.38
+    cOffset:
+    - 3.81e-05
+    - -0.00155
+    mOffset:
+    - 0.00128
+    - 0.00344
+    yOffset:
+    - 0.00526
+    - 0.00169
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.44e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.35
+    cOffset:
+    - 0.00517
+    - 0.000527
+    mOffset:
+    - -0.00742
+    - -0.000537
+    yOffset:
+    - -0.0018
+    - 0.00187
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.11e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.24
+    cOffset:
+    - 0.00148
+    - 0.00135
+    mOffset:
+    - 0.0159
+    - -0.0492
+    yOffset:
+    - 0.00141
+    - -0.00194
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.12e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.38
+    cOffset:
+    - -0.000745
+    - -0.00509
+    mOffset:
+    - -0.00884
+    - 0.00547
+    yOffset:
+    - 0.000796
+    - -0.00145
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.79e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.32
+    cOffset:
+    - 0.00249
+    - 0.00138
+    mOffset:
+    - -0.00277
+    - 0.000728
+    yOffset:
+    - -0.00175
+    - -0.000752
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.09e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.07
+    cOffset:
+    - -0.000853
+    - -0.000836
+    mOffset:
+    - 0.00774
+    - 0.00343
+    yOffset:
+    - -0.00498
+    - 0.000613
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.12e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.07
+    cOffset:
+    - 0.00358
+    - 0.00211
+    mOffset:
+    - -0.0117
+    - 0.00253
+    yOffset:
+    - 0.00285
+    - -0.00375
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.01e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.12
+    cOffset:
+    - -0.00225
+    - 0.00275
+    mOffset:
+    - 0.00137
+    - -0.00146
+    yOffset:
+    - 0.00326
+    - 0.000931
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.34e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.08
+    cOffset:
+    - 0.000672
+    - 0.00181
+    mOffset:
+    - -0.00415
+    - -0.00332
+    yOffset:
+    - 0.00294
+    - 0.00674
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.43e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.08
+    cOffset:
+    - 0.00546
+    - -0.00529
+    mOffset:
+    - -0.0034
+    - -0.00193
+    yOffset:
+    - -0.00497
+    - -0.000158
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.58e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.24
+    cOffset:
+    - 0.00331
+    - 0.000895
+    mOffset:
+    - -0.00103
+    - 0.00333
+    yOffset:
+    - -0.000854
+    - 0.000947
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.9e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.28
+    cOffset:
+    - 0.00285
+    - 0.00334
+    mOffset:
+    - 0.0324
+    - -0.0447
+    yOffset:
+    - 0.00126
+    - 0.00325
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.2e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.17
+    cOffset:
+    - 0.00507
+    - -0.000442
+    mOffset:
+    - -0.00444
+    - -0.00583
+    yOffset:
+    - 0.00112
+    - -0.0035
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.3e-06
+    inkStatus: 2
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.24
+    cOffset:
+    - 0.00175
+    - 0.00123
+    mOffset:
+    - 0.00366
+    - 0.00462
+    yOffset:
+    - -0.00124
+    - -0.00264
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.48e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.87
+    cOffset:
+    - 0.0031
+    - -0.00486
+    mOffset:
+    - 0.00163
+    - 0.00225
+    yOffset:
+    - 0.0035
+    - -0.00256
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.4e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.4
+    cOffset:
+    - -0.00146
+    - 0.00705
+    mOffset:
+    - 0.00457
+    - 0.00033
+    yOffset:
+    - 0.0023
+    - -0.000955
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.31e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.38
+    cOffset:
+    - 0.0011
+    - 0.000348
+    mOffset:
+    - -0.00562
+    - -0.000375
+    yOffset:
+    - -0.000412
+    - 0.000975
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.7e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.99
+    cOffset:
+    - -0.00197
+    - 0.00338
+    mOffset:
+    - -0.00381
+    - 0.00154
+    yOffset:
+    - -0.000604
+    - -0.000871
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.75e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.45
+    cOffset:
+    - 0.00165
+    - 0.00439
+    mOffset:
+    - -0.00768
+    - 0.00263
+    yOffset:
+    - -0.00104
+    - 0.0039
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.11e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.06
+    cOffset:
+    - 0.004
+    - 0.00303
+    mOffset:
+    - -0.00546
+    - 0.00606
+    yOffset:
+    - 0.00459
+    - 0.000175
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.48e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.02
+    cOffset:
+    - -0.00102
+    - -0.000795
+    mOffset:
+    - -0.00374
+    - -0.00343
+    yOffset:
+    - -0.00213
+    - 0.00647
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.44e-07
+    inkStatus: 4
+    title: Triumph of Bitcoin
+    sourceId: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.03
+    cOffset:
+    - 0.00286
+    - -0.00109
+    mOffset:
+    - -0.00207
+    - -0.00022
+    yOffset:
+    - -0.000708
+    - 0.00333
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.74e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.19
+    cOffset:
+    - -0.00207
+    - 0.00229
+    mOffset:
+    - 0.000629
+    - -0.000555
+    yOffset:
+    - -0.000338
+    - -0.000564
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.26e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.44
+    cOffset:
+    - -0.00352
+    - -0.00436
+    mOffset:
+    - -0.0083
+    - -0.00237
+    yOffset:
+    - 0.00454
+    - -0.000173
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.05e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.19
+    cOffset:
+    - -0.000782
+    - -0.00308
+    mOffset:
+    - 0.00101
+    - 0.00664
+    yOffset:
+    - 0.00109
+    - -0.00131
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.47e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.2
+    cOffset:
+    - -0.00284
+    - 0.0028
+    mOffset:
+    - -0.00145
+    - 0.00748
+    yOffset:
+    - -0.0048
+    - 0.00168
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.36e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.45
+    cOffset:
+    - -0.00897
+    - 0.00144
+    mOffset:
+    - 0.00665
+    - 0.00333
+    yOffset:
+    - 0.00388
+    - 0.000622
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.44e-06
+    inkStatus: 6
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.97
+    cOffset:
+    - 0.00155
+    - -0.000478
+    mOffset:
+    - -0.00319
+    - -0.00142
+    yOffset:
+    - 0.000454
+    - -0.00393
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.1e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.86
+    cOffset:
+    - -0.000684
+    - 0.000798
+    mOffset:
+    - 0.00492
+    - -0.00289
+    yOffset:
+    - -0.00679
+    - -0.00381
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.61e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.3
+    cOffset:
+    - -0.0017
+    - 0.00331
+    mOffset:
+    - 0.00464
+    - 0.0036
+    yOffset:
+    - 0.00204
+    - -0.000509
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.07e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.09
+    cOffset:
+    - -0.00158
+    - 0.000787
+    mOffset:
+    - -0.000324
+    - 0.000922
+    yOffset:
+    - 0.00212
+    - 0.00306
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.67e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.29
+    cOffset:
+    - 0.00605
+    - 0.000118
+    mOffset:
+    - 0.00182
+    - -0.00253
+    yOffset:
+    - 0.00218
+    - -0.00129
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.84e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.3
+    cOffset:
+    - 0.00149
+    - 0.00021
+    mOffset:
+    - 0.00536
+    - 0.00181
+    yOffset:
+    - -0.00179
+    - -0.00408
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.3e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.34
+    cOffset:
+    - -0.00416
+    - 0.0003
+    mOffset:
+    - -0.00211
+    - 0.00282
+    yOffset:
+    - 0.00217
+    - 0.00611
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.26e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.2
+    cOffset:
+    - 0.00473
+    - 0.000135
+    mOffset:
+    - 0.00145
+    - 0.00239
+    yOffset:
+    - -0.00144
+    - 0.00262
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.66e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.27
+    cOffset:
+    - -0.00623
+    - 0.00107
+    mOffset:
+    - 0.0109
+    - -0.00327
+    yOffset:
+    - -0.00161
+    - 0.0036
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.07e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.26
+    cOffset:
+    - 0.000402
+    - -0.0005
+    mOffset:
+    - -0.00169
+    - -9.9e-05
+    yOffset:
+    - -0.00176
+    - -0.00141
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.56e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.34
+    cOffset:
+    - -0.00159
+    - 0.00394
+    mOffset:
+    - 0.00137
+    - 0.00196
+    yOffset:
+    - 0.000113
+    - -0.00413
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.83e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - -0.00139
+    - 0.00332
+    mOffset:
+    - -0.000719
+    - 0.00183
+    yOffset:
+    - -0.000333
+    - 0.00359
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.74e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.33
+    cOffset:
+    - 0.000132
+    - 0.00203
+    mOffset:
+    - -0.000448
+    - 0.0075
+    yOffset:
+    - 0.0055
+    - 0.00158
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.13e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.05
+    cOffset:
+    - -0.00296
+    - -0.00112
+    mOffset:
+    - -0.00255
+    - -0.00442
+    yOffset:
+    - -0.000523
+    - -0.00327
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.34e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.22
+    cOffset:
+    - 0.00068
+    - -0.000196
+    mOffset:
+    - -0.00235
+    - -0.00155
+    yOffset:
+    - 0.0033
+    - -0.000106
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.45e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.22
+    cOffset:
+    - 0.000435
+    - 0.00124
+    mOffset:
+    - -0.00115
+    - -0.000998
+    yOffset:
+    - -0.00825
+    - 0.000588
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.88e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.06
+    cOffset:
+    - -0.00285
+    - 0.00147
+    mOffset:
+    - 0.00515
+    - -0.003
+    yOffset:
+    - -0.000611
+    - 5.64e-05
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.66e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.32
+    cOffset:
+    - 0.00277
+    - 0.0066
+    mOffset:
+    - -0.0477
+    - 0.111
+    yOffset:
+    - -0.000952
+    - -0.000905
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.74e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.04
+    cOffset:
+    - -0.000258
+    - -0.000723
+    mOffset:
+    - 0.00148
+    - -0.00569
+    yOffset:
+    - -0.000947
+    - -0.0046
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.7e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.23
+    cOffset:
+    - 0.00551
+    - -0.000535
+    mOffset:
+    - 0.00197
+    - -0.00155
+    yOffset:
+    - 0.000159
+    - 0.00127
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.11e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - -0.00255
+    - 0.0012
+    mOffset:
+    - 0.0039
+    - -0.0016
+    yOffset:
+    - 0.000462
+    - -0.00187
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.47e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.11
+    cOffset:
+    - 0.0029
+    - -0.00209
+    mOffset:
+    - -0.00866
+    - 0.0018
+    yOffset:
+    - 0.000361
+    - -0.00194
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.56e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - -0.000807
+    - 0.00147
+    mOffset:
+    - 0.00203
+    - 0.00303
+    yOffset:
+    - 0.00193
+    - 0.000591
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.58e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.09
+    cOffset:
+    - -0.000487
+    - -0.00317
+    mOffset:
+    - -0.0034
+    - -0.00627
+    yOffset:
+    - -0.00228
+    - -0.00179
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.2e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.25
+    cOffset:
+    - 0.0034
+    - 0.00332
+    mOffset:
+    - -0.00181
+    - -0.00148
+    yOffset:
+    - 0.00022
+    - 0.00219
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.83e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.5
+    cOffset:
+    - -0.00166
+    - -0.00176
+    mOffset:
+    - -0.000725
+    - -0.00662
+    yOffset:
+    - -0.00106
+    - -0.00312
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.69e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.33
+    cOffset:
+    - -0.00467
+    - 0.00246
+    mOffset:
+    - 0.00575
+    - 0.00377
+    yOffset:
+    - -0.00226
+    - -0.00114
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.07e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.3
+    cOffset:
+    - -0.00152
+    - 0.000605
+    mOffset:
+    - 0.00452
+    - -0.00787
+    yOffset:
+    - -0.00197
+    - 0.0027
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.26e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.22
+    cOffset:
+    - 0.0015
+    - 0.00146
+    mOffset:
+    - 0.000487
+    - -0.000364
+    yOffset:
+    - -0.00248
+    - 0.00223
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.23e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.15
+    cOffset:
+    - -0.00199
+    - -0.00102
+    mOffset:
+    - -0.000933
+    - -0.00346
+    yOffset:
+    - -0.00216
+    - 0.00147
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.11e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.2
+    cOffset:
+    - 0.00474
+    - -0.00036
+    mOffset:
+    - -0.00319
+    - -0.00135
+    yOffset:
+    - 0.00029
+    - -0.00118
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.94e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.09
+    cOffset:
+    - -0.00144
+    - 0.00279
+    mOffset:
+    - 0.000251
+    - 0.0013
+    yOffset:
+    - 0.00365
+    - 0.00284
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.21e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.31
+    cOffset:
+    - -0.00155
+    - -0.00258
+    mOffset:
+    - 0.000325
+    - -0.00127
+    yOffset:
+    - -0.000516
+    - 0.00154
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.1e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.43
+    cOffset:
+    - 0.000226
+    - -0.00202
+    mOffset:
+    - 0.00129
+    - -0.00402
+    yOffset:
+    - 0.000919
+    - -0.00303
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.01e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.94
+    cOffset:
+    - -0.00111
+    - -0.00312
+    mOffset:
+    - 0.00218
+    - -0.00316
+    yOffset:
+    - -0.00104
+    - 0.00481
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.72e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - 0.00315
+    - -0.000801
+    mOffset:
+    - -0.00219
+    - -0.00527
+    yOffset:
+    - 0.00211
+    - 0.00383
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.79e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.26
+    cOffset:
+    - -0.000197
+    - 0.00388
+    mOffset:
+    - -0.00371
+    - 0.00134
+    yOffset:
+    - 0.00257
+    - 0.00121
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.23e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.41
+    cOffset:
+    - 0.0012
+    - -0.00188
+    mOffset:
+    - -0.00572
+    - -0.000404
+    yOffset:
+    - -0.00153
+    - 0.00324
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.27e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.33
+    cOffset:
+    - -0.00678
+    - -0.00338
+    mOffset:
+    - 0.00184
+    - -0.00233
+    yOffset:
+    - 0.00353
+    - 0.00564
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.78e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - 0.00027
+    - 0.00542
+    mOffset:
+    - 8.36e-05
+    - 0.00138
+    yOffset:
+    - 0.00337
+    - 0.0071
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.35e-06
+    inkStatus: 5
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.1
+    cOffset:
+    - 0.00125
+    - 0.00388
+    mOffset:
+    - 0.000652
+    - -0.00197
+    yOffset:
+    - -0.00378
+    - -0.00274
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.91e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.24
+    cOffset:
+    - -0.00446
+    - -4.58e-05
+    mOffset:
+    - 0.00419
+    - -0.00244
+    yOffset:
+    - -0.000637
+    - -0.00403
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.45e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.11
+    cOffset:
+    - 0.00208
+    - -0.00164
+    mOffset:
+    - 0.00209
+    - 0.00509
+    yOffset:
+    - 0.00176
+    - 0.00363
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.27e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.34
+    cOffset:
+    - 0.000263
+    - 0.000659
+    mOffset:
+    - -0.00307
+    - -0.000828
+    yOffset:
+    - 0.00134
+    - 0.00658
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.23e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.94
+    cOffset:
+    - -0.00133
+    - -0.00379
+    mOffset:
+    - 0.00207
+    - -0.00694
+    yOffset:
+    - 0.00126
+    - -0.000912
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.72e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.3
+    cOffset:
+    - -0.000308
+    - 0.00249
+    mOffset:
+    - -0.0028
+    - -0.00633
+    yOffset:
+    - -0.00218
+    - -0.00176
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.31e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - 0.000893
+    - -0.000959
+    mOffset:
+    - -0.00292
+    - -0.00367
+    yOffset:
+    - 0.0048
+    - -0.0032
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.55e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - 0.00604
+    - 0.00438
+    mOffset:
+    - 0.00283
+    - 0.0015
+    yOffset:
+    - 0.00506
+    - -0.0013
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.55e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.16
+    cOffset:
+    - -0.000202
+    - -0.0014
+    mOffset:
+    - -0.00327
+    - -0.0023
+    yOffset:
+    - 0.00423
+    - -0.000706
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.77e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.04
+    cOffset:
+    - -0.0018
+    - 0.000623
+    mOffset:
+    - -0.00618
+    - 0.00176
+    yOffset:
+    - 0.00219
+    - 0.00212
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.29e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.42
+    cOffset:
+    - 0.00222
+    - -0.000299
+    mOffset:
+    - 0.00528
+    - -0.00194
+    yOffset:
+    - 0.00278
+    - 0.00197
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.58e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.41
+    cOffset:
+    - 0.00121
+    - 0.00196
+    mOffset:
+    - -0.00601
+    - -0.000338
+    yOffset:
+    - -0.00491
+    - -0.00193
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.47e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.36
+    cOffset:
+    - -0.00143
+    - -0.00189
+    mOffset:
+    - 0.00422
+    - -0.00202
+    yOffset:
+    - 0.00173
+    - 0.00222
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.35e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - -0.00559
+    - 0.000353
+    mOffset:
+    - 0.00505
+    - 0.00255
+    yOffset:
+    - 0.00111
+    - 0.0051
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.53e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.07
+    cOffset:
+    - 0.00421
+    - 0.000645
+    mOffset:
+    - -0.00792
+    - 0.00495
+    yOffset:
+    - 0.0026
+    - -0.0033
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.18e-08
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.43
+    cOffset:
+    - -0.00569
+    - -0.00168
+    mOffset:
+    - -0.00049
+    - -0.00551
+    yOffset:
+    - -0.00421
+    - -0.0011
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.21e-06
+    inkStatus: 3
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.32
+    cOffset:
+    - 0.000262
+    - -0.00191
+    mOffset:
+    - 0.00201
+    - -0.000601
+    yOffset:
+    - -0.00228
+    - -0.00152
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.89e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.3
+    cOffset:
+    - -0.00189
+    - -0.000401
+    mOffset:
+    - 0.00263
+    - -0.00188
+    yOffset:
+    - -0.000616
+    - -0.00352
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.88e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.01
+    cOffset:
+    - -0.00663
+    - -0.0357
+    mOffset:
+    - 0.000651
+    - -0.00657
+    yOffset:
+    - 0.003
+    - 0.00113
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.88e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.15
+    cOffset:
+    - -0.00488
+    - -0.000123
+    mOffset:
+    - -0.000994
+    - -0.00381
+    yOffset:
+    - 0.000349
+    - 0.00247
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.99e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.13
+    cOffset:
+    - 0.00183
+    - -0.000228
+    mOffset:
+    - 0.00251
+    - -0.00199
+    yOffset:
+    - -0.00478
+    - -0.00279
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.72e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.24
+    cOffset:
+    - -0.0214
+    - 0.00104
+    mOffset:
+    - 0.00625
+    - 0.00234
+    yOffset:
+    - 0.00386
+    - -0.00424
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.51e-05
+    inkStatus: 6
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.26
+    cOffset:
+    - -0.00138
+    - -0.00079
+    mOffset:
+    - -0.000452
+    - -0.000473
+    yOffset:
+    - 0.00089
+    - 0.00476
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.59e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.23
+    cOffset:
+    - -0.00286
+    - -0.00268
+    mOffset:
+    - -0.0023
+    - 0.00535
+    yOffset:
+    - -0.00469
+    - -0.000991
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.48e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.1
+    cOffset:
+    - -0.00272
+    - 0.00219
+    mOffset:
+    - -0.00615
+    - 0.00138
+    yOffset:
+    - 0.00521
+    - -0.00236
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.0e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.07
+    cOffset:
+    - 0.00575
+    - 0.00218
+    mOffset:
+    - 0.00197
+    - -0.000812
+    yOffset:
+    - 0.000409
+    - -0.00297
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.98e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.08
+    cOffset:
+    - 0.000208
+    - 0.00115
+    mOffset:
+    - 0.00171
+    - -0.00203
+    yOffset:
+    - 0.00202
+    - 0.00188
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.56e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.08
+    cOffset:
+    - -0.00745
+    - -0.002
+    mOffset:
+    - -0.00227
+    - -0.000984
+    yOffset:
+    - 0.000619
+    - 0.000184
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.05e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.04
+    cOffset:
+    - 0.00163
+    - -0.0018
+    mOffset:
+    - -0.00204
+    - -0.000109
+    yOffset:
+    - 0.00398
+    - 0.000634
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.33e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.47
+    cOffset:
+    - 0.000308
+    - 0.00377
+    mOffset:
+    - 0.00059
+    - -0.00241
+    yOffset:
+    - 0.00127
+    - 0.00103
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.03e-07
+    inkStatus: 3
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.12
+    cOffset:
+    - 0.000829
+    - -0.00333
+    mOffset:
+    - 0.00583
+    - 0.000568
+    yOffset:
+    - -0.00172
+    - 0.00612
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.9e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.42
+    cOffset:
+    - -0.00273
+    - 0.00507
+    mOffset:
+    - 0.00501
+    - 0.00764
+    yOffset:
+    - -0.00601
+    - 0.00171
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.75e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.27
+    cOffset:
+    - 0.00267
+    - -0.00217
+    mOffset:
+    - -0.00851
+    - 0.00109
+    yOffset:
+    - -0.000525
+    - 0.0012
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.54e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.03
+    cOffset:
+    - -0.000368
+    - 0.00346
+    mOffset:
+    - -0.00347
+    - 0.00216
+    yOffset:
+    - -0.0016
+    - 0.00454
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.21e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.99
+    cOffset:
+    - -0.00122
+    - -0.00156
+    mOffset:
+    - -0.00332
+    - 0.00167
+    yOffset:
+    - 0.0403
+    - 0.0351
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.52e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.13
+    cOffset:
+    - -0.00159
+    - -0.00522
+    mOffset:
+    - -0.00491
+    - 0.00449
+    yOffset:
+    - -0.0017
+    - -0.000413
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.82e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.07
+    cOffset:
+    - -0.00634
+    - -0.00181
+    mOffset:
+    - -0.00506
+    - 0.0069
+    yOffset:
+    - 0.00569
+    - -0.00163
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.36e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.05
+    cOffset:
+    - 0.00199
+    - 0.00125
+    mOffset:
+    - 0.0207
+    - -0.00802
+    yOffset:
+    - 0.00111
+    - -0.00309
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.21e-06
+    inkStatus: 1
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.16
+    cOffset:
+    - 0.00313
+    - 0.00109
+    mOffset:
+    - -0.00164
+    - 0.00091
+    yOffset:
+    - 0.00117
+    - -0.00138
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.63e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - -0.00331
+    - -0.00112
+    mOffset:
+    - 0.00578
+    - -0.00421
+    yOffset:
+    - 0.00129
+    - 0.000378
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.3e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.23
+    cOffset:
+    - -0.000687
+    - -0.00023
+    mOffset:
+    - -0.00377
+    - -0.00175
+    yOffset:
+    - 0.00209
+    - -0.000951
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.64e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.31
+    cOffset:
+    - -0.00507
+    - 0.000368
+    mOffset:
+    - -0.00402
+    - 0.00211
+    yOffset:
+    - 0.00415
+    - -0.00257
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.82e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.12
+    cOffset:
+    - 0.00515
+    - -0.000952
+    mOffset:
+    - -0.00464
+    - 0.00731
+    yOffset:
+    - -0.00243
+    - 0.00455
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 0.000151
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.98
+    cOffset:
+    - 0.00133
+    - 5.14e-05
+    mOffset:
+    - -0.000946
+    - 0.000829
+    yOffset:
+    - 0.00395
+    - 0.0047
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.63e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.41
+    cOffset:
+    - -0.0034
+    - 0.00053
+    mOffset:
+    - -0.000152
+    - 0.00842
+    yOffset:
+    - 0.00402
+    - 0.00282
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.36e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.08
+    cOffset:
+    - 0.00481
+    - -0.00567
+    mOffset:
+    - 0.00132
+    - 0.00137
+    yOffset:
+    - -0.000733
+    - -0.00468
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.63e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.89
+    cOffset:
+    - 0.00156
+    - -0.000511
+    mOffset:
+    - -0.00393
+    - 0.00321
+    yOffset:
+    - 0.002
+    - -0.000856
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.44e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.26
+    cOffset:
+    - 0.000769
+    - -0.00357
+    mOffset:
+    - 0.00747
+    - 0.00188
+    yOffset:
+    - -0.00181
+    - 0.00214
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.6e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.07
+    cOffset:
+    - -0.00213
+    - -0.00338
+    mOffset:
+    - -0.00682
+    - -0.013
+    yOffset:
+    - 0.00131
+    - 0.00187
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.91e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.23
+    cOffset:
+    - 0.00147
+    - -0.00271
+    mOffset:
+    - -0.00126
+    - 0.00328
+    yOffset:
+    - 0.00298
+    - -0.00359
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.07e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.06
+    cOffset:
+    - -0.00206
+    - -0.00334
+    mOffset:
+    - 0.000397
+    - -0.000299
+    yOffset:
+    - 0.00797
+    - 0.000202
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.03e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.08
+    cOffset:
+    - 0.000114
+    - -0.00322
+    mOffset:
+    - -0.000867
+    - 0.00831
+    yOffset:
+    - 0.00228
+    - -0.00155
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.55e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.12
+    cOffset:
+    - 0.00125
+    - 0.00239
+    mOffset:
+    - -0.0045
+    - -0.000676
+    yOffset:
+    - 0.00017
+    - -0.0056
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.44e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.42
+    cOffset:
+    - 0.000181
+    - -0.00135
+    mOffset:
+    - -0.00154
+    - 0.00383
+    yOffset:
+    - -0.00313
+    - -0.000289
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.38e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - -0.00206
+    - -0.00312
+    mOffset:
+    - 0.000687
+    - -0.00229
+    yOffset:
+    - -0.000353
+    - 0.00435
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.86e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.32
+    cOffset:
+    - -0.000609
+    - 0.00123
+    mOffset:
+    - 0.00245
+    - -0.00562
+    yOffset:
+    - 0.00349
+    - -0.000937
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.13e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.29
+    cOffset:
+    - 0.00252
+    - -0.00323
+    mOffset:
+    - 0.00162
+    - 0.000987
+    yOffset:
+    - -0.000168
+    - 0.000819
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.86e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.17
+    cOffset:
+    - -0.00086
+    - -0.00296
+    mOffset:
+    - -0.00305
+    - 0.00153
+    yOffset:
+    - -0.00145
+    - -0.00156
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.21e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.13
+    cOffset:
+    - -0.000989
+    - 0.00266
+    mOffset:
+    - -0.00502
+    - 0.00527
+    yOffset:
+    - -0.000301
+    - -0.00433
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.3e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.11
+    cOffset:
+    - -0.000301
+    - 0.000871
+    mOffset:
+    - -0.00117
+    - 0.00534
+    yOffset:
+    - -0.000649
+    - 0.00515
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.38e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.46
+    cOffset:
+    - -0.00571
+    - -0.00132
+    mOffset:
+    - -0.00165
+    - -0.00482
+    yOffset:
+    - -0.00169
+    - -0.000741
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.9e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - -0.000345
+    - 0.00222
+    mOffset:
+    - -0.00154
+    - 0.00221
+    yOffset:
+    - 0.000934
+    - 0.000477
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.92e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.25
+    cOffset:
+    - -0.00161
+    - -0.00304
+    mOffset:
+    - -0.00223
+    - 0.0021
+    yOffset:
+    - -0.00285
+    - -0.00327
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.23e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.44
+    cOffset:
+    - 0.00115
+    - 0.00225
+    mOffset:
+    - 0.00224
+    - -0.00444
+    yOffset:
+    - 0.000334
+    - -0.00159
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.47e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.12
+    cOffset:
+    - -0.00229
+    - -0.000357
+    mOffset:
+    - 0.00102
+    - -0.00077
+    yOffset:
+    - -0.00308
+    - 0.00372
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.29e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.22
+    cOffset:
+    - 0.0023
+    - -0.00178
+    mOffset:
+    - -0.00225
+    - 0.00621
+    yOffset:
+    - -0.00412
+    - 0.00409
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.12e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.31
+    cOffset:
+    - -0.000162
+    - -0.00493
+    mOffset:
+    - 0.00278
+    - -0.00113
+    yOffset:
+    - 0.00264
+    - 0.00156
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.28e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.24
+    cOffset:
+    - -0.000753
+    - 0.00266
+    mOffset:
+    - -0.00726
+    - 0.0125
+    yOffset:
+    - 0.000642
+    - -0.00161
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.67e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.12
+    cOffset:
+    - 0.00224
+    - -0.0035
+    mOffset:
+    - 0.00134
+    - -0.00179
+    yOffset:
+    - -0.000136
+    - -0.000989
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.17e-06
+    inkStatus: 4
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.06
+    cOffset:
+    - 0.00102
+    - 0.00309
+    mOffset:
+    - -0.000162
+    - -0.000608
+    yOffset:
+    - -0.00296
+    - 0.00144
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.35e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.1
+    cOffset:
+    - 0.000749
+    - 0.00194
+    mOffset:
+    - -0.00361
+    - -0.00042
+    yOffset:
+    - -0.00239
+    - 0.000351
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.39e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.05
+    cOffset:
+    - -0.00111
+    - -0.00186
+    mOffset:
+    - -0.00598
+    - -0.00741
+    yOffset:
+    - -0.0036
+    - 0.00175
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.84e-06
+    inkStatus: 2
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.15
+    cOffset:
+    - -0.00402
+    - -0.00488
+    mOffset:
+    - -6.78e-05
+    - 0.00369
+    yOffset:
+    - 0.00121
+    - 0.000908
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.33e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.2
+    cOffset:
+    - 0.00418
+    - 0.00186
+    mOffset:
+    - 0.00624
+    - 0.00204
+    yOffset:
+    - 0.00258
+    - -0.00313
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.5e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.0
+    cOffset:
+    - 8.39e-05
+    - 4.48e-05
+    mOffset:
+    - 0.000664
+    - 0.000606
+    yOffset:
+    - -0.0015
+    - 0.00152
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.8e-05
+    inkStatus: 5
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.12
+    cOffset:
+    - -0.00413
+    - -0.00268
+    mOffset:
+    - 0.00321
+    - 0.0038
+    yOffset:
+    - 0.000413
+    - -0.00205
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.03e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.47
+    cOffset:
+    - 0.00513
+    - -0.000639
+    mOffset:
+    - -0.00302
+    - 0.0048
+    yOffset:
+    - -0.000548
+    - -0.00504
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.64e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.26
+    cOffset:
+    - -0.00193
+    - -0.0047
+    mOffset:
+    - -0.00278
+    - 0.00218
+    yOffset:
+    - 0.000769
+    - -0.00375
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.1e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.31
+    cOffset:
+    - 0.00265
+    - 0.00287
+    mOffset:
+    - 0.00569
+    - 0.00572
+    yOffset:
+    - -0.00367
+    - -0.00494
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.54e-05
+    inkStatus: 6
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.16
+    cOffset:
+    - 0.00565
+    - -0.00554
+    mOffset:
+    - 0.00187
+    - 0.00919
+    yOffset:
+    - 0.00404
+    - -0.000685
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.88e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.37
+    cOffset:
+    - 0.000412
+    - 0.00346
+    mOffset:
+    - -0.0124
+    - -0.000811
+    yOffset:
+    - -0.000573
+    - -0.0005
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.32e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.16
+    cOffset:
+    - -0.0442
+    - -0.0251
+    mOffset:
+    - -0.00034
+    - 0.00236
+    yOffset:
+    - 0.000956
+    - 0.00152
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 0.000248
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.33
+    cOffset:
+    - 0.0037
+    - 0.00288
+    mOffset:
+    - 0.0115
+    - 0.00154
+    yOffset:
+    - 0.00362
+    - 0.00508
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.54e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.17
+    cOffset:
+    - 0.0042
+    - 0.00355
+    mOffset:
+    - 0.00235
+    - -0.00205
+    yOffset:
+    - 0.00205
+    - 0.00174
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.12e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.35
+    cOffset:
+    - 0.00257
+    - -0.00369
+    mOffset:
+    - -0.00103
+    - 0.00527
+    yOffset:
+    - -0.000463
+    - -0.00132
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.86e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.12
+    cOffset:
+    - -0.00173
+    - 0.00194
+    mOffset:
+    - 0.00483
+    - -0.00146
+    yOffset:
+    - 0.000243
+    - -0.000888
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.9e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.15
+    cOffset:
+    - 0.0068
+    - -0.00189
+    mOffset:
+    - -0.00103
+    - -0.00673
+    yOffset:
+    - 0.00214
+    - -0.00287
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.54e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.02
+    cOffset:
+    - -0.00279
+    - 0.00144
+    mOffset:
+    - -0.000246
+    - 0.000142
+    yOffset:
+    - 0.00216
+    - -0.00391
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.1e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.31
+    cOffset:
+    - -0.00366
+    - 0.00196
+    mOffset:
+    - 0.0133
+    - -0.0104
+    yOffset:
+    - 0.000541
+    - -0.00264
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.42e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.26
+    cOffset:
+    - -0.00114
+    - -0.000584
+    mOffset:
+    - 0.00649
+    - -0.00399
+    yOffset:
+    - -0.00127
+    - 0.00167
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.53e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.08
+    cOffset:
+    - -0.000787
+    - -0.00388
+    mOffset:
+    - -0.000684
+    - -0.00258
+    yOffset:
+    - 0.003
+    - 0.00158
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.47e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.2
+    cOffset:
+    - -0.0046
+    - 0.00336
+    mOffset:
+    - 0.00943
+    - 0.00248
+    yOffset:
+    - 0.00226
+    - 0.000258
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.94e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.27
+    cOffset:
+    - 0.00249
+    - 0.00723
+    mOffset:
+    - 0.00398
+    - 0.00115
+    yOffset:
+    - -0.00238
+    - -0.00235
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.03e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - 0.00559
+    - 0.000864
+    mOffset:
+    - 0.00239
+    - 0.00391
+    yOffset:
+    - 0.00298
+    - 0.000392
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.69e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.06
+    cOffset:
+    - 0.00251
+    - 0.00244
+    mOffset:
+    - -0.00412
+    - -0.00154
+    yOffset:
+    - 0.000205
+    - 0.00473
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.03e-05
+    inkStatus: 6
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.08
+    cOffset:
+    - 0.00425
+    - -0.00132
+    mOffset:
+    - 0.00192
+    - -0.00422
+    yOffset:
+    - 0.00194
+    - 0.000304
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.63e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.05
+    cOffset:
+    - -0.00283
+    - -3.28e-05
+    mOffset:
+    - -0.00806
+    - 0.00523
+    yOffset:
+    - -0.000772
+    - -0.00151
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.32e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.22
+    cOffset:
+    - 0.00036
+    - 0.0043
+    mOffset:
+    - -0.0052
+    - 0.000269
+    yOffset:
+    - -0.00335
+    - -0.00327
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.31e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.91
+    cOffset:
+    - 0.00125
+    - -0.00127
+    mOffset:
+    - 0.00689
+    - 0.00165
+    yOffset:
+    - -0.00448
+    - -0.000856
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.53e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.9
+    cOffset:
+    - 2.55e-05
+    - 0.0013
+    mOffset:
+    - 0.00512
+    - 0.00467
+    yOffset:
+    - 0.00187
+    - -0.00335
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 0.000154
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.15
+    cOffset:
+    - 0.00264
+    - -0.00127
+    mOffset:
+    - -0.00695
+    - -0.000723
+    yOffset:
+    - -0.000334
+    - 0.00501
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.34e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.22
+    cOffset:
+    - -0.0007
+    - -0.0015
+    mOffset:
+    - 0.00439
+    - -0.00299
+    yOffset:
+    - 0.00273
+    - 0.00356
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.33e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.42
+    cOffset:
+    - -0.00187
+    - 0.00156
+    mOffset:
+    - 0.00183
+    - 1.58e-05
+    yOffset:
+    - 0.00319
+    - -0.000743
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.6e-05
+    inkStatus: 1
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.36
+    cOffset:
+    - 0.00203
+    - 0.0019
+    mOffset:
+    - -0.000224
+    - -0.00537
+    yOffset:
+    - -0.000885
+    - 0.0014
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.21e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.02
+    cOffset:
+    - -0.00137
+    - -0.00212
+    mOffset:
+    - -0.00878
+    - -0.00708
+    yOffset:
+    - 0.00238
+    - 0.000989
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.73e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - -0.001
+    - 0.0018
+    mOffset:
+    - 0.000398
+    - -0.00241
+    yOffset:
+    - 0.000754
+    - 0.00393
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.08e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.55
+    cOffset:
+    - 0.00454
+    - -0.00101
+    mOffset:
+    - 0.00603
+    - 0.0022
+    yOffset:
+    - -0.0032
+    - -0.00239
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.13e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.48
+    cOffset:
+    - 0.00125
+    - -0.00262
+    mOffset:
+    - 0.00619
+    - -0.000962
+    yOffset:
+    - -0.00324
+    - 0.00016
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.04e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.14
+    cOffset:
+    - -0.00433
+    - 0.000366
+    mOffset:
+    - -0.0656
+    - -0.0149
+    yOffset:
+    - 0.00107
+    - -0.00276
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.69e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.2
+    cOffset:
+    - 0.00048
+    - 0.00284
+    mOffset:
+    - -0.00256
+    - 0.00472
+    yOffset:
+    - -0.000262
+    - -0.0007
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.49e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.37
+    cOffset:
+    - 0.00624
+    - 0.00199
+    mOffset:
+    - -0.00242
+    - -0.00769
+    yOffset:
+    - 0.00304
+    - 0.00112
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.98e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.22
+    cOffset:
+    - 0.000906
+    - 0.00485
+    mOffset:
+    - -0.00833
+    - -0.00175
+    yOffset:
+    - -0.00223
+    - 0.00476
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.95e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.16
+    cOffset:
+    - -0.00226
+    - -0.00178
+    mOffset:
+    - -0.00355
+    - 0.000675
+    yOffset:
+    - 0.000915
+    - 0.00427
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.04e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.27
+    cOffset:
+    - -0.00253
+    - -0.00511
+    mOffset:
+    - 0.00299
+    - 0.00555
+    yOffset:
+    - 0.000805
+    - -0.000799
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.2e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.27
+    cOffset:
+    - -0.00201
+    - -0.00118
+    mOffset:
+    - -0.00112
+    - -0.00496
+    yOffset:
+    - 0.00151
+    - 0.00152
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.31e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.15
+    cOffset:
+    - 0.00163
+    - 0.00145
+    mOffset:
+    - -0.000556
+    - 0.00299
+    yOffset:
+    - -0.00284
+    - -0.000982
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.93e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.4
+    cOffset:
+    - -0.0039
+    - -0.00467
+    mOffset:
+    - -0.00161
+    - -0.00143
+    yOffset:
+    - -0.00111
+    - 0.00143
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.31e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.34
+    cOffset:
+    - 0.00161
+    - 0.00475
+    mOffset:
+    - -0.000665
+    - 0.00278
+    yOffset:
+    - 0.000775
+    - -0.00015
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.03e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.22
+    cOffset:
+    - -0.00343
+    - 0.00134
+    mOffset:
+    - 0.00259
+    - -0.00451
+    yOffset:
+    - -0.0046
+    - 0.00197
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.34e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.25
+    cOffset:
+    - 0.00098
+    - -0.0044
+    mOffset:
+    - 0.00297
+    - 0.0092
+    yOffset:
+    - 0.00179
+    - 0.00314
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.21e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.35
+    cOffset:
+    - 0.00488
+    - 0.00355
+    mOffset:
+    - 0.01
+    - 0.000505
+    yOffset:
+    - 0.00738
+    - -0.00219
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.61e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.89
+    cOffset:
+    - -0.00213
+    - -0.000585
+    mOffset:
+    - -0.00179
+    - 0.00498
+    yOffset:
+    - -0.00161
+    - -0.00271
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.04e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.88
+    cOffset:
+    - -0.00104
+    - -6.79e-05
+    mOffset:
+    - 0.00333
+    - 0.00229
+    yOffset:
+    - -0.00273
+    - 0.0112
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.26e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.08
+    cOffset:
+    - 0.00137
+    - -0.000991
+    mOffset:
+    - -0.00101
+    - -0.00272
+    yOffset:
+    - -0.00222
+    - 0.00165
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.11e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.28
+    cOffset:
+    - -0.00205
+    - -9.16e-07
+    mOffset:
+    - -0.003
+    - -0.00379
+    yOffset:
+    - -0.000642
+    - -0.000254
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.09e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.27
+    cOffset:
+    - -0.000855
+    - -0.00111
+    mOffset:
+    - -0.00325
+    - -0.000805
+    yOffset:
+    - -0.00186
+    - -0.00293
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.32e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.24
+    cOffset:
+    - 0.00263
+    - -0.00459
+    mOffset:
+    - 0.000868
+    - 0.00437
+    yOffset:
+    - 0.00345
+    - -3.66e-05
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.49e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.3
+    cOffset:
+    - 0.0491
+    - -0.0481
+    mOffset:
+    - -0.00258
+    - -0.00457
+    yOffset:
+    - -0.00277
+    - 0.00315
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.49e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.17
+    cOffset:
+    - 0.00334
+    - 0.00146
+    mOffset:
+    - 0.00778
+    - 0.000647
+    yOffset:
+    - 0.00628
+    - 0.0027
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.26e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.14
+    cOffset:
+    - -0.00284
+    - -0.00224
+    mOffset:
+    - 0.0078
+    - -0.00212
+    yOffset:
+    - -0.000898
+    - 0.00474
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.61e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.02
+    cOffset:
+    - 0.000273
+    - -0.00616
+    mOffset:
+    - 0.00104
+    - -0.00184
+    yOffset:
+    - -0.00177
+    - -0.000612
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.2e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.11
+    cOffset:
+    - -0.00273
+    - -0.00216
+    mOffset:
+    - 0.000685
+    - -0.00432
+    yOffset:
+    - 0.00186
+    - 0.000451
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.53e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.29
+    cOffset:
+    - 0.00197
+    - 0.00321
+    mOffset:
+    - -0.000244
+    - -0.00342
+    yOffset:
+    - 0.024
+    - -0.0568
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.29e-06
+    inkStatus: 6
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.14
+    cOffset:
+    - 0.00496
+    - -0.000141
+    mOffset:
+    - -0.0005
+    - -0.00337
+    yOffset:
+    - -0.00428
+    - 0.00446
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.6e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.04
+    cOffset:
+    - 0.00768
+    - 0.00392
+    mOffset:
+    - -0.008
+    - 0.00017
+    yOffset:
+    - -0.00278
+    - -0.00133
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.91e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.38
+    cOffset:
+    - -0.00162
+    - -0.00576
+    mOffset:
+    - 0.00554
+    - 0.00104
+    yOffset:
+    - -0.000974
+    - 0.00129
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.35e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.25
+    cOffset:
+    - 0.00195
+    - 0.0021
+    mOffset:
+    - -0.00926
+    - 0.00445
+    yOffset:
+    - 0.00104
+    - -0.00212
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.33e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.14
+    cOffset:
+    - 0.000482
+    - -0.000145
+    mOffset:
+    - 0.00181
+    - -0.00498
+    yOffset:
+    - 0.00317
+    - -0.000399
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.94e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.26
+    cOffset:
+    - -0.000985
+    - 0.000948
+    mOffset:
+    - 0.00474
+    - 0.00349
+    yOffset:
+    - -8.99e-05
+    - -7.59e-05
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.87e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.23
+    cOffset:
+    - 0.00506
+    - 0.00223
+    mOffset:
+    - -0.007
+    - 0.0014
+    yOffset:
+    - -0.0021
+    - -0.00278
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.27e-05
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.24
+    cOffset:
+    - -0.000514
+    - -0.000627
+    mOffset:
+    - -0.00904
+    - 0.00265
+    yOffset:
+    - -0.00537
+    - 0.00604
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.46e-05
+    inkStatus: 1
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.35
+    cOffset:
+    - -8.08e-05
+    - -0.00349
+    mOffset:
+    - -0.00424
+    - 0.000415
+    yOffset:
+    - 0.0047
+    - 0.000789
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.92e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.42
+    cOffset:
+    - 0.00332
+    - 0.00407
+    mOffset:
+    - -0.00676
+    - 0.00395
+    yOffset:
+    - -0.00177
+    - 0.00322
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.01e-07
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.45
+    cOffset:
+    - -0.00078
+    - 0.00546
+    mOffset:
+    - -0.00516
+    - -0.000428
+    yOffset:
+    - 0.00188
+    - 0.00186
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.83e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.31
+    cOffset:
+    - 0.00502
+    - 0.00171
+    mOffset:
+    - -0.00771
+    - 0.00743
+    yOffset:
+    - -0.00147
+    - 0.00185
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.11e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.11
+    cOffset:
+    - -0.00131
+    - 0.00586
+    mOffset:
+    - 0.00562
+    - 0.00178
+    yOffset:
+    - -0.00119
+    - -0.00235
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.71e-06
+    inkStatus: 0
+    title: Triumph of Bitcoin
+    sourceId: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.33
+    cOffset:
+    - 0.00421
+    - -0.000394
+    mOffset:
+    - -2.57e-05
+    - 0.0032
+    yOffset:
+    - -0.00224
+    - -0.00205
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.38e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.16
+    cOffset:
+    - -0.00172
+    - 0.00098
+    mOffset:
+    - -0.00779
+    - 0.00403
+    yOffset:
+    - -0.00113
+    - 0.00117
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.35e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.1
+    cOffset:
+    - -0.00709
+    - 0.00234
+    mOffset:
+    - -0.00634
+    - 0.000854
+    yOffset:
+    - -0.00165
+    - -0.00348
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.48e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.43
+    cOffset:
+    - -0.000851
+    - -0.00162
+    mOffset:
+    - 0.00199
+    - -0.000722
+    yOffset:
+    - 0.00361
+    - -0.00345
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.9e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.29
+    cOffset:
+    - -0.00427
+    - -0.00147
+    mOffset:
+    - 4.81e-05
+    - 0.00635
+    yOffset:
+    - -0.000961
+    - -0.000211
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.21e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.35
+    cOffset:
+    - 0.00133
+    - -0.00289
+    mOffset:
+    - -0.00173
+    - -0.00135
+    yOffset:
+    - 0.00364
+    - 0.000556
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.37e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.23
+    cOffset:
+    - -0.00287
+    - 0.00183
+    mOffset:
+    - 0.00265
+    - 0.00516
+    yOffset:
+    - -0.00213
+    - -0.00334
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.17e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.11
+    cOffset:
+    - -9.65e-05
+    - -0.00172
+    mOffset:
+    - -0.0835
+    - -0.0472
+    yOffset:
+    - -3.07e-05
+    - -0.000203
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.58e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - 0.000883
+    - -0.000721
+    mOffset:
+    - -0.00155
+    - 0.00471
+    yOffset:
+    - -0.00227
+    - -0.000138
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.88e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.98
+    cOffset:
+    - -0.00139
+    - 0.00177
+    mOffset:
+    - -1.04e-05
+    - 0.000797
+    yOffset:
+    - 0.00621
+    - 0.0357
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.06e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.31
+    cOffset:
+    - -0.00165
+    - -0.00271
+    mOffset:
+    - -0.00366
+    - -0.000435
+    yOffset:
+    - -0.000107
+    - -0.00175
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.16e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.07
+    cOffset:
+    - 0.00529
+    - -0.000231
+    mOffset:
+    - -0.00337
+    - -0.00137
+    yOffset:
+    - -0.00119
+    - -0.00186
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.11e-06
+    inkStatus: 6
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - 0.00675
+    - 0.0283
+    mOffset:
+    - -0.00519
+    - -0.00606
+    yOffset:
+    - -0.00173
+    - 0.000528
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.06e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.07
+    cOffset:
+    - -0.00145
+    - 0.00313
+    mOffset:
+    - -0.00516
+    - 0.00404
+    yOffset:
+    - 0.00572
+    - -0.000494
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.28e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.15
+    cOffset:
+    - -0.00256
+    - -0.000656
+    mOffset:
+    - -0.000958
+    - -0.00299
+    yOffset:
+    - -0.0016
+    - 0.00366
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.21e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.41
+    cOffset:
+    - 0.00377
+    - 0.00131
+    mOffset:
+    - 0.00182
+    - -0.00556
+    yOffset:
+    - -0.0017
+    - -0.00441
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.11e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.3
+    cOffset:
+    - -0.00137
+    - 0.000483
+    mOffset:
+    - -0.00537
+    - -0.000622
+    yOffset:
+    - -0.00121
+    - -0.00253
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.37e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.29
+    cOffset:
+    - -0.00279
+    - -0.00243
+    mOffset:
+    - 0.0148
+    - -0.0219
+    yOffset:
+    - 0.00666
+    - 0.00726
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.08e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.07
+    cOffset:
+    - 0.00508
+    - 0.0055
+    mOffset:
+    - 0.00959
+    - -0.00475
+    yOffset:
+    - 0.00411
+    - 0.00217
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.77e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.0
+    cOffset:
+    - -0.000194
+    - -0.00717
+    mOffset:
+    - -0.000979
+    - -0.00037
+    yOffset:
+    - 0.00385
+    - 0.000755
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.19e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.19
+    cOffset:
+    - -0.00312
+    - 0.00327
+    mOffset:
+    - -0.00502
+    - 0.00345
+    yOffset:
+    - -0.000647
+    - 0.0085
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.89e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.11
+    cOffset:
+    - 0.000341
+    - -0.00021
+    mOffset:
+    - -0.00457
+    - -0.00462
+    yOffset:
+    - -0.00449
+    - 0.000991
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.42e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.27
+    cOffset:
+    - 0.00215
+    - -0.00411
+    mOffset:
+    - -0.00366
+    - 3.82e-05
+    yOffset:
+    - 0.00279
+    - 0.00255
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.75e-07
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.23
+    cOffset:
+    - 0.00106
+    - 0.0011
+    mOffset:
+    - 0.00198
+    - 0.00114
+    yOffset:
+    - 0.00146
+    - -0.000614
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.87e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - -0.00465
+    - -0.000404
+    mOffset:
+    - -0.00115
+    - 0.000456
+    yOffset:
+    - 0.00144
+    - 0.00471
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.84e-05
+    inkStatus: 6
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.03
+    cOffset:
+    - -0.00102
+    - 0.000549
+    mOffset:
+    - 0.00234
+    - -0.00546
+    yOffset:
+    - -0.000907
+    - -0.0036
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.16e-07
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.1
+    cOffset:
+    - 0.00299
+    - -0.000906
+    mOffset:
+    - -0.00862
+    - 0.002
+    yOffset:
+    - 0.00271
+    - 0.00253
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.71e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.97
+    cOffset:
+    - -0.00315
+    - -0.00339
+    mOffset:
+    - -0.000746
+    - 0.00203
+    yOffset:
+    - -0.000822
+    - 0.00185
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.25e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.3
+    cOffset:
+    - -0.00167
+    - 7.3e-05
+    mOffset:
+    - 0.00356
+    - -0.00798
+    yOffset:
+    - 0.00109
+    - -0.00348
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.78e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.0
+    cOffset:
+    - -0.00264
+    - 0.000693
+    mOffset:
+    - 0.000716
+    - 7.8e-05
+    yOffset:
+    - -0.00414
+    - -0.0039
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.19e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.16
+    cOffset:
+    - -0.00122
+    - 0.00257
+    mOffset:
+    - -0.00717
+    - 0.00117
+    yOffset:
+    - 2.11e-05
+    - -0.000712
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.56e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.2
+    cOffset:
+    - -0.00117
+    - -0.00116
+    mOffset:
+    - 0.00592
+    - 0.00355
+    yOffset:
+    - -0.00201
+    - 0.0019
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 0.000203
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - -0.00326
+    - -0.00466
+    mOffset:
+    - 0.00757
+    - 0.000992
+    yOffset:
+    - -0.00303
+    - 0.00154
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.33e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.19
+    cOffset:
+    - 0.000951
+    - 0.000203
+    mOffset:
+    - -0.00525
+    - -0.00437
+    yOffset:
+    - 0.00221
+    - 0.000477
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.1e-06
+    inkStatus: 4
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.28
+    cOffset:
+    - 0.00315
+    - 0.00012
+    mOffset:
+    - 0.0028
+    - -0.00266
+    yOffset:
+    - 0.00329
+    - -0.0013
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.01e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.14
+    cOffset:
+    - -9.2e-05
+    - -0.00107
+    mOffset:
+    - -0.0341
+    - -0.0419
+    yOffset:
+    - 0.000276
+    - 0.0025
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.1e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - 0.000955
+    - 0.000896
+    mOffset:
+    - 0.00873
+    - -0.00378
+    yOffset:
+    - 0.00157
+    - 0.00231
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.23e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - -0.000824
+    - 0.00123
+    mOffset:
+    - 0.00527
+    - 0.00195
+    yOffset:
+    - 0.00138
+    - 0.00684
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.88e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.07
+    cOffset:
+    - -0.0013
+    - 0.00483
+    mOffset:
+    - -0.0023
+    - 0.00142
+    yOffset:
+    - 0.00264
+    - 0.0034
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.19e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.27
+    cOffset:
+    - 0.000506
+    - 6.78e-05
+    mOffset:
+    - 0.00519
+    - 0.00229
+    yOffset:
+    - -0.00235
+    - -0.00511
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.86e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.27
+    cOffset:
+    - -0.00134
+    - -0.000209
+    mOffset:
+    - 0.0022
+    - -0.00286
+    yOffset:
+    - 0.00172
+    - -0.0026
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 8.32e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.34
+    cOffset:
+    - 0.00206
+    - 0.00165
+    mOffset:
+    - 0.00315
+    - -0.00118
+    yOffset:
+    - -0.000783
+    - -0.00135
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.81e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.09
+    cOffset:
+    - -0.00171
+    - 2.68e-05
+    mOffset:
+    - 0.00387
+    - -0.00397
+    yOffset:
+    - 0.00467
+    - 0.00454
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.5e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.2
+    cOffset:
+    - -0.00365
+    - -0.00244
+    mOffset:
+    - -0.00693
+    - -0.00468
+    yOffset:
+    - 0.000233
+    - -0.00233
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 0.000139
+    inkStatus: 6
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.13
+    cOffset:
+    - -0.001
+    - -0.00326
+    mOffset:
+    - 0.00264
+    - 0.00247
+    yOffset:
+    - 1.65e-05
+    - 0.00161
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.62e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - -0.00518
+    - -0.00571
+    mOffset:
+    - 0.000232
+    - 0.00243
+    yOffset:
+    - 0.00405
+    - 0.00521
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.45e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 1.94
+    cOffset:
+    - 0.00082
+    - 0.00196
+    mOffset:
+    - 0.00438
+    - 0.002
+    yOffset:
+    - 7.21e-05
+    - 0.000564
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.59e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - 0.00576
+    - -0.00311
+    mOffset:
+    - 0.00323
+    - 0.00223
+    yOffset:
+    - -4.21e-05
+    - -0.00333
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.38e-08
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.14
+    cOffset:
+    - 0.00151
+    - 0.00412
+    mOffset:
+    - 0.00541
+    - 0.00123
+    yOffset:
+    - 0.00193
+    - -0.00257
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.45e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.24
+    cOffset:
+    - -0.00029
+    - 0.00106
+    mOffset:
+    - -0.00339
+    - 0.00274
+    yOffset:
+    - 0.00105
+    - 3.34e-05
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.91e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.06
+    cOffset:
+    - -0.00335
+    - -0.0021
+    mOffset:
+    - -0.00267
+    - 0.00501
+    yOffset:
+    - -0.00419
+    - -0.00174
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.92e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.09
+    cOffset:
+    - 0.0062
+    - 0.000634
+    mOffset:
+    - 0.00224
+    - -0.00215
+    yOffset:
+    - 0.00175
+    - -0.00103
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.58e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.23
+    cOffset:
+    - 0.00237
+    - 0.000104
+    mOffset:
+    - -0.00587
+    - -0.00941
+    yOffset:
+    - 0.00055
+    - 3.31e-05
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.51e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - -0.0014
+    - 0.00186
+    mOffset:
+    - 0.00405
+    - -0.00169
+    yOffset:
+    - -0.000312
+    - 0.00349
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.76e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.27
+    cOffset:
+    - 0.00112
+    - -0.00108
+    mOffset:
+    - 0.00835
+    - 0.00265
+    yOffset:
+    - 0.000929
+    - 0.000953
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.1e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.27
+    cOffset:
+    - -0.0022
+    - -0.000663
+    mOffset:
+    - -0.00276
+    - -0.0017
+    yOffset:
+    - -7.93e-05
+    - -0.00192
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.53e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.34
+    cOffset:
+    - 0.00488
+    - 0.00162
+    mOffset:
+    - 0.00227
+    - -0.00406
+    yOffset:
+    - 0.00405
+    - 0.00123
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 3.48e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.1
+    cOffset:
+    - 0.00221
+    - -0.00273
+    mOffset:
+    - -0.0122
+    - 0.00625
+    yOffset:
+    - -0.00353
+    - -0.000843
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 4.87e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.13
+    cOffset:
+    - -0.00259
+    - 0.0027
+    mOffset:
+    - -0.00114
+    - 0.000478
+    yOffset:
+    - -0.00364
+    - 0.00486
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.95e-07
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.39
+    cOffset:
+    - 0.00122
+    - -0.00246
+    mOffset:
+    - -0.00855
+    - -0.00457
+    yOffset:
+    - -0.000287
+    - -0.00371
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.08e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.26
+    cOffset:
+    - -0.00387
+    - -0.00111
+    mOffset:
+    - 0.00559
+    - 0.00235
+    yOffset:
+    - 0.00381
+    - -0.00295
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.27e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.26
+    cOffset:
+    - -8.27e-05
+    - 0.00689
+    mOffset:
+    - 0.00662
+    - 0.00241
+    yOffset:
+    - 0.0033
+    - 0.000969
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.65e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.02
+    cOffset:
+    - 0.000478
+    - -0.0021
+    mOffset:
+    - -0.00234
+    - -9.19e-06
+    yOffset:
+    - -0.0032
+    - -0.000782
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 1.28e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.31
+    cOffset:
+    - 0.00569
+    - 0.000106
+    mOffset:
+    - 0.0092
+    - 0.000574
+    yOffset:
+    - -0.00078
+    - -8.05e-05
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 5.75e-06
+    inkStatus: 3
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.18
+    cOffset:
+    - -0.00164
+    - -0.000365
+    mOffset:
+    - -2.55e-05
+    - 0.00554
+    yOffset:
+    - -0.0017
+    - 0.00233
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 9.27e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.21
+    cOffset:
+    - -0.00217
+    - 0.00137
+    mOffset:
+    - 0.00648
+    - 0.000904
+    yOffset:
+    - 0.000309
+    - -0.00354
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.24e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.23
+    cOffset:
+    - -0.00165
+    - -0.00167
+    mOffset:
+    - -0.00353
+    - 0.00605
+    yOffset:
+    - 0.00197
+    - 0.000836
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 2.04e-05
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.06
+    cOffset:
+    - 0.00182
+    - 0.0068
+    mOffset:
+    - 0.000482
+    - -0.00448
+    yOffset:
+    - -0.00467
+    - -0.00233
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 7.72e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
+- file: ./inscribed.html
+  destination: null
+  metadata:
+    radius: 2.31
+    cOffset:
+    - 0.000764
+    - -0.00103
+    mOffset:
+    - 0.00317
+    - -0.00243
+    yOffset:
+    - 0.000404
+    - 0.00293
+    kOffset:
+    - 20000
+    - 20000
+    noiseAmp: 6.97e-06
+    inkStatus: 0
+    title: Triumph of Science
+    sourceId: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0

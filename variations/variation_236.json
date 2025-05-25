@@ -1,29 +1,23 @@
 {
-  "radius": 2.18,
+  "radius": 2.19,
   "cOffset": [
-    0.00124,
-    -0.00207
+    0.00248,
+    -0.00157
   ],
   "mOffset": [
-    -0.0035,
-    -0.00132
+    0.00182,
+    0.00414
   ],
   "yOffset": [
-    0.00163,
-    -0.000455
+    0.000539,
+    0.000853
   ],
   "kOffset": [
     20000,
     20000
   ],
-  "noiseAmp": 9.57e-07,
-  "inkStatus": 2,
+  "noiseAmp": 3.78e-06,
+  "inkStatus": 0,
   "title": "Triumph of Bitcoin",
-  "wear": 50.4,
-  "sourceId": "ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0",
-  "variationId": 236,
-  "outliers": [
-    "inkStatus"
-  ],
-  "isOutlier": true
+  "sourceId": "ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0"
 }

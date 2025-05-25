@@ -1,9 +1,10 @@
 // TODO: When doing a test inscribe remove the .js and .jpg from these paths
-import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60a63a43eb925f28636i0.js';
+import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60a63a43eb925f28636i0';
 // const texture = window.TEXTURE_PATH_OVERRIDE || '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg'; // christian religion
 // const texture = window.TEXTURE_PATH_OVERRIDE || 'content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg' // bitcoin
 // const texture = window.TEXTURE_PATH_OVERRIDE || 'content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
-const texture = 'content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
+// const texture = 'content/6461c2a49eba6c8220bf4/72d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
+const texture = '/content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0' // bitcoin
 
 // TODO fix the aspect ratio of the main canvas so it's the original 900 x 860 aspect ratio
 
@@ -17,7 +18,6 @@ const metadata = {
   noiseAmp: 0.00001,
   inkStatus: 3,
   title: 'Triumph of Bitcoin',
-  wear: 150
 };
 
 const vertexShader = /* glsl */`
@@ -120,8 +120,55 @@ const fragmentShader = /* glsl */`
 }`
 
 async function main(metadata) {
+
+  // TODO either fix or delete this block
+  // Uses window inner height and width to set the canvas size
+  // and still use aspect ratio to calculate the height and width
+
+  // function getDimensions() {
+  //   const innerWidth = window.innerWidth;
+  //   const innerHeight = window.innerHeight;
+  //   const width = Math.min(innerWidth, innerHeight);
+  //   const height = width / 1.04511; // Maintain the original aspect ratio of 900x860
+  //   return { width, height };
+  // }
+
+  // const { width, height } = getDimensions();
+
+
+  // // set up event listener for resizing
+  // // TODO Fix this. it's not changing the glcanvas resolution when the window is resized
+  // window.addEventListener('resize', () => {
+  //   const { width, height } = getDimensions();
+  //   const canvas = document.getElementById('glcanvas');
+  //   if (canvas) {
+  //     canvas.width = width;
+  //     canvas.height = height;
+  //     canvas.style.width = `${width}px`;
+  //     canvas.style.height = `${height}px`;
+  //   }
+
+  //   const container = document.getElementById('container');
+  //   if (container) {
+  //     container.style.width = `${width}px`;
+  //     container.style.height = `${height}px`;
+  //   }
+  //   // Redraw the canvas
+  //   const gl = canvas.getContext('webgl');
+  //   if (!gl) throw new Error('WebGL not supported');
+  //   gl.viewport(0, 0, canvas.width, canvas.height);
+  //   gl.clearColor(1, 1, 1, 1); // Clear to white
+    
+  //     gl.drawArrays(gl.TRIANGLES, 0, 6);
+
+  // });
+
+
   // 1. Create & style canvas
-  const canvas = setupDOM({width: 1024, height: 1024, margin: 10, wear: metadata.wear});
+  // const canvas = setupDOM({width, height, aspect: 1.04511, margin: 10});
+  
+  
+  const canvas = setupDOM({width: 900, height: 860, aspect: 1.04511, margin: 10});
 
   const gl = canvas.getContext('webgl');
   if (!gl) throw new Error('WebGL not supported');
@@ -225,19 +272,8 @@ async function main(metadata) {
 
 
 async function getMetadata() {
-  // Check if we're in test mode with overridden metadata
-  if (window.getMetadataOverride) {
-    console.log('Using test metadata:', window.getMetadataOverride);
-    return window.getMetadataOverride;
-  }
 
   let currentId = window.location.href.split("/").pop();
-
-  // For local development outside of test mode, use the local metadata directly
-  if (window.location.hostname === "127.0.0.1" || window.location.hostname === "localhost") {
-    console.log('Using local development metadata');
-    return metadata;
-  }
 
   function hexToUint8Array(hex) {
     const bytes = new Uint8Array(hex.length / 2);
@@ -251,16 +287,16 @@ async function getMetadata() {
     const cborMetadata = await fetch(`/r/metadata/${currentId}`).then((res) => res.json());
     const uint8Metadata = hexToUint8Array(cborMetadata);
     const decoded = decode(uint8Metadata);
+    console.log('decoded metadata', decoded);
     return {
-      radius: decoded.radius        || metadata.radius,
-      cOffset: decoded.cOffset      || metadata.cOffset,
-      mOffset: decoded.mOffset      || metadata.mOffset,
-      yOffset: decoded.yOffset      || metadata.yOffset,
-      kOffset: decoded.kOffset      || metadata.kOffset,
-      noiseAmp: decoded.noiseAmp    || metadata.noiseAmp,
-      inkStatus: decoded.inkStatus  || metadata.inkStatus,
-      title: decoded.title          || metadata.title,
-      wear: decoded.wear            || metadata.wear
+      radius: decoded.radius,
+      cOffset: decoded.cOffset,
+      mOffset: decoded.mOffset,
+      yOffset: decoded.yOffset,
+      kOffset: decoded.kOffset,
+      noiseAmp: decoded.noiseAmp,
+      inkStatus: decoded.inkStatus,
+      title: decoded.title
     };
   } catch {
     console.log('using default metadata');
@@ -268,7 +304,7 @@ async function getMetadata() {
   }
 }
 
-function setupDOM({ width = 512, height = 512, margin = 20, wear = 50 } = {}) {
+function setupDOM({ width = 512, height = 512, aspect='1/1', margin = 20 } = {}) {
   // Create an off-white background and paper texture filter
   const body = document.body;
   body.style.margin = '0';
@@ -276,67 +312,78 @@ function setupDOM({ width = 512, height = 512, margin = 20, wear = 50 } = {}) {
   body.style.justifyContent = 'center';
   body.style.alignItems = 'center';
   body.style.height = '100vh';
-  body.style.background = '#f5f3e8';  // off-white background
 
   // Clear any existing SVG filters and canvas elements
-  document.querySelectorAll('svg, #container').forEach(el => el.remove());
 
-  // Calculate offset compensation values based on wear
-  // Adjust the compensation factor to account for large wear values
-  const offsetX = -wear * 0.2; 
-  const offsetY = -wear * 0.2;
 
-  // Define SVG filter for crumpled paper displacement
-  const svgNS = 'http://www.w3.org/2000/svg';
-  const svg = document.createElementNS(svgNS, 'svg');
-  svg.setAttribute('style', 'position:absolute;width:0;height:0');
-  svg.innerHTML = `<defs>
-  <filter id="paperFilter"
-          x="-40%" y="-40%" width="180%" height="180%"
-          filterUnits="objectBoundingBox">
-    <!-- very broad folds -->
-    <feTurbulence
-      type="turbulence"
-      baseFrequency="0.008 0.008"
-      numOctaves="5"
-      seed="6"
-      result="warpNoise" />
+  // TODO delete
+//     document.querySelectorAll('svg, #container').forEach(el => el.remove());
 
-    <feGaussianBlur
-      in="warpNoise"
-      stdDeviation="100"
-      result="smoothNoise" />
+//   // Calculate offset compensation values based on wear
+//   // Adjust the compensation factor to account for large wear values
+//   const offsetX = -wear * 0.2; 
+//   const offsetY = -wear * 0.2;
 
-    <feDisplacementMap
-      in="SourceGraphic"
-      in2="smoothNoise"
-      scale="${wear}"
-      xChannelSelector="R"
-      yChannelSelector="G"
-      result="displaced" />
+//   const getChannelSelector = (scale) => {
+//     const channels = ['R', 'G', 'B'];
+//     const ix = Math.floor(wear * scale) % channels.length;
+//     return channels[ix];
+//   }
+
+
+
+//   // Define SVG filter for crumpled paper displacement
+//   const svgNS = 'http://www.w3.org/2000/svg';
+//   const svg = document.createElementNS(svgNS, 'svg');
+//   svg.setAttribute('style', 'position:absolute;width:0;height:0');
+//   svg.innerHTML = `<defs>
+//   <filter id="paperFilter"
+//           x="-40%" y="-40%" width="180%" height="180%"
+//           filterUnits="objectBoundingBox">
+//     <!-- very broad folds -->
+//     <feTurbulence
+//       type="turbulence"
+//       baseFrequency="0.008 0.008"
+//       numOctaves="5"
+//       seed="6"
+//       result="warpNoise" />
+
+//     <feGaussianBlur
+//       in="warpNoise"
+//       stdDeviation="100"
+//       result="smoothNoise" />
+
+//     <feDisplacementMap
+//       in="SourceGraphic"
+//       in2="smoothNoise"
+//       scale="${wear}"
+//       xChannelSelector="${getChannelSelector(1.235)}"
+//       yChannelSelector="${getChannelSelector(9.512)}"
+//       result="displaced" />
       
-    <!-- Add offset to compensate for displacement shift -->
-    <feOffset
-      in="displaced"
-      dx="${offsetX}"
-      dy="${offsetY}"
-      result="recentered" />
+//     <!-- Add offset to compensate for displacement shift -->
+//     <feOffset
+//       in="displaced"
+//       dx="${offsetX * 1.2}"
+//       dy="${offsetY}"
+//       result="recentered" />
 
-    <feDropShadow
-      in="recentered"
-      dx="25" dy="25"
-      stdDeviation="20"
-      flood-color="black"
-      flood-opacity="0.1" />
-  </filter>
-</defs>`;
-
-  body.appendChild(svg);
+//     <feDropShadow
+//       in="recentered"
+//       dx="25" dy="25"
+//       stdDeviation="20"
+//       flood-color="black"
+//       flood-opacity="0.1" />
+//   </filter>
+// </defs>`;
+//   body.appendChild(svg);
+/////////////////////////////////////
 
   const container = document.createElement('div');
   container.id = 'container';
-  container.style.width = '100%';
-  container.style.height = '100%';
+  container.style.width = `calc(min(100vw, 100vh))`;
+  container.style.height = 'min(100vw, 100vh)';
+  // container.style.aspectRatio = aspect;
   container.style.boxSizing = 'border-box';
   container.style.padding = `${margin}px`;
   container.style.display = 'flex';
@@ -344,15 +391,16 @@ function setupDOM({ width = 512, height = 512, margin = 20, wear = 50 } = {}) {
   container.style.alignItems = 'center';
   container.style.background = 'none';
   body.appendChild(container);
+  // container.style.background = '#f5f3e8';  // off-white background
 
   const canvas = document.createElement('canvas');
   canvas.id = 'glcanvas';
   canvas.width = width;
   canvas.height = height;
-  canvas.style.filter =
-  'url(#paperFilter) ' +
-  'drop-shadow(40px 30px 18px rgba(0, 0, 0, .333)) ' +
-  'drop-shadow(15px 10px 10px rgba(0, 0, 0, 0.333))';
+  // canvas.style.filter =
+  // 'url(#paperFilter) ' +
+  // 'drop-shadow(40px 30px 18px rgba(0, 0, 0, .333)) ' +
+  // 'drop-shadow(15px 10px 10px rgba(0, 0, 0, 0.333))';
   container.appendChild(canvas);
 
   function resizeCanvas() {
@@ -375,6 +423,4 @@ function setupDOM({ width = 512, height = 512, margin = 20, wear = 50 } = {}) {
 
 getMetadata().then((metadata) => {
   main(metadata);
-  // Remove this second call to setupDOM which is causing the problem
-  // setupDOM({ width: 1024, height: 1024, margin: 10, wear: metadata.wear });
 });

@@ -12,5 +12,5 @@ wallet +args='':
 batch +args='':
   ord --datadir env wallet batch --no-backup --fee-rate 1 --batch {{args}}
 
-mine address:
-  bitcoin-cli -datadir=env generatetoaddress 1 {{address}}
+mine:
+  B:\Bitcoin\daemon\bitcoin-cli.exe -datadir=env generatetoaddress 1 bcrt1pdwxjyh7wc8c8gxc7690yza7cq2aglumclk45c6j8xr8jsj7rkrwqf2rvj9

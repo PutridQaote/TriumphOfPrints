@@ -1,7 +1,14 @@
+# /// script
+# dependencies = [
+#   "yaml",
+# ]
+# ///
+
 import random
 import json
 import os
 import copy
+import yaml
 
 
 TOB_LIST = [
@@ -43,7 +50,6 @@ BASE_METADATA = {
   "noiseAmp": 0.0,
   "inkStatus": 0,
   "title": "placeholder will be set later",
-  "wear": 50  # Default wear value - smaller scale for better centering
 }
 
 # Allowed ± variance around each base value
@@ -55,11 +61,10 @@ PARAMETER_VARIANCES = {
   "kOffset": [0, 0],
   "noiseAmp": 0.0000888,
   "inkStatus": 0,
-  "wear": 80  # How much the wear can vary from base value
 }
 
 # Clustering factor for normal parameters (higher = tighter clustering)
-NORMAL_CLUSTERING_FACTOR = 8.88
+NORMAL_CLUSTERING_FACTOR = 7.77
 
 #------------------------------------------>>
 #
@@ -76,7 +81,6 @@ OUTLIER_BASE_METADATA = {
   "kOffset": [20000, 20000],        # No change for kOffset - outlier not used
   "noiseAmp": 0.0111,               # Much more noise
   "inkStatus": 0,
-  "wear": 70                       # Much more wear for outliers
 }
 
 OUTLIER_VARIANCE_MULTIPLIERS = {
@@ -85,7 +89,6 @@ OUTLIER_VARIANCE_MULTIPLIERS = {
     "yOffset": 5.0,  # 5x wider range for yellow offset outliers
     "kOffset": 1.0,  # No change for kOffset
     "noiseAmp": 4.20, # 4.2x wider range for noise amplitude outliers
-    "wear": 1.2      # No change for wear
 }
 
 # Probability (0.0-1.0) of using the outlier value for each parameter
@@ -96,8 +99,7 @@ OUTLIER_PROBABILITIES = {
   "yOffset": 0.0111,     
   "kOffset": 0.0,                   # outlier not used
   "noiseAmp": 0.0222,
-  "inkStatus": 0.0420,
-  "wear": 0.0222                   
+  "inkStatus": 0.0888,
 }
 
 OUTLIER_CASCADE_FACTOR = 4.20 # increases chances of subsequent outliers
@@ -148,7 +150,7 @@ def generate_variation(base_metadata, variances, source_id, variation_id):
     outlier_bonus = 1.0  # Starts at 1.0 (normal probability)
 
     # Create lists of all parameters by type
-    scalar_params = ["radius", "noiseAmp"]  # Remove wear from scalar params
+    scalar_params = ["radius", "noiseAmp"]
     vector_params = ["cOffset", "mOffset", "yOffset", "kOffset"]
     
     # Combine and shuffle all parameters (except inkStatus which is handled separately)
@@ -165,21 +167,6 @@ def generate_variation(base_metadata, variances, source_id, variation_id):
     else:
         variation["inkStatus"] = 0
     
-    # Handle wear parameter separately - only allow increases from base value
-    param = "wear"
-    base_probability = OUTLIER_PROBABILITIES[param]
-    is_out = random.random() < (base_probability * outlier_bonus)
-    if is_out:
-        outliers_used.append(param)
-        outlier_bonus = OUTLIER_CASCADE_FACTOR
-        base = OUTLIER_BASE_METADATA[param]
-        delta = variances[param]
-    else:
-        base = base_metadata[param]
-        delta = variances[param]
-    
-    # Apply the "up" direction constraint for wear
-    variation[param] = abs(be_random(base, delta, is_out, direction="up"))
     
     # Process all other parameters in random order
     for param in all_params:
@@ -231,8 +218,6 @@ def generate_variation(base_metadata, variances, source_id, variation_id):
         variation["title"] = "Triumph of Bitcoin"
 
     # Format values to specified precision
-    # Round wear to one decimal place (tens place)
-    variation["wear"] = round(variation["wear"], 1)
     
     # Round radius to three significant digits
     variation["radius"] = float(f"{variation['radius']:.3g}")
@@ -263,7 +248,7 @@ def generate_variation(base_metadata, variances, source_id, variation_id):
     return variation
 
 
-def main():
+def mainJson():
     os.makedirs("variations", exist_ok=True)
     per_src = TOTAL_VARIATIONS // len(SOURCE_IDS)
     extra   = TOTAL_VARIATIONS % len(SOURCE_IDS)
@@ -315,7 +300,101 @@ def main():
     outlier_ids = [v["variationId"] for v in all_vars if v.get("isOutlier")]
     print(f"\nOutlier variation IDs ({len(outlier_ids)} total):")
     print(" ", outlier_ids)
+    clean_variations()
 
+
+def clean_variations():
+    """remove   "variationId", "outliers", "isOutlier"
+    """
+
+    variations_path = "variations"
+    for filename in os.listdir(variations_path):
+
+        if filename.endswith(".json") and "all" not in filename:
+            path = os.path.join(variations_path, filename)
+            with open(path, "r") as f:
+                data = json.load(f)
+
+            for key in ["variationId", "outliers", "isOutlier"]:
+                data.pop(key, None)
+                # del data[key]
+            # Write back cleaned data
+            with open(path, "w") as f:
+                json.dump(data, f, indent=2)
+            # print(f"Clesaned {filename}")
+    print("cleaned all json")
+
+
+def mainYaml():
+    """Generate all variants in a single YAML file in the specified format."""
+    per_src = TOTAL_VARIATIONS // len(SOURCE_IDS)
+    extra = TOTAL_VARIATIONS % len(SOURCE_IDS)
+    variants = []
+    vid = 0
+
+    print(f"Starting generation of {TOTAL_VARIATIONS} total variations for YAML file")
+
+    # Create the base YAML structure
+    yaml_data = {
+        "mode": "separate-outputs",
+        "inscriptions": []
+    }
+
+    for idx, src in enumerate(SOURCE_IDS):
+        count = per_src + (1 if idx < extra else 0)
+        print(f" • Source {idx+1}/{len(SOURCE_IDS)} ({src[:8]}…): generating {count} variations")
+
+        for _ in range(count):
+            # Generate the variation metadata
+            v = generate_variation(BASE_METADATA, PARAMETER_VARIANCES, src, vid)
+            
+            
+            # Create inscription entry
+            inscription = {
+                "file": "./inscribed.html",
+                "destination": None,
+                "metadata": {
+                    "radius": v["radius"],
+                    "cOffset": v["cOffset"],
+                    "mOffset": v["mOffset"],
+                    "yOffset": v["yOffset"],
+                    "kOffset": v["kOffset"],
+                    "noiseAmp": v["noiseAmp"],
+                    "inkStatus": v["inkStatus"],
+                    "title": v["title"],
+                    "sourceId": v["sourceId"]
+                }
+            }
+            
+            # Add to inscriptions list
+            yaml_data["inscriptions"].append(inscription)
+            print(f"    – Added variation {vid} to YAML")
+            vid += 1
+
+    # Write to YAML file
+    yaml_path = "all_variations.yaml"
+    with open(yaml_path, "w") as f:
+        yaml.dump(yaml_data, f, default_flow_style=False, sort_keys=False)
+    
+    print(f"\nWrote combined YAML file: {yaml_path}")
+    
+    # Print outlier statistics
+    print_outlier_stats(yaml_data["inscriptions"])
+
+def print_outlier_stats(inscriptions):
+    """Print statistics about the generated variations."""
+    # Count variations per source
+    sources_count = {}
+    for insc in inscriptions:
+        src = insc["metadata"]["sourceId"]
+        sources_count[src] = sources_count.get(src, 0) + 1
+    
+    print("\nVariations per source:")
+    for src, cnt in sources_count.items():
+        print(f"   {src[:8]}... : {cnt}")
+    
+    print(f"\nTotal inscriptions: {len(inscriptions)}")
 
 if __name__=="__main__":
-    main()
+    # mainJson()
+    mainYaml()
