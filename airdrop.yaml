@@ -1,6 +1,6 @@
 mode: separate-outputs
 parents:
-  - 4d50cdb928b5e920865e35015be6d463ffcc7f9e39af3d4cad49d9ea7e8288c9i0
+  - 8bc04209a9789282518cae88aebb5012e2ebf2f3398bff73fd75491d50cd9d6ei0
 
 inscriptions:
 - file: ./inscribed.html
@@ -3123,6 +3123,8 @@ inscriptions:
     kOffset:
     - 20000
     - 20000
+
+  # PLZ I'd like to have this one :smirk:
 - file: ./inscribed.html
   destination: null
   metadata:
@@ -3143,6 +3145,7 @@ inscriptions:
     kOffset:
     - 20000
     - 20000
+    
 - file: ./inscribed.html
   destination: null
   metadata:

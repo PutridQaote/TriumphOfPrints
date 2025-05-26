@@ -117,65 +117,45 @@ const fragmentShader = /* glsl */`
 }`
 
 async function main(metadata) {
+  // 0. Load source image
+  const img = await fetch(metadata.source)
+    .then(r => r.blob())
+    .then(createImageBitmap);
 
-  // TODO either fix or delete this block
-  // Uses window inner height and width to set the canvas size
-  // and still use aspect ratio to calculate the height and width
+  // 1. Create + size canvas
+  const canvas = setupDOM({
+    width: 900,
+    height: 860,
+    aspect: 900/860,
+    margin: 10
+  });
+  const rect = canvas.getBoundingClientRect();
+  const DPR  = window.devicePixelRatio || 1;
 
-  // function getDimensions() {
-  //   const innerWidth = window.innerWidth;
-  //   const innerHeight = window.innerHeight;
-  //   const width = Math.min(innerWidth, innerHeight);
-  //   const height = width / 1.04511; // Maintain the original aspect ratio of 900x860
-  //   return { width, height };
-  // }
+  if (rect.width < 300) {
+    // thumbnail
+    canvas.width  = Math.round(rect.width  * DPR);
+    canvas.height = Math.round(rect.height * DPR);
+  } else {
+    // full‐size
+    canvas.width  = 900 * DPR;
+    canvas.height = 860 * DPR;
+  }
 
-  // const { width, height } = getDimensions();
-
-
-  // // set up event listener for resizing
-  // // TODO Fix this. it's not changing the glcanvas resolution when the window is resized
-  // window.addEventListener('resize', () => {
-  //   const { width, height } = getDimensions();
-  //   const canvas = document.getElementById('glcanvas');
-  //   if (canvas) {
-  //     canvas.width = width;
-  //     canvas.height = height;
-  //     canvas.style.width = `${width}px`;
-  //     canvas.style.height = `${height}px`;
-  //   }
-
-  //   const container = document.getElementById('container');
-  //   if (container) {
-  //     container.style.width = `${width}px`;
-  //     container.style.height = `${height}px`;
-  //   }
-  //   // Redraw the canvas
-  //   const gl = canvas.getContext('webgl');
-  //   if (!gl) throw new Error('WebGL not supported');
-  //   gl.viewport(0, 0, canvas.width, canvas.height);
-  //   gl.clearColor(1, 1, 1, 1); // Clear to white
-    
-  //     gl.drawArrays(gl.TRIANGLES, 0, 6);
-
-  // });
-
-
-  // // 1. Create & style canvas
-  // const canvas = setupDOM({width, height, aspect: 1.04511, margin: 10});
-  
-  
-  const canvas = setupDOM({width: 900, height: 860, aspect: 1.04511, margin: 10});
-
-
-
-  const gl = canvas.getContext('webgl');
+  const gl = canvas.getContext('webgl', {
+    alpha: false,
+    preserveDrawingBuffer: true,
+    antialias: !(rect.width < 300)
+  });
   if (!gl) throw new Error('WebGL not supported');
+  gl.viewport(0, 0, canvas.width, canvas.height);
 
   // 2. Compile vertex shader
   const vs = gl.createShader(gl.VERTEX_SHADER);
   gl.shaderSource(vs, vertexShader);
   gl.compileShader(vs);
+  const vsLog = gl.getShaderInfoLog(vs); // DEBUG ADDED
+  if (vsLog) console.warn('Vertex shader info log:', vsLog); // DEBUG ADDED
   if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
     throw new Error('Vertex shader failed: ' + gl.getShaderInfoLog(vs));
   }
@@ -184,6 +164,8 @@ async function main(metadata) {
   const fs = gl.createShader(gl.FRAGMENT_SHADER);
   gl.shaderSource(fs, fragmentShader);
   gl.compileShader(fs);
+  const fsLog = gl.getShaderInfoLog(fs); // DEBUG ADDED
+  if (fsLog) console.warn('Fragment shader info log:', fsLog); // DEBUG ADDED
   if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
     throw new Error('Fragment shader failed: ' + gl.getShaderInfoLog(fs));
   }
@@ -193,6 +175,8 @@ async function main(metadata) {
   gl.attachShader(program, vs);
   gl.attachShader(program, fs);
   gl.linkProgram(program);
+  const linkLog = gl.getProgramInfoLog(program); // DEBUG ADDED
+  if (linkLog) console.warn('Program link info log:', linkLog); // DEBUG ADDED
   if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
     throw new Error('Program link failed: ' + gl.getProgramInfoLog(program));
   }
@@ -266,7 +250,29 @@ async function main(metadata) {
   gl.uniform1f(uNoise, metadata.noiseAmp);
   gl.uniform1f(uInkStatus, metadata.inkStatus);
 
+  // … after you’ve set all the uniforms …
   gl.drawArrays(gl.TRIANGLES, 0, 6);
+  const err = gl.getError();
+  if (err !== gl.NO_ERROR) console.error('WebGL error code:', err);
+
+  // SNAPSHOT + FREE FOR THUMBNAILS
+  if (rect.width < 300) {
+    // 1) capture pixels
+    const dataURL = canvas.toDataURL();
+    // 2) make an <img>
+    const imgEl   = new Image();
+    imgEl.src     = dataURL;
+    imgEl.style.cssText = canvas.style.cssText;
+    // 3) swap into the DOM
+    canvas.parentNode.replaceChild(imgEl, canvas);
+    // 4) free the GL context
+    const loseExt = gl.getExtension('WEBGL_lose_context');
+    if (loseExt) loseExt.loseContext();
+    // 5) stop here—no further GL work for thumbnails
+    return;
+  }
+
+
 }
 
 
@@ -406,10 +412,18 @@ function setupDOM({ width = 512, height = 512, aspect='1/1', margin = 20 } = {})
   canvas.id = 'glcanvas';
   canvas.width = width;
   canvas.height = height;
-  // canvas.style.filter =
-  // 'url(#paperFilter) ' +
-  // 'drop-shadow(40px 30px 18px rgba(0, 0, 0, .333)) ' +
-  // 'drop-shadow(15px 10px 10px rgba(0, 0, 0, 0.333))';
+
+  // DEBUG ADDED vvvvv
+  // WebGL context event listeners for debugging
+  canvas.addEventListener('webglcontextlost', e => {
+    e.preventDefault(); // optional: prevent default context loss behavior
+    console.warn('CTX LOST', e);
+  }, false);
+  canvas.addEventListener('webglcontextrestored', e => {
+    console.info('CTX RESTORED', e);
+  }, false);
+  // DEBUG ADDED ^^^^^^
+
   container.appendChild(canvas);
 
   function resizeCanvas() {
