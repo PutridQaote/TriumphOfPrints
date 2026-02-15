@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Grid Stress Test</title>
+  <style>
+    :root {
+      --bg: #0f1115;
+      --panel: #1b1f27;
+      --line: #2b3240;
+      --text: #e8edf7;
+      --muted: #98a5be;
+    }
+
+    * { box-sizing: border-box; }
+
+    body {
+      margin: 0;
+      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+      color: var(--text);
+      background: radial-gradient(circle at top, #1a2233, var(--bg) 45%);
+      min-height: 100vh;
+    }
+
+    .toolbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      padding: 12px;
+      border-bottom: 1px solid var(--line);
+      background: color-mix(in srgb, var(--bg) 85%, black);
+    }
+
+    .toolbar label { color: var(--muted); font-size: 12px; }
+    .toolbar input, .toolbar button {
+      background: var(--panel);
+      color: var(--text);
+      border: 1px solid var(--line);
+      border-radius: 6px;
+      padding: 7px 10px;
+      font: inherit;
+    }
+
+    .toolbar button { cursor: pointer; }
+
+    #grid {
+      padding: 10px;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 8px;
+    }
+
+    iframe {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      border: 1px solid var(--line);
+      background: #000;
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar">
+    <label for="count">Cards</label>
+    <input id="count" type="number" min="1" max="333" value="120">
+
+    <label for="thumb1x1">Use 1x1 thumbnail test</label>
+    <input id="thumb1x1" type="checkbox" checked>
+
+    <button id="renderBtn" type="button">Render Grid</button>
+    <button id="allBtn" type="button">Load All 333</button>
+  </div>
+
+  <div id="grid"></div>
+
+  <script>
+    const grid = document.getElementById('grid');
+    const countInput = document.getElementById('count');
+    const thumb1x1 = document.getElementById('thumb1x1');
+    const renderBtn = document.getElementById('renderBtn');
+    const allBtn = document.getElementById('allBtn');
+
+    function renderGrid(count) {
+      const safeCount = Math.max(1, Math.min(333, count));
+      const suffix = thumb1x1.checked ? '?thumbpx=1' : '';
+
+      grid.innerHTML = '';
+      for (let i = 0; i < safeCount; i++) {
+        const frame = document.createElement('iframe');
+        frame.loading = 'lazy';
+        frame.src = `/test_html/variation_${i}.html${suffix}`;
+        frame.title = `variation_${i}`;
+        grid.appendChild(frame);
+      }
+    }
+
+    renderBtn.addEventListener('click', () => renderGrid(Number(countInput.value)));
+    allBtn.addEventListener('click', () => {
+      countInput.value = 333;
+      renderGrid(333);
+    });
+
+    renderGrid(Number(countInput.value));
+  </script>
+</body>
+</html>

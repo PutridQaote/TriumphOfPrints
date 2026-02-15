@@ -116,38 +116,128 @@ const fragmentShader = /* glsl */`
     gl_FragColor = vec4(rgb_srgb, 1.0);
 }`
 
+const THUMBNAIL_GL_STAGGER_KEY = 'top:grid-thumb-gl-last-start';
+const PREVIEW_THUMBNAIL_MAX_PX = 112;
+
+function isOnePixelThumbnailMode() {
+  const params = new URLSearchParams(window.location.search);
+  return params.get('thumbpx') === '1' || params.get('thumb') === '1x1';
+}
+
+function getThumbnailPixelOverride() {
+  const params = new URLSearchParams(window.location.search);
+  const v = Number(params.get('thumbpx'));
+  return Number.isFinite(v) && v > 0 ? Math.round(v) : null;
+}
+
+function isOrdPreviewRoute() {
+  return window.location.pathname.startsWith('/preview/');
+}
+
+function getInscriptionIndexFromPath() {
+  const match = window.location.pathname.match(/i(\d+)$/);
+  if (!match) return null;
+  const parsed = Number(match[1]);
+  return Number.isFinite(parsed) ? parsed : null;
+}
+
+function sleep(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+}
+
+async function staggerThumbnailRenderStart() {
+  // In ord preview iframes, storage APIs are often blocked by sandbox origin rules.
+  // Use deterministic delay by inscription index so iframe starts are serialized.
+  const inscriptionIndex = getInscriptionIndexFromPath();
+  if (inscriptionIndex !== null) {
+    const capped = Math.min(inscriptionIndex, 160);
+    await sleep((capped * 85) + Math.floor(Math.random() * 35));
+    return;
+  }
+
+  const minGapMs = 120;
+
+  try {
+    while (true) {
+      const now = Date.now();
+      const last = Number(localStorage.getItem(THUMBNAIL_GL_STAGGER_KEY) || '0');
+      const delta = now - last;
+
+      if (delta >= minGapMs) {
+        localStorage.setItem(THUMBNAIL_GL_STAGGER_KEY, String(now));
+        return;
+      }
+
+      await sleep(minGapMs - delta + Math.floor(Math.random() * 25));
+    }
+  } catch {
+    // Some embedded contexts may not allow storage access.
+    await sleep(80 + Math.floor(Math.random() * 120));
+  }
+}
+
 async function main(metadata) {
-  // 0. Load source image
-  const img = await fetch(metadata.source)
-    .then(r => r.blob())
-    .then(createImageBitmap);
+  const isPreview = isOrdPreviewRoute();
 
   // 1. Create + size canvas
   const canvas = setupDOM({
     width: 900,
     height: 860,
     aspect: 900/860,
-    margin: 10
+    margin: isPreview ? 0 : 10,
+    fill: isPreview
   });
   const rect = canvas.getBoundingClientRect();
   const DPR  = window.devicePixelRatio || 1;
+  const isThumbnail = rect.width <= (isPreview ? 700 : 320);
+  const thumbPxOverride = getThumbnailPixelOverride();
+  const forceOnePixel = isThumbnail && isOnePixelThumbnailMode();
 
-  if (rect.width < 300) {
-    // thumbnail
-    canvas.width  = Math.round(rect.width  * DPR);
-    canvas.height = Math.round(rect.height * DPR);
+  const swapCanvasWithImage = (src) => {
+    if (!canvas.parentNode) return;
+    const fallbackImg = new Image();
+    fallbackImg.src = src;
+    fallbackImg.style.cssText = canvas.style.cssText;
+    canvas.parentNode.replaceChild(fallbackImg, canvas);
+  };
+
+  if (forceOnePixel) {
+    canvas.width = 1;
+    canvas.height = 1;
+  } else if (isThumbnail) {
+    // Use a bounded thumbnail render size in grid previews to keep GL load manageable.
+    const renderedThumbMax = thumbPxOverride ?? (isPreview ? PREVIEW_THUMBNAIL_MAX_PX : Infinity);
+    canvas.width = Math.max(1, Math.min(Math.round(rect.width * DPR), renderedThumbMax));
+    canvas.height = Math.max(1, Math.min(Math.round(rect.height * DPR), renderedThumbMax));
   } else {
     // full‐size
     canvas.width  = 900 * DPR;
     canvas.height = 860 * DPR;
   }
 
+  if (isThumbnail) {
+    await staggerThumbnailRenderStart();
+  }
+
   const gl = canvas.getContext('webgl', {
     alpha: false,
     preserveDrawingBuffer: true,
-    antialias: !(rect.width < 300)
+    antialias: !isThumbnail
   });
-  if (!gl) throw new Error('WebGL not supported');
+  if (!gl) {
+    if (isThumbnail) {
+      swapCanvasWithImage(metadata.source);
+      return;
+    }
+    throw new Error('WebGL not supported');
+  }
+
+  // If the browser drops this context due to pressure, never leave an empty tile.
+  canvas.addEventListener('webglcontextlost', (e) => {
+    e.preventDefault();
+    if (isThumbnail) swapCanvasWithImage(metadata.source);
+  }, { once: true });
+
   gl.viewport(0, 0, canvas.width, canvas.height);
 
   // 2. Compile vertex shader
@@ -253,10 +343,18 @@ async function main(metadata) {
   // … after you’ve set all the uniforms …
   gl.drawArrays(gl.TRIANGLES, 0, 6);
   const err = gl.getError();
-  if (err !== gl.NO_ERROR) console.error('WebGL error code:', err);
+  if (err !== gl.NO_ERROR) {
+    if (isThumbnail) {
+      swapCanvasWithImage(metadata.source);
+      const loseExt = gl.getExtension('WEBGL_lose_context');
+      if (loseExt) loseExt.loseContext();
+      return;
+    }
+    console.error('WebGL error code:', err);
+  }
 
   // SNAPSHOT + FREE FOR THUMBNAILS
-  if (rect.width < 300) {
+  if (isThumbnail) {
     // 1) capture pixels
     const dataURL = canvas.toDataURL();
     // 2) make an <img>
@@ -319,7 +417,7 @@ async function getMetadata() {
   }
 }
 
-function setupDOM({ width = 512, height = 512, aspect='1/1', margin = 20 } = {}) {
+function setupDOM({ width = 512, height = 512, aspect='1/1', margin = 20, fill = false } = {}) {
   // Create an off-white background and paper texture filter
   const body = document.body;
   body.style.margin = '0';
@@ -413,20 +511,15 @@ function setupDOM({ width = 512, height = 512, aspect='1/1', margin = 20 } = {})
   canvas.width = width;
   canvas.height = height;
 
-  // DEBUG ADDED vvvvv
-  // WebGL context event listeners for debugging
-  canvas.addEventListener('webglcontextlost', e => {
-    e.preventDefault(); // optional: prevent default context loss behavior
-    console.warn('CTX LOST', e);
-  }, false);
-  canvas.addEventListener('webglcontextrestored', e => {
-    console.info('CTX RESTORED', e);
-  }, false);
-  // DEBUG ADDED ^^^^^^
-
   container.appendChild(canvas);
 
   function resizeCanvas() {
+    if (fill) {
+      canvas.style.width = '100%';
+      canvas.style.height = '100%';
+      return;
+    }
+
     const cw = container.clientWidth - margin * 2;
     const ch = container.clientHeight - margin * 2;
     if (cw < ch) {
