@@ -117,7 +117,12 @@ const fragmentShader = /* glsl */`
 }`
 
 const THUMBNAIL_GL_STAGGER_KEY = 'top:grid-thumb-gl-last-start';
-const PREVIEW_THUMBNAIL_MAX_PX = 112;
+const PREVIEW_THUMBNAIL_MAX_PX = 96;
+
+const THUMBNAIL_STAGGER_FAST_SLOTS = 12;
+const THUMBNAIL_STAGGER_TOTAL_SLOTS = 180;
+const THUMBNAIL_STAGGER_FAST_STEP_MS = 22;
+const THUMBNAIL_STAGGER_SLOW_STEP_MS = 54;
 
 function isOnePixelThumbnailMode() {
   const params = new URLSearchParams(window.location.search);
@@ -141,21 +146,62 @@ function getInscriptionIndexFromPath() {
   return Number.isFinite(parsed) ? parsed : null;
 }
 
+function getInscriptionIdFromPath() {
+  const match = window.location.pathname.match(/([0-9a-f]{64}i\d+)$/i);
+  return match ? match[1].toLowerCase() : null;
+}
+
+function hashStringFNV1a(str) {
+  let hash = 0x811c9dc5;
+  for (let i = 0; i < str.length; i++) {
+    hash ^= str.charCodeAt(i);
+    hash = Math.imul(hash, 0x01000193);
+  }
+  return hash >>> 0;
+}
+
+function getDeterministicThumbnailDelayMs() {
+  const inscriptionId = getInscriptionIdFromPath();
+  if (inscriptionId) {
+    const hash = hashStringFNV1a(inscriptionId);
+    const slot = hash % THUMBNAIL_STAGGER_TOTAL_SLOTS;
+    const waveJitter = (hash >>> 16) % 24;
+    if (slot < THUMBNAIL_STAGGER_FAST_SLOTS) {
+      return (slot * THUMBNAIL_STAGGER_FAST_STEP_MS) + waveJitter;
+    }
+
+    const fastSectionMs = THUMBNAIL_STAGGER_FAST_SLOTS * THUMBNAIL_STAGGER_FAST_STEP_MS;
+    const slowSlot = slot - THUMBNAIL_STAGGER_FAST_SLOTS;
+    return fastSectionMs + (slowSlot * THUMBNAIL_STAGGER_SLOW_STEP_MS) + waveJitter;
+  }
+
+  const inscriptionIndex = getInscriptionIndexFromPath();
+  if (inscriptionIndex !== null) {
+    const slot = inscriptionIndex % THUMBNAIL_STAGGER_TOTAL_SLOTS;
+    if (slot < THUMBNAIL_STAGGER_FAST_SLOTS) {
+      return slot * THUMBNAIL_STAGGER_FAST_STEP_MS;
+    }
+    const fastSectionMs = THUMBNAIL_STAGGER_FAST_SLOTS * THUMBNAIL_STAGGER_FAST_STEP_MS;
+    return fastSectionMs + ((slot - THUMBNAIL_STAGGER_FAST_SLOTS) * THUMBNAIL_STAGGER_SLOW_STEP_MS);
+  }
+
+  return null;
+}
+
 function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 async function staggerThumbnailRenderStart() {
   // In ord preview iframes, storage APIs are often blocked by sandbox origin rules.
-  // Use deterministic delay by inscription index so iframe starts are serialized.
-  const inscriptionIndex = getInscriptionIndexFromPath();
-  if (inscriptionIndex !== null) {
-    const capped = Math.min(inscriptionIndex, 160);
-    await sleep((capped * 85) + Math.floor(Math.random() * 35));
+  // Use deterministic, bounded slotting from inscription ID/index to avoid bursty starts.
+  const deterministicDelay = getDeterministicThumbnailDelayMs();
+  if (deterministicDelay !== null) {
+    await sleep(deterministicDelay);
     return;
   }
 
-  const minGapMs = 120;
+  const minGapMs = 90;
 
   try {
     while (true) {
@@ -168,11 +214,11 @@ async function staggerThumbnailRenderStart() {
         return;
       }
 
-      await sleep(minGapMs - delta + Math.floor(Math.random() * 25));
+      await sleep(minGapMs - delta + Math.floor(Math.random() * 18));
     }
   } catch {
     // Some embedded contexts may not allow storage access.
-    await sleep(80 + Math.floor(Math.random() * 120));
+    await sleep(60 + Math.floor(Math.random() * 90));
   }
 }
 
@@ -201,6 +247,41 @@ async function main(metadata) {
     canvas.parentNode.replaceChild(fallbackImg, canvas);
   };
 
+  const freezeCanvasTo2D = async () => {
+    if (!canvas.parentNode) return;
+
+    const frozenCanvas = document.createElement('canvas');
+    frozenCanvas.width = canvas.width;
+    frozenCanvas.height = canvas.height;
+    frozenCanvas.style.cssText = canvas.style.cssText;
+
+    const ctx = frozenCanvas.getContext('2d', { alpha: false });
+    if (!ctx) throw new Error('2D canvas not supported');
+
+    if (typeof createImageBitmap === 'function') {
+      try {
+        const bitmap = await createImageBitmap(canvas);
+        ctx.drawImage(bitmap, 0, 0, frozenCanvas.width, frozenCanvas.height);
+        if (typeof bitmap.close === 'function') bitmap.close();
+      } catch {
+        ctx.drawImage(canvas, 0, 0, frozenCanvas.width, frozenCanvas.height);
+      }
+    } else {
+      ctx.drawImage(canvas, 0, 0, frozenCanvas.width, frozenCanvas.height);
+    }
+
+    canvas.parentNode.replaceChild(frozenCanvas, canvas);
+  };
+
+  if (isThumbnail) {
+    // Show something immediately while the deferred GL render queue catches up.
+    canvas.style.backgroundImage = `url("${metadata.source}")`;
+    canvas.style.backgroundPosition = 'center';
+    canvas.style.backgroundSize = 'cover';
+    canvas.style.backgroundRepeat = 'no-repeat';
+    canvas.style.backgroundColor = '#000';
+  }
+
   if (forceOnePixel) {
     canvas.width = 1;
     canvas.height = 1;
@@ -219,11 +300,18 @@ async function main(metadata) {
     await staggerThumbnailRenderStart();
   }
 
-  const gl = canvas.getContext('webgl', {
-    alpha: false,
-    preserveDrawingBuffer: true,
-    antialias: !isThumbnail
-  });
+  let gl = null;
+  try {
+    gl = canvas.getContext('webgl', {
+      alpha: false,
+      preserveDrawingBuffer: true,
+      antialias: !isThumbnail,
+      powerPreference: 'low-power'
+    });
+  } catch {
+    gl = null;
+  }
+
   if (!gl) {
     if (isThumbnail) {
       swapCanvasWithImage(metadata.source);
@@ -355,14 +443,12 @@ async function main(metadata) {
 
   // SNAPSHOT + FREE FOR THUMBNAILS
   if (isThumbnail) {
-    // 1) capture pixels
-    const dataURL = canvas.toDataURL();
-    // 2) make an <img>
-    const imgEl   = new Image();
-    imgEl.src     = dataURL;
-    imgEl.style.cssText = canvas.style.cssText;
-    // 3) swap into the DOM
-    canvas.parentNode.replaceChild(imgEl, canvas);
+    // 1) freeze pixels into a 2D canvas (faster than encoding to base64 data URL)
+    try {
+      await freezeCanvasTo2D();
+    } catch {
+      swapCanvasWithImage(metadata.source);
+    }
     // 4) free the GL context
     const loseExt = gl.getExtension('WEBGL_lose_context');
     if (loseExt) loseExt.loseContext();
@@ -376,7 +462,7 @@ async function main(metadata) {
 
 async function getMetadata() {
 
-  let currentId = window.location.href.split("/").pop();
+  let currentId = window.location.pathname.split("/").pop();
 
   function hexToUint8Array(hex) {
     const bytes = new Uint8Array(hex.length / 2);
