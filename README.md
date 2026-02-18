@@ -1,65 +1,102 @@
-# Triumph of Science / Bitcoin / Christian Religion
+# Triumph Of Prints
 
-## Dev
+WebGL-based inscription renderer for the Triumph collection.
 
-## Fast-reload edits on `main.js`
+## Prereqs
 
-1. Pretty much all visuals would be changing in the `fragmentShader` in `main.js`.
-2. Run the following command to start a local server with hot reloading:
+- macOS / Linux shell
+- `ord`
+- `bitcoin-cli`
+- `just`
+- `jq`
+- `uv` (for local dev server)
 
-```bash
-    j dev
-```
+## Commands
 
-3. Open `http://localhost:5173/` in your browser if it doesn't open automatically.
+From `/Users/mty/src/TriumphOfPrints`:
 
-4. Edit `main.js` and save. The page should reload automatically but it might not update if you make small changes or save multiple times in quick succession. If that happens, just refresh the page manually.
+- `just dev`: local hot-reload server (`http://localhost:5173`)
+- `just env`: start local regtest `ord env` at `http://localhost:9001`
+- `just env-stop`: stop local regtest `ord env` + `bitcoind` processes for this repo
+- `just env-restart`: stop then start local regtest env
+- `just env-reset`: remove local `env/`
+- `just env-fresh`: reset + start fresh regtest env
+- `just batch <yaml>`: run wallet batch inscription in local regtest env
+- `just wallet <args>`: pass-through wallet commands
+- `just mine`: mine 1 block to a fresh wallet address
+- `just mine6`: mine 6 blocks to a fresh wallet address
+- `just snapshot-ephemera`: build a 333-recipient holder snapshot from local `ord` API
 
+## Local Dev Loop
 
-### Test inscribe
+1. Run `just dev`.
+2. Edit `/Users/mty/src/TriumphOfPrints/main.js`.
+3. Refresh browser if hot reload misses a change.
 
-1. Get `ord env` running
+## Regtest Test-Inscribe Flow
 
-```bash
-    # Optional: clear previous contents of env dir
-    rm -rf env
-    just env
-```
+This is the safe testing flow (no mainnet inscription).
 
-2. Inscribe javascript module, but first edit the two imports at the top to remove ".js" and ".jpg" respectively
+1. Start clean env:
+   - `just env-fresh`
+2. Inscribe JS:
+   - `just batch js.yaml`
+   - Copy new JS inscription ID from output.
+3. Point HTML at that JS:
+   - Update `/Users/mty/src/TriumphOfPrints/inscribed.html`:
+     - `<script type="module" src="/content/<JS_INSCRIPTION_ID>"></script>`
+4. Inscribe parent:
+   - `just batch parent.yaml`
+   - `just mine`
+   - Copy parent inscription ID from output.
+5. Point airdrop children to parent:
+   - Update `parents:` in `/Users/mty/src/TriumphOfPrints/airdrop.yaml` with that parent ID.
+6. Inscribe full child batch:
+   - `just batch airdrop.yaml`
+   - `just mine`
+   - `just mine`
+7. Verify:
+   - Parent children page:
+     - `http://localhost:9001/children/<PARENT_INSCRIPTION_ID>`
+   - Individual child:
+     - `http://localhost:9001/content/<CHILD_INSCRIPTION_ID>`
 
-```javascript
-    import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60a63a43eb925f28636i0.js';
-const texture = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg';
+## Notes On Grid Reliability
 
-```
+- Thumbnail previews are intentionally throttled and bounded in render size for stability.
+- If a tile fails under context pressure, it does one delayed self-retry (`glretry=1`) before final fallback.
+- Final fallback is always source image (never blank tile).
 
-```bash
-    j batch js.yaml
-```
+## Files You’ll Usually Touch
 
-3. Change `<sript src=.../>` in `inscribed.html`.
+- `/Users/mty/src/TriumphOfPrints/main.js`: renderer + thumbnail hardening
+- `/Users/mty/src/TriumphOfPrints/inscribed.html`: script inscription pointer
+- `/Users/mty/src/TriumphOfPrints/airdrop.yaml`: child inscriptions + parent linkage
+- `/Users/mty/src/TriumphOfPrints/justfile`: local command wrappers
 
-```html
-    <script type="module" src="/content/..."></script>
-```
+## Optional Debug Tool
 
-4. Inscribe HTML file
+- `/Users/mty/src/TriumphOfPrints/grid_stress.html` is a local stress harness for iframe/grid behavior.
+- It is not required for final inscription/publish.
 
-```bash
-    j batch html.yaml
-```
+## Ephemera Holder Snapshot
 
-5. Wallet receive + copy address
+Use this when your local `ord server` is running against mainnet and reachable (for example `http://127.0.0.1:9001`).
 
-```bash
-    j wallet receive
-```
+Run:
 
-6. Mine
+- `just snapshot-ephemera`
+- Or with explicit output directory:
+  - `just snapshot-ephemera http://127.0.0.1:9001 snapshots/ephemera/manual_run_01`
 
-```bash
-    j mine {address from previous step}
-```
+Generated files:
 
-7. View at `http://localhost:9001/`. If you cleared the env dir initially then the html is `/1`
+- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/ephemera_metadata.json`: canonical source list from Ephemera.
+- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/ord_locations.jsonl`: raw per-inscription lookup results from your local `ord`.
+- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/recipient_snapshot.json`: joined, machine-friendly snapshot.
+- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/recipient_snapshot.csv`: spreadsheet view of source inscription + current address.
+- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/recipient_assignment_template.csv`: manual assignment sheet for mapping your drop inscription IDs to specific Ephemera inscriptions.
+- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/holders_by_address.csv`: grouped addresses and counts.
+- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/summary.json`: quick counts and sanity checks.
+
+Snapshot outputs are local artifacts and ignored by git.

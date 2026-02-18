@@ -1,6 +1,6 @@
 mode: separate-outputs
 parents:
-  - 7eb7cf4cbe50f8a00ba0a36621daa90a183ce6afb7c3a9bbed44e80db941c225i0
+  - bcc864c9421b7f96de4a958141bd53fa33bd70a2f327aa77426a2a5bb26d46a3i0
 
 inscriptions:
 - file: ./inscribed.html

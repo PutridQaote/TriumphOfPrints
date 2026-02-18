@@ -12,6 +12,15 @@ dev:
 env:
   ord env --proxy {{proxy}} {{datadir}}
 
+env-stop:
+  pkill -f "ord env --proxy {{proxy}} {{datadir}}" || true
+  pkill -f "bitcoind -conf=$PWD/{{datadir}}/bitcoin.conf" || true
+  pkill -f "ord --datadir $PWD/{{datadir}} server" || true
+
+env-restart:
+  just env-stop
+  just env
+
 env-reset:
   rm -rf {{datadir}}
 
@@ -41,4 +50,11 @@ mine6 address='':
     addr=$(ord -f json --datadir {{datadir}} wallet receive | jq -r '.addresses[0]'); \
     echo "Mining 6 blocks to $addr"; \
     bitcoin-cli -datadir={{datadir}} generatetoaddress 6 $addr; \
+  fi
+
+snapshot-ephemera ord_base='http://127.0.0.1:9001' out_dir='':
+  if [ -n "{{out_dir}}" ]; then \
+    ./scripts/snapshot_ephemera_holders.sh --ord-base "{{ord_base}}" --out-dir "{{out_dir}}"; \
+  else \
+    ./scripts/snapshot_ephemera_holders.sh --ord-base "{{ord_base}}"; \
   fi

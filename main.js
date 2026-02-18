@@ -1,9 +1,4 @@
-// TODO: When doing a test inscribe remove the .js and .jpg from these paths
 import { decode } from '/content/077fbf9e2d8c405e5f276220ed83c029eb86ecc1bd22a60a63a43eb925f28636i0';
-
-// const texture = '/content/23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0.jpg'; // christian religion
-// const texture = 'content/ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0.jpg' // bitcoin
-// const texture = 'content/6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0.jpg' // science
 
 const metadata = {
   title: 'Triumph of Bitcoin',
@@ -117,12 +112,43 @@ const fragmentShader = /* glsl */`
 }`
 
 const THUMBNAIL_GL_STAGGER_KEY = 'top:grid-thumb-gl-last-start';
-const PREVIEW_THUMBNAIL_MAX_PX = 96;
+const PREVIEW_THUMBNAIL_MAX_PX = 108;
 
-const THUMBNAIL_STAGGER_FAST_SLOTS = 12;
-const THUMBNAIL_STAGGER_TOTAL_SLOTS = 180;
-const THUMBNAIL_STAGGER_FAST_STEP_MS = 22;
-const THUMBNAIL_STAGGER_SLOW_STEP_MS = 54;
+const THUMBNAIL_STAGGER_PROFILES = {
+  sparse: {
+    fastSlots: 6,
+    totalSlots: 20,
+    fastStepMs: 8,
+    slowStepMs: 12,
+    jitterMs: 6,
+    minGapMs: 16,
+    minGapJitterMs: 7,
+    fallbackBaseMs: 16,
+    fallbackJitterMs: 28
+  },
+  balanced: {
+    fastSlots: 8,
+    totalSlots: 52,
+    fastStepMs: 12,
+    slowStepMs: 20,
+    jitterMs: 9,
+    minGapMs: 34,
+    minGapJitterMs: 12,
+    fallbackBaseMs: 30,
+    fallbackJitterMs: 44
+  },
+  dense: {
+    fastSlots: 12,
+    totalSlots: 110,
+    fastStepMs: 16,
+    slowStepMs: 30,
+    jitterMs: 12,
+    minGapMs: 62,
+    minGapJitterMs: 18,
+    fallbackBaseMs: 50,
+    fallbackJitterMs: 72
+  }
+};
 
 function isOnePixelThumbnailMode() {
   const params = new URLSearchParams(window.location.search);
@@ -160,29 +186,42 @@ function hashStringFNV1a(str) {
   return hash >>> 0;
 }
 
-function getDeterministicThumbnailDelayMs() {
+function getThumbnailStaggerProfile(tileWidth, isPreview) {
+  if (!isPreview) return THUMBNAIL_STAGGER_PROFILES.sparse;
+  const pageMatch = document.referrer.match(/\/children\/[0-9a-f]{64}i\d+\/(\d+)$/i);
+  if (pageMatch && Number(pageMatch[1]) >= 1) {
+    // Paged children routes are often the smaller/final pages; bias faster starts.
+    return THUMBNAIL_STAGGER_PROFILES.balanced;
+  }
+  if (tileWidth >= 250) return THUMBNAIL_STAGGER_PROFILES.sparse;
+  if (tileWidth >= 175) return THUMBNAIL_STAGGER_PROFILES.balanced;
+  return THUMBNAIL_STAGGER_PROFILES.dense;
+}
+
+function getDeterministicThumbnailDelayMs(staggerProfile) {
+  const { fastSlots, totalSlots, fastStepMs, slowStepMs, jitterMs } = staggerProfile;
   const inscriptionId = getInscriptionIdFromPath();
   if (inscriptionId) {
     const hash = hashStringFNV1a(inscriptionId);
-    const slot = hash % THUMBNAIL_STAGGER_TOTAL_SLOTS;
-    const waveJitter = (hash >>> 16) % 24;
-    if (slot < THUMBNAIL_STAGGER_FAST_SLOTS) {
-      return (slot * THUMBNAIL_STAGGER_FAST_STEP_MS) + waveJitter;
+    const slot = hash % totalSlots;
+    const waveJitter = (hash >>> 16) % jitterMs;
+    if (slot < fastSlots) {
+      return (slot * fastStepMs) + waveJitter;
     }
 
-    const fastSectionMs = THUMBNAIL_STAGGER_FAST_SLOTS * THUMBNAIL_STAGGER_FAST_STEP_MS;
-    const slowSlot = slot - THUMBNAIL_STAGGER_FAST_SLOTS;
-    return fastSectionMs + (slowSlot * THUMBNAIL_STAGGER_SLOW_STEP_MS) + waveJitter;
+    const fastSectionMs = fastSlots * fastStepMs;
+    const slowSlot = slot - fastSlots;
+    return fastSectionMs + (slowSlot * slowStepMs) + waveJitter;
   }
 
   const inscriptionIndex = getInscriptionIndexFromPath();
   if (inscriptionIndex !== null) {
-    const slot = inscriptionIndex % THUMBNAIL_STAGGER_TOTAL_SLOTS;
-    if (slot < THUMBNAIL_STAGGER_FAST_SLOTS) {
-      return slot * THUMBNAIL_STAGGER_FAST_STEP_MS;
+    const slot = inscriptionIndex % totalSlots;
+    if (slot < fastSlots) {
+      return slot * fastStepMs;
     }
-    const fastSectionMs = THUMBNAIL_STAGGER_FAST_SLOTS * THUMBNAIL_STAGGER_FAST_STEP_MS;
-    return fastSectionMs + ((slot - THUMBNAIL_STAGGER_FAST_SLOTS) * THUMBNAIL_STAGGER_SLOW_STEP_MS);
+    const fastSectionMs = fastSlots * fastStepMs;
+    return fastSectionMs + ((slot - fastSlots) * slowStepMs);
   }
 
   return null;
@@ -192,16 +231,23 @@ function sleep(ms) {
   return new Promise(resolve => setTimeout(resolve, ms));
 }
 
-async function staggerThumbnailRenderStart() {
+async function loadImageBitmap(src) {
+  const resp = await fetch(src, { mode: 'cors', cache: 'force-cache' });
+  if (!resp.ok) throw new Error('Image load error');
+  const blob = await resp.blob();
+  return createImageBitmap(blob);
+}
+
+async function staggerThumbnailRenderStart(staggerProfile) {
   // In ord preview iframes, storage APIs are often blocked by sandbox origin rules.
   // Use deterministic, bounded slotting from inscription ID/index to avoid bursty starts.
-  const deterministicDelay = getDeterministicThumbnailDelayMs();
+  const deterministicDelay = getDeterministicThumbnailDelayMs(staggerProfile);
   if (deterministicDelay !== null) {
     await sleep(deterministicDelay);
     return;
   }
 
-  const minGapMs = 90;
+  const minGapMs = staggerProfile.minGapMs;
 
   try {
     while (true) {
@@ -214,37 +260,49 @@ async function staggerThumbnailRenderStart() {
         return;
       }
 
-      await sleep(minGapMs - delta + Math.floor(Math.random() * 18));
+      await sleep(minGapMs - delta + Math.floor(Math.random() * staggerProfile.minGapJitterMs));
     }
   } catch {
     // Some embedded contexts may not allow storage access.
-    await sleep(60 + Math.floor(Math.random() * 90));
+    await sleep(staggerProfile.fallbackBaseMs + Math.floor(Math.random() * staggerProfile.fallbackJitterMs));
   }
 }
 
 async function main(metadata) {
   const isPreview = isOrdPreviewRoute();
+  const retryHash = hashStringFNV1a(getInscriptionIdFromPath() ?? window.location.pathname);
+  const thumbnailRetryDelayMs = 900 + (retryHash % 1100);
+  const hasThumbnailRetryAttempt = new URLSearchParams(window.location.search).get('glretry') === '1';
+  let thumbnailFailureHandled = false;
 
-  // 1. Create + size canvas
   const canvas = setupDOM({
     width: 900,
     height: 860,
-    aspect: 900/860,
     margin: isPreview ? 0 : 10,
     fill: isPreview
   });
   const rect = canvas.getBoundingClientRect();
   const DPR  = window.devicePixelRatio || 1;
   const isThumbnail = rect.width <= (isPreview ? 700 : 320);
+  const thumbnailStaggerProfile = isThumbnail ? getThumbnailStaggerProfile(rect.width, isPreview) : null;
   const thumbPxOverride = getThumbnailPixelOverride();
   const forceOnePixel = isThumbnail && isOnePixelThumbnailMode();
+  const imageBitmapPromise = isThumbnail ? loadImageBitmap(metadata.source) : null;
 
-  const swapCanvasWithImage = (src) => {
+  const swapCanvasWithImage = (src, forceImgTag = false) => {
     if (!canvas.parentNode) return;
-    const fallbackImg = new Image();
-    fallbackImg.src = src;
-    fallbackImg.style.cssText = canvas.style.cssText;
-    canvas.parentNode.replaceChild(fallbackImg, canvas);
+    if (!forceImgTag) {
+      canvas.style.backgroundImage = `url("${src}")`;
+      canvas.style.backgroundPosition = 'center';
+      canvas.style.backgroundSize = 'cover';
+      canvas.style.backgroundRepeat = 'no-repeat';
+      canvas.style.backgroundColor = '#000';
+      return;
+    }
+    const fallbackImage = new Image();
+    fallbackImage.src = src;
+    fallbackImage.style.cssText = canvas.style.cssText;
+    canvas.parentNode.replaceChild(fallbackImage, canvas);
   };
 
   const freezeCanvasTo2D = async () => {
@@ -273,8 +331,35 @@ async function main(metadata) {
     canvas.parentNode.replaceChild(frozenCanvas, canvas);
   };
 
+  const releaseThumbnailContext = (gl) => {
+    if (!gl) return;
+    const loseExt = gl.getExtension('WEBGL_lose_context');
+    if (loseExt) loseExt.loseContext();
+  };
+
+  const scheduleThumbnailRetry = () => {
+    if (!isThumbnail || hasThumbnailRetryAttempt) return false;
+    const params = new URLSearchParams(window.location.search);
+    params.set('glretry', '1');
+    const retryUrl = `${window.location.pathname}?${params.toString()}`;
+    window.setTimeout(() => {
+      window.location.replace(retryUrl);
+    }, thumbnailRetryDelayMs);
+    return true;
+  };
+
+  const handleThumbnailFailure = (gl) => {
+    if (thumbnailFailureHandled) return;
+    thumbnailFailureHandled = true;
+    releaseThumbnailContext(gl);
+    if (scheduleThumbnailRetry()) {
+      swapCanvasWithImage(metadata.source);
+      return;
+    }
+    swapCanvasWithImage(metadata.source, true);
+  };
+
   if (isThumbnail) {
-    // Show something immediately while the deferred GL render queue catches up.
     canvas.style.backgroundImage = `url("${metadata.source}")`;
     canvas.style.backgroundPosition = 'center';
     canvas.style.backgroundSize = 'cover';
@@ -286,21 +371,20 @@ async function main(metadata) {
     canvas.width = 1;
     canvas.height = 1;
   } else if (isThumbnail) {
-    // Use a bounded thumbnail render size in grid previews to keep GL load manageable.
     const renderedThumbMax = thumbPxOverride ?? (isPreview ? PREVIEW_THUMBNAIL_MAX_PX : Infinity);
     canvas.width = Math.max(1, Math.min(Math.round(rect.width * DPR), renderedThumbMax));
     canvas.height = Math.max(1, Math.min(Math.round(rect.height * DPR), renderedThumbMax));
   } else {
-    // full‐size
     canvas.width  = 900 * DPR;
     canvas.height = 860 * DPR;
   }
 
-  if (isThumbnail) {
-    await staggerThumbnailRenderStart();
+  if (isThumbnail && thumbnailStaggerProfile) {
+    await staggerThumbnailRenderStart(thumbnailStaggerProfile);
   }
 
   let gl = null;
+  let contextLost = false;
   try {
     gl = canvas.getContext('webgl', {
       alpha: false,
@@ -314,149 +398,131 @@ async function main(metadata) {
 
   if (!gl) {
     if (isThumbnail) {
-      swapCanvasWithImage(metadata.source);
+      handleThumbnailFailure(gl);
       return;
     }
     throw new Error('WebGL not supported');
   }
 
-  // If the browser drops this context due to pressure, never leave an empty tile.
   canvas.addEventListener('webglcontextlost', (e) => {
     e.preventDefault();
-    if (isThumbnail) swapCanvasWithImage(metadata.source);
+    contextLost = true;
   }, { once: true });
 
-  gl.viewport(0, 0, canvas.width, canvas.height);
+  try {
+    gl.viewport(0, 0, canvas.width, canvas.height);
 
-  // 2. Compile vertex shader
-  const vs = gl.createShader(gl.VERTEX_SHADER);
-  gl.shaderSource(vs, vertexShader);
-  gl.compileShader(vs);
-  const vsLog = gl.getShaderInfoLog(vs); // DEBUG ADDED
-  if (vsLog) console.warn('Vertex shader info log:', vsLog); // DEBUG ADDED
-  if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
-    throw new Error('Vertex shader failed: ' + gl.getShaderInfoLog(vs));
-  }
+    const vs = gl.createShader(gl.VERTEX_SHADER);
+    gl.shaderSource(vs, vertexShader);
+    gl.compileShader(vs);
+    if (!gl.getShaderParameter(vs, gl.COMPILE_STATUS)) {
+      throw new Error('Vertex shader failed');
+    }
 
-  // 3. Compile fragment shader
-  const fs = gl.createShader(gl.FRAGMENT_SHADER);
-  gl.shaderSource(fs, fragmentShader);
-  gl.compileShader(fs);
-  const fsLog = gl.getShaderInfoLog(fs); // DEBUG ADDED
-  if (fsLog) console.warn('Fragment shader info log:', fsLog); // DEBUG ADDED
-  if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
-    throw new Error('Fragment shader failed: ' + gl.getShaderInfoLog(fs));
-  }
+    const fs = gl.createShader(gl.FRAGMENT_SHADER);
+    gl.shaderSource(fs, fragmentShader);
+    gl.compileShader(fs);
+    if (!gl.getShaderParameter(fs, gl.COMPILE_STATUS)) {
+      throw new Error('Fragment shader failed');
+    }
 
-  // 4. Link program
-  const program = gl.createProgram();
-  gl.attachShader(program, vs);
-  gl.attachShader(program, fs);
-  gl.linkProgram(program);
-  const linkLog = gl.getProgramInfoLog(program); // DEBUG ADDED
-  if (linkLog) console.warn('Program link info log:', linkLog); // DEBUG ADDED
-  if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
-    throw new Error('Program link failed: ' + gl.getProgramInfoLog(program));
-  }
-  gl.useProgram(program);
+    const program = gl.createProgram();
+    gl.attachShader(program, vs);
+    gl.attachShader(program, fs);
+    gl.linkProgram(program);
+    if (!gl.getProgramParameter(program, gl.LINK_STATUS)) {
+      throw new Error('Program link failed');
+    }
+    gl.useProgram(program);
 
-  // 5. Set up a_position buffer (two-triangle quad)
-  const posLoc = gl.getAttribLocation(program, 'a_position');
-  const posBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, posBuffer);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-    -1, -1,  1, -1,  -1, 1,
-    -1,  1,  1, -1,   1, 1
-  ]), gl.STATIC_DRAW);
-  gl.enableVertexAttribArray(posLoc);
-  gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
+    const posLoc = gl.getAttribLocation(program, 'a_position');
+    const posBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, posBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+      -1, -1,  1, -1,  -1, 1,
+      -1,  1,  1, -1,   1, 1
+    ]), gl.STATIC_DRAW);
+    gl.enableVertexAttribArray(posLoc);
+    gl.vertexAttribPointer(posLoc, 2, gl.FLOAT, false, 0, 0);
 
-  // 6. Set up a_texcoord buffer
-  const texLoc = gl.getAttribLocation(program, 'a_texcoord');
-  const texBuffer = gl.createBuffer();
-  gl.bindBuffer(gl.ARRAY_BUFFER, texBuffer);
-  gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
-     0, 0,  1, 0,  0, 1,
-     0, 1,  1, 0,  1, 1
-  ]), gl.STATIC_DRAW);
-  gl.enableVertexAttribArray(texLoc);
-  gl.vertexAttribPointer(texLoc, 2, gl.FLOAT, false, 0, 0);
+    const texLoc = gl.getAttribLocation(program, 'a_texcoord');
+    const texBuffer = gl.createBuffer();
+    gl.bindBuffer(gl.ARRAY_BUFFER, texBuffer);
+    gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([
+      0, 0,  1, 0,  0, 1,
+      0, 1,  1, 0,  1, 1
+    ]), gl.STATIC_DRAW);
+    gl.enableVertexAttribArray(texLoc);
+    gl.vertexAttribPointer(texLoc, 2, gl.FLOAT, false, 0, 0);
 
-  // 7. Look up uniform locations
-  const uImage     = gl.getUniformLocation(program, 'u_image');
-  const uRes       = gl.getUniformLocation(program, 'u_resolution');
-  const uRad       = gl.getUniformLocation(program, 'u_radius');
-  const uCOff      = gl.getUniformLocation(program, 'u_cOffset');
-  const uMOff      = gl.getUniformLocation(program, 'u_mOffset');
-  const uYOff      = gl.getUniformLocation(program, 'u_yOffset');
-  const uKOff      = gl.getUniformLocation(program, 'u_kOffset');
-  const uNoise     = gl.getUniformLocation(program, 'u_noiseAmp');
-  const uInkStatus = gl.getUniformLocation(program, 'u_inkStatus');
+    const uImage = gl.getUniformLocation(program, 'u_image');
+    const uRes = gl.getUniformLocation(program, 'u_resolution');
+    const uRad = gl.getUniformLocation(program, 'u_radius');
+    const uCOff = gl.getUniformLocation(program, 'u_cOffset');
+    const uMOff = gl.getUniformLocation(program, 'u_mOffset');
+    const uYOff = gl.getUniformLocation(program, 'u_yOffset');
+    const uKOff = gl.getUniformLocation(program, 'u_kOffset');
+    const uNoise = gl.getUniformLocation(program, 'u_noiseAmp');
+    const uInkStatus = gl.getUniformLocation(program, 'u_inkStatus');
 
-  // Tell the shader to sample from texture unit 0
-  gl.uniform1i(uImage, 0);
+    gl.uniform1i(uImage, 0);
 
-  // 8. Fetch & upload your image as a texture
-  const resp = await fetch(metadata.source, { mode: 'cors' });
-  if (!resp.ok) throw new Error('Image load error');
-  const blob = await resp.blob();
-  const imgBitmap = await createImageBitmap(blob);
+    const imgBitmap = imageBitmapPromise
+      ? await imageBitmapPromise
+      : await loadImageBitmap(metadata.source);
 
-  const tex = gl.createTexture();
-  gl.activeTexture(gl.TEXTURE0);
-  gl.bindTexture(gl.TEXTURE_2D, tex);
-  gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 0);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
-  gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-  gl.texImage2D(
-    gl.TEXTURE_2D, 0,
-    gl.RGBA, gl.RGBA,
-    gl.UNSIGNED_BYTE,
-    imgBitmap
-  );
+    const tex = gl.createTexture();
+    gl.activeTexture(gl.TEXTURE0);
+    gl.bindTexture(gl.TEXTURE_2D, tex);
+    gl.pixelStorei(gl.UNPACK_FLIP_Y_WEBGL, 0);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
+    gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
+    gl.texImage2D(
+      gl.TEXTURE_2D, 0,
+      gl.RGBA, gl.RGBA,
+      gl.UNSIGNED_BYTE,
+      imgBitmap
+    );
 
-  // 9. Pass in metadata uniforms & draw
-  gl.viewport(0, 0, canvas.width, canvas.height);
-  gl.uniform2f(uRes, canvas.width, canvas.height);
-  gl.uniform1f(uRad, metadata.radius);
-  gl.uniform2f(uCOff, ...metadata.cOffset);
-  gl.uniform2f(uMOff, ...metadata.mOffset);
-  gl.uniform2f(uYOff, ...metadata.yOffset);
-  gl.uniform2f(uKOff, ...metadata.kOffset);
-  gl.uniform1f(uNoise, metadata.noiseAmp);
-  gl.uniform1f(uInkStatus, metadata.inkStatus);
+    gl.viewport(0, 0, canvas.width, canvas.height);
+    gl.uniform2f(uRes, canvas.width, canvas.height);
+    gl.uniform1f(uRad, metadata.radius);
+    gl.uniform2f(uCOff, ...metadata.cOffset);
+    gl.uniform2f(uMOff, ...metadata.mOffset);
+    gl.uniform2f(uYOff, ...metadata.yOffset);
+    gl.uniform2f(uKOff, ...metadata.kOffset);
+    gl.uniform1f(uNoise, metadata.noiseAmp);
+    gl.uniform1f(uInkStatus, metadata.inkStatus);
 
-  // … after you’ve set all the uniforms …
-  gl.drawArrays(gl.TRIANGLES, 0, 6);
-  const err = gl.getError();
-  if (err !== gl.NO_ERROR) {
+    gl.drawArrays(gl.TRIANGLES, 0, 6);
+    const err = gl.getError();
+    if (err !== gl.NO_ERROR || contextLost) {
+      if (isThumbnail) {
+        handleThumbnailFailure(gl);
+        return;
+      }
+      throw new Error(`WebGL error code: ${err}`);
+    }
+
     if (isThumbnail) {
-      swapCanvasWithImage(metadata.source);
-      const loseExt = gl.getExtension('WEBGL_lose_context');
-      if (loseExt) loseExt.loseContext();
+      try {
+        await freezeCanvasTo2D();
+      } catch {
+        handleThumbnailFailure(gl);
+        return;
+      }
+      releaseThumbnailContext(gl);
       return;
     }
-    console.error('WebGL error code:', err);
-  }
-
-  // SNAPSHOT + FREE FOR THUMBNAILS
-  if (isThumbnail) {
-    // 1) freeze pixels into a 2D canvas (faster than encoding to base64 data URL)
-    try {
-      await freezeCanvasTo2D();
-    } catch {
-      swapCanvasWithImage(metadata.source);
+  } catch (error) {
+    if (isThumbnail) {
+      handleThumbnailFailure(gl);
+      return;
     }
-    // 4) free the GL context
-    const loseExt = gl.getExtension('WEBGL_lose_context');
-    if (loseExt) loseExt.loseContext();
-    // 5) stop here—no further GL work for thumbnails
-    return;
+    throw error;
   }
-
-
 }
 
 
@@ -476,7 +542,6 @@ async function getMetadata() {
     const cborMetadata = await fetch(`/r/metadata/${currentId}`).then((res) => res.json());
     const uint8Metadata = hexToUint8Array(cborMetadata);
     const decoded = decode(uint8Metadata);
-    console.log('decoded metadata', decoded);
 
     // Ensure source path has the correct format
     let source = decoded.source || 'ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0'; // use default if not provided
@@ -498,13 +563,11 @@ async function getMetadata() {
       source: source
     };
   } catch {
-    console.log('using default metadata');
     return metadata;
   }
 }
 
-function setupDOM({ width = 512, height = 512, aspect='1/1', margin = 20, fill = false } = {}) {
-  // Create an off-white background and paper texture filter
+function setupDOM({ width = 512, height = 512, margin = 20, fill = false } = {}) {
   const body = document.body;
   body.style.margin = '0';
   body.style.display = 'flex';
@@ -512,77 +575,10 @@ function setupDOM({ width = 512, height = 512, aspect='1/1', margin = 20, fill =
   body.style.alignItems = 'center';
   body.style.height = '100vh';
 
-  // Clear any existing SVG filters and canvas elements
-
-
-  // TODO delete
-//     document.querySelectorAll('svg, #container').forEach(el => el.remove());
-
-//   // Calculate offset compensation values based on wear
-//   // Adjust the compensation factor to account for large wear values
-//   const offsetX = -wear * 0.2; 
-//   const offsetY = -wear * 0.2;
-
-//   const getChannelSelector = (scale) => {
-//     const channels = ['R', 'G', 'B'];
-//     const ix = Math.floor(wear * scale) % channels.length;
-//     return channels[ix];
-//   }
-
-
-
-//   // Define SVG filter for crumpled paper displacement
-//   const svgNS = 'http://www.w3.org/2000/svg';
-//   const svg = document.createElementNS(svgNS, 'svg');
-//   svg.setAttribute('style', 'position:absolute;width:0;height:0');
-//   svg.innerHTML = `<defs>
-//   <filter id="paperFilter"
-//           x="-40%" y="-40%" width="180%" height="180%"
-//           filterUnits="objectBoundingBox">
-//     <!-- very broad folds -->
-//     <feTurbulence
-//       type="turbulence"
-//       baseFrequency="0.008 0.008"
-//       numOctaves="5"
-//       seed="6"
-//       result="warpNoise" />
-
-//     <feGaussianBlur
-//       in="warpNoise"
-//       stdDeviation="100"
-//       result="smoothNoise" />
-
-//     <feDisplacementMap
-//       in="SourceGraphic"
-//       in2="smoothNoise"
-//       scale="${wear}"
-//       xChannelSelector="${getChannelSelector(1.235)}"
-//       yChannelSelector="${getChannelSelector(9.512)}"
-//       result="displaced" />
-      
-//     <!-- Add offset to compensate for displacement shift -->
-//     <feOffset
-//       in="displaced"
-//       dx="${offsetX * 1.2}"
-//       dy="${offsetY}"
-//       result="recentered" />
-
-//     <feDropShadow
-//       in="recentered"
-//       dx="25" dy="25"
-//       stdDeviation="20"
-//       flood-color="black"
-//       flood-opacity="0.1" />
-//   </filter>
-// </defs>`;
-//   body.appendChild(svg);
-/////////////////////////////////////
-
   const container = document.createElement('div');
   container.id = 'container';
   container.style.width = `calc(min(100vw, 100vh))`;
   container.style.height = 'min(100vw, 100vh)';
-  // container.style.aspectRatio = aspect;
   container.style.boxSizing = 'border-box';
   container.style.padding = `${margin}px`;
   container.style.display = 'flex';
@@ -590,7 +586,6 @@ function setupDOM({ width = 512, height = 512, aspect='1/1', margin = 20, fill =
   container.style.alignItems = 'center';
   container.style.background = 'none';
   body.appendChild(container);
-  // container.style.background = '#f5f3e8';  // off-white background
 
   const canvas = document.createElement('canvas');
   canvas.id = 'glcanvas';
