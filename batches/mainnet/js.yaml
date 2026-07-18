@@ -1,3 +1,4 @@
 mode: separate-outputs
+postage: 1000
 inscriptions:
-  - file: ./main.js 
+  - file: ./main.js

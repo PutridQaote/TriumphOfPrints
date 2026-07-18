@@ -1,102 +1,122 @@
 # Triumph Of Prints
 
-WebGL-based inscription renderer for the Triumph collection.
+A 333-piece recursive Ordinals collection rendered with a CMYK-halftone WebGL
+shader. Each child has the same tiny HTML body; its unique artwork parameters
+and source image are stored as on-chain CBOR metadata.
 
-## Prereqs
+## Release model
 
-- macOS / Linux shell
+- `main.js` is inscribed first and becomes the shared recursive renderer.
+- `inscribed.html` points to that confirmed mainnet JavaScript inscription.
+- The existing inscription
+  `23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0`
+  is the collection parent. It is not re-inscribed.
+- The 333 children use `separate-outputs`, 1,000 sats postage each, and are sent
+  one-to-one to the current holders of their assigned Ephemera inscriptions.
+- The parent must be held by the ord wallet that creates the child batch.
+
+See `batches/README.md` for the canonical/generated/archive/regtest layout.
+
+## Prerequisites
+
 - `ord`
+- Bitcoin Core with `txindex=1`
 - `bitcoin-cli`
 - `just`
 - `jq`
-- `uv` (for local dev server)
+- Ruby (the release scripts use only its standard library)
 
-## Commands
+## Safe commands
 
-From `/Users/mty/src/TriumphOfPrints`:
+```sh
+# Create a timestamped candidate from the live local mainnet ord server.
+just refresh-airdrop
 
-- `just dev`: local hot-reload server (`http://localhost:5173`)
-- `just env`: start local regtest `ord env` at `http://localhost:9001`
-- `just env-stop`: stop local regtest `ord env` + `bitcoind` processes for this repo
-- `just env-restart`: stop then start local regtest env
-- `just env-reset`: remove local `env/`
-- `just env-fresh`: reset + start fresh regtest env
-- `just batch <yaml>`: run wallet batch inscription in local regtest env
-- `just wallet <args>`: pass-through wallet commands
-- `just mine`: mine 1 block to a fresh wallet address
-- `just mine6`: mine 6 blocks to a fresh wallet address
-- `just snapshot-ephemera`: build a 333-recipient holder snapshot from local `ord` API
+# Validate a candidate, including live holder and dependency checks.
+just validate-airdrop batches/generated/<timestamp>/airdrop.yaml candidate http://127.0.0.1
 
-## Local Dev Loop
+# After the real mainnet JS ID has replaced the placeholder, run strict checks.
+just validate-airdrop batches/generated/<timestamp>/airdrop.yaml release http://127.0.0.1
+```
 
-1. Run `just dev`.
-2. Edit `/Users/mty/src/TriumphOfPrints/main.js`.
-3. Refresh browser if hot reload misses a change.
+Refresh output is atomic and never overwrites an existing bundle. Each bundle
+contains:
 
-## Regtest Test-Inscribe Flow
+- `airdrop.yaml`: ord-ready candidate batch;
+- `mapping.csv`: the fixed print/Ephemera pairing with refreshed addresses;
+- `summary.json`: block height, timestamp, changed assignments, address types,
+  parent, and postage totals.
 
-This is the safe testing flow (no mainnet inscription).
+`batches/generated/` is ignored so rehearsals and intermediate snapshots do not
+pollute git. The final launch bundle should be copied to a deliberate release
+location and committed after strict validation.
 
-1. Start clean env:
-   - `just env-fresh`
-2. Inscribe JS:
-   - `just batch js.yaml`
-   - Copy new JS inscription ID from output.
-3. Point HTML at that JS:
-   - Update `/Users/mty/src/TriumphOfPrints/inscribed.html`:
-     - `<script type="module" src="/content/<JS_INSCRIPTION_ID>"></script>`
-4. Inscribe parent:
-   - `just batch parent.yaml`
-   - `just mine`
-   - Copy parent inscription ID from output.
-5. Point airdrop children to parent:
-   - Update `parents:` in `/Users/mty/src/TriumphOfPrints/airdrop.yaml` with that parent ID.
-6. Inscribe full child batch:
-   - `just batch airdrop.yaml`
-   - `just mine`
-   - `just mine`
-7. Verify:
-   - Parent children page:
-     - `http://localhost:9001/children/<PARENT_INSCRIPTION_ID>`
-   - Individual child:
-     - `http://localhost:9001/content/<CHILD_INSCRIPTION_ID>`
+## Clean regtest rehearsal
 
-## Notes On Grid Reliability
+The regtest rehearsal deliberately uses a newly inscribed copy of the parent
+JPEG as a stand-in. Mainnet never runs that parent batch.
 
-- Thumbnail previews are intentionally throttled and bounded in render size for stability.
-- If a tile fails under context pressure, it does one delayed self-retry (`glretry=1`) before final fallback.
-- Final fallback is always source image (never blank tile).
+```sh
+# Terminal 1: destructive only to ignored env/ regtest state.
+just env-fresh
 
-## Files You’ll Usually Touch
+# Terminal 2: inscribe and confirm the renderer.
+just batch batches/regtest/js.yaml
+just mine
 
-- `/Users/mty/src/TriumphOfPrints/main.js`: renderer + thumbnail hardening
-- `/Users/mty/src/TriumphOfPrints/inscribed.html`: script inscription pointer
-- `/Users/mty/src/TriumphOfPrints/airdrop.yaml`: child inscriptions + parent linkage
-- `/Users/mty/src/TriumphOfPrints/justfile`: local command wrappers
+# Inscribe and confirm the synthetic regtest parent.
+just batch batches/regtest/parent.yaml
+just mine
 
-## Optional Debug Tool
+# Substitute the two IDs printed above.
+just prepare-regtest <JS_INSCRIPTION_ID> <PARENT_INSCRIPTION_ID>
 
-- `/Users/mty/src/TriumphOfPrints/grid_stress.html` is a local stress harness for iframe/grid behavior.
-- It is not required for final inscription/publish.
+# Inscribe and confirm all 333 children.
+just batch env/rehearsal/airdrop.yaml
+just mine
+just mine
 
-## Ephemera Holder Snapshot
+# Optional: annotate every regtest preview with its current mainnet recipient.
+just rehearsal-gallery <CHILD_REVEAL_TXID> batches/generated/<timestamp>/mapping.csv
+python3 -m http.server 5173 --bind 127.0.0.1
+```
 
-Use this when your local `ord server` is running against mainnet and reachable (for example `http://127.0.0.1:9001`).
+The same server can be started with `just gallery-server` and stopped with
+`just gallery-stop`.
 
-Run:
+Browse:
 
-- `just snapshot-ephemera`
-- Or with explicit output directory:
-  - `just snapshot-ephemera http://127.0.0.1:9001 snapshots/ephemera/manual_run_01`
+- `http://127.0.0.1:9001/children/<PARENT_INSCRIPTION_ID>`
+- `http://127.0.0.1:9001/preview/<CHILD_INSCRIPTION_ID>`
+- `http://127.0.0.1:9001/content/<CHILD_INSCRIPTION_ID>`
+- `http://127.0.0.1:5173/env/rehearsal/gallery.html` for the annotated
+  art/recipient review gallery after starting the static server above.
 
-Generated files:
+## Mainnet launch order
 
-- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/ephemera_metadata.json`: canonical source list from Ephemera.
-- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/ord_locations.jsonl`: raw per-inscription lookup results from your local `ord`.
-- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/recipient_snapshot.json`: joined, machine-friendly snapshot.
-- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/recipient_snapshot.csv`: spreadsheet view of source inscription + current address.
-- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/recipient_assignment_template.csv`: manual assignment sheet for mapping your drop inscription IDs to specific Ephemera inscriptions.
-- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/holders_by_address.csv`: grouped addresses and counts.
-- `/Users/mty/src/TriumphOfPrints/snapshots/ephemera/<timestamp>/summary.json`: quick counts and sanity checks.
+1. Create a dedicated ord wallet and make a verified descriptor/mnemonic backup.
+2. Fund it with postage, fees, and headroom.
+3. Transfer the existing parent inscription into that wallet and verify it with
+   `ord wallet inscriptions`.
+4. Inscribe `main.js` using `batches/mainnet/js.yaml`.
+5. After confirmation, update `inscribed.html` with the real JS inscription ID.
+6. Optionally inscribe an unparented canary child and verify rendering.
+7. Refresh holders close to launch and run strict release validation.
+8. Dry-run the final batch at the chosen live fee rate.
+9. Inscribe the 333 children while the parent remains in the ord wallet.
+10. Confirm and verify the parent children page before moving the parent again.
 
-Snapshot outputs are local artifacts and ignored by git.
+Do not use `--no-backup` for mainnet. Do not run ordinary Bitcoin Core wallet
+send operations against the ord wallet; use ord's wallet commands so inscription
+sat control is preserved.
+
+## Other commands
+
+- `just dev`: local development server (requires `uv`).
+- `just env`: start the existing regtest environment.
+- `just env-stop`: stop this repository's regtest processes.
+- `just wallet <args>`: regtest ord wallet passthrough.
+- `just snapshot-ephemera`: create the older full snapshot artifact set.
+
+`grid_stress.html` is an optional thumbnail/WebGL stress harness and is not part
+of the inscription payload.

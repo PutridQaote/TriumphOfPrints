@@ -1,3 +1,4 @@
+# Legacy example batch file retained for reference only.
 mode: separate-outputs
 # parents:
   # - 
@@ -14,4 +15,3 @@ inscriptions:
           inkStatus: 3
           title: 'Triumph of Bitcoin'
           wear: 150
-

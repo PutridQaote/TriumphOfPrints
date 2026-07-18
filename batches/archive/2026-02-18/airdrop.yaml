@@ -1,10 +1,12 @@
+# Historical recipient snapshot. DO NOT INSCRIBE: destinations are stale and
+# the parent is a regtest inscription. Use `just refresh-airdrop` instead.
 mode: separate-outputs
 parents:
   - bcc864c9421b7f96de4a958141bd53fa33bd70a2f327aa77426a2a5bb26d46a3i0
 
 inscriptions:
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pgusmwx0aldrecv9a6zdkyz43jf5qnzl0376j0ntnpyh7kjctkhqqlhn6p5
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -24,7 +26,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pe6gcmskymz8ld9u3mlepyhyuw9v4upjfjugznlmr23eje2f3s9lquc4yq3
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -44,7 +46,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pkgehtcrwku0l2zptwdwzl9kxkmjwq96hpyzpdx3l22h5h67tv0jqpq8298
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -64,7 +66,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p626uf4jxmjry8tnujrqzddqdclrjjzrzg682wgqcugdkexy966jsmy8vaa
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -84,7 +86,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p7nsphqx0vmy43wf8s3tr48mgke43cyfgd8lxrzmtay78s4nrv70qdwaxk4
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -104,7 +106,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ptn9v626vvaknc8vtmhh5w8c76q2zag7m74njj6lpehfavzewtx9qnlte0r
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -124,7 +126,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pnrmu8tnyf7gglqqfuqdft7yu27nza2hj6y0fa5t3697mqu7wur6sedjxhs
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -144,7 +146,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pgxne7ukda4gzcwzh4tqsegrrm9kevcf0l5uttuh2464fywfwnzsssrur5v
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -164,7 +166,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p94p8wakn03tnmjxe3xu27nrgrzh7eq2u3dzsksqggeyenw609grq0egqyj
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -184,7 +186,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ppzqha5sg83nmspen8xgy2yvc9pdws0dzjgxk8kmwel2m5ypfcd2q9cwkm5
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -204,7 +206,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pfj6k4nqt3hujjq04987wt6j9nvke545swp9ewu0pccytuqe54wds3ysv88
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -224,7 +226,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -244,7 +246,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pxknkr9wnrcumv4m6q9yqrznu43e0g8dv3ew5a3umae84z57y0ygsn056mu
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -264,7 +266,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pg4x5eg7d46yyu2ju7sdehknfqyfugsz0u8f0tmkg6h9077dxps8sp5rgs7
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -284,7 +286,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pld0m4d6e23uk8sg9rl7uac953dgt88l5rdlr8nhxyadwd67s0tqsrwkmem
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -304,7 +306,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pp3qy2cdpldezkcmx3sclzz5eqnmlm768xn5p50jtvsy62w7mvgqqpmyz9q
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -324,7 +326,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1parnjr655yk4gd22s8gx8q632shg43es0r8d7t4aeykpjrnyytd9snapdp2
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -344,7 +346,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pj3z58dcvcwfpmr6gvsxf8az80ezuw8cty3694fwlxx9fk65csqgsvmc6qc
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -364,7 +366,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p626uf4jxmjry8tnujrqzddqdclrjjzrzg682wgqcugdkexy966jsmy8vaa
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -384,7 +386,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1py4sk9yuumgeu3zky9nktcymhpfvv9kjk6heph8fx0wdd8xdc534qvhur3x
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -404,7 +406,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pj6pjh6pzkuxyczkqyfxvvw00w9tjmpmc5a4mccj2g94pe407ufcqd9jqep
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -424,7 +426,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p44ka9smp276xevqj6h3gmc89euykwzqzrzf88ry6cc8a7cvs0weqag9t59
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -444,7 +446,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pplq0uj6h93apg4xkwkq64ausk6576f4aj57kzxsu42gk9yg5xwyq006zcg
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -464,7 +466,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p3fa7mx4f3s9yyj6fcvcurw0qlk5h4nay0f9senqetcczfzpqjr2qq7znz0
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -484,7 +486,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p23hy7mdzeu6am85u93f7zzskdparj3x29dw5uafmw230japuvmhq5hhew4
   metadata:
     source: fbab7ffde03428ed7c11dc268605241b6e33ea212229b03fb1d8f21e289fae54i0
     title: Triumph of Bitcoin
@@ -504,7 +506,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pd0u2uf0npd2urc5wt5r8wgkgn0scf3hxmf8snedqx0z6gfharwrsw8zjg3
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -524,7 +526,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pfg6phqn3a78gv3qww28344jferey6n553grj49pdjjt5tqwz9jkspjkcg2
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -544,7 +546,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pnrmu8tnyf7gglqqfuqdft7yu27nza2hj6y0fa5t3697mqu7wur6sedjxhs
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -564,7 +566,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pt2gaxk7ty5wt05lswam8l4dllwd4urguqhtagcunmaxlp9vvtqnshnh2uw
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -584,7 +586,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p04lws0f3c3t9eutkgu7p49rljf4dnd45mnu0was8vyprzgp7rjuqlk0r0k
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -604,7 +606,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p44ka9smp276xevqj6h3gmc89euykwzqzrzf88ry6cc8a7cvs0weqag9t59
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -624,7 +626,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pj4xess460jhzcss0x9p6jsajz6ayr6rls2wu3nv66zl7jgk20wlsdufk5r
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -644,7 +646,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9j7zu3ghvr8ck7dec7kjpgmvuthxcrqfcec2kczgg334kskglhmqnt536y
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -664,7 +666,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -684,7 +686,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p44ka9smp276xevqj6h3gmc89euykwzqzrzf88ry6cc8a7cvs0weqag9t59
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -704,7 +706,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p2ny7wn6wq9t86cnxzn8s40yhch8744kwpw2r4fv3pvvxlaxdemdqvg2ksc
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -724,7 +726,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pyatqfzuxhm4zaxx9lj7l0z4xrg3ujlx7shqx5wtyfr3c8ptzrj4syp0c6m
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -744,7 +746,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pg00xgzm2eyp99kmvsw2pavg4gaj3kv8yzrewtyhzf8t3zqwlt2hsy42j5t
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -764,7 +766,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p3vxd4l5dkpfwnat36n62qh43swdfpw9ltf75hq3t9rt4f8r97ydqrj26vt
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -784,7 +786,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pfrvtm4h90urk37y6xymr6rnr26d0yppxfld6hztyqj9c5klc7wyq68w2a4
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -804,7 +806,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p3xmcrupvhuthzzk2leuqza040jgekndvtdq3pykszqcg4ahr9q5qvx6c5s
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -824,7 +826,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pp3qy2cdpldezkcmx3sclzz5eqnmlm768xn5p50jtvsy62w7mvgqqpmyz9q
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -844,7 +846,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pmzyy3g09lddjxx9vx8ed2yn7sgjap9uwqqaazuk68v5f9rg6wu5sh5ysr7
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -864,7 +866,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9lrphpr2k7ht7xxhtcj6ywkfst876chnycpyfn3whrmtga0wlcaspwua9r
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -884,7 +886,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -904,7 +906,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p4mkw974rwtx5pv5pmw6r5qv65379spwj5g9zx59ys05mkucn5pzqrkatz5
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -924,7 +926,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pu692d685wemyu2mgq6v75xda9f99zh9n6mpau4pvx74e03stffqq8zatyr
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -944,7 +946,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pkhqckmxdh3mz7yld9p34w5vvzadn9y0rfa7hhqhwdpv9248hnk3se7gj32
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -964,7 +966,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pp9ape78prng7l4pvnj42uy7gcrnkhaw6yslwal0easjw9kfllm6qj6l3yf
   metadata:
     source: 63594e1b8512a5ad3215acfb7470f181444c773c0953d875f9713fca3d896774i0
     title: Triumph of Bitcoin
@@ -984,7 +986,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pjrg8k4r5c47a6946j7s47cw5fy6a9mqpsftct98u74km24jz96rq7uterg
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1004,7 +1006,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p7e0mururgw55tnrev36f6fakfaw044nv4jatugdm9mtghm3y3cvsg7jz8h
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1024,7 +1026,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p0wq2htxcu0thq977jwxt29aeyk7ne5wxyurwn53y7q2h4wpj5hdq32cvn7
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1044,7 +1046,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pfu0evehv07hhgq3urhsfnmq4len7e3u0ddjfj8s3yluj8934l9nq4meacu
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1064,7 +1066,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pvtl958l34gyc3qmvfu62gl9s430s4s0v82qrg0nfz9g5m9d0vxdqdnl22p
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1084,7 +1086,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pnrmu8tnyf7gglqqfuqdft7yu27nza2hj6y0fa5t3697mqu7wur6sedjxhs
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1104,7 +1106,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1qmkljkm707y6kxj0jmvauz9r37az5q3xs9gv4pd
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1124,7 +1126,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p22xmurz5m8cmcl4yupjqm2lhyj2e2e5v65jfka4amrhw5tevvdcq46y55r
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1144,7 +1146,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ppj9fafqqxd5g3n7xhms2c4y6apg957f25chyfd4ena23d4fl4qms04p75c
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1164,7 +1166,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1psyfmvzmc5l7ak9hfe0065kz3nqkhwatc8qx0d5cd9u5k4654657syl5p9g
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1184,7 +1186,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ptfwnjajfx6el2p950wt2d0yqtqzzjxqpqky75duf0lm8naam0vnszp2l2k
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1204,7 +1206,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p4wue2z2gx03zfn66as282ylsxs5z2nfwn6xvdetdemzw3uxqxs7s9w6nn2
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1224,7 +1226,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p3pcymcnj7n5hzd7zgn6txqltut63zwc7q92ytct2mp2pn9vr588s09lqhh
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1244,7 +1246,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1264,7 +1266,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pk4n0a574cx3rugrmr5m33yyxlmgdfaaucwva8l6j0lr4nypjafcslxmgcg
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1284,7 +1286,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pmzyy3g09lddjxx9vx8ed2yn7sgjap9uwqqaazuk68v5f9rg6wu5sh5ysr7
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1304,7 +1306,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pftmpr0rh6nt0lpkzwet5ds7ajm62yzyt50e669v2nzyzcf8gtrjsdlq7fd
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1324,7 +1326,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prsqk3zn77zzn0ns7daxwrxft9a8vmghk2ruxlwxtzfhmkwjnyv4qhqkdj7
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1344,7 +1346,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pp9ape78prng7l4pvnj42uy7gcrnkhaw6yslwal0easjw9kfllm6qj6l3yf
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1364,7 +1366,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pewc92p5kjztsfc40xfsqljvx0f3v434x3kf9sqgrzzf0dh6z4vxsw0rp8c
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1384,7 +1386,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prsqk3zn77zzn0ns7daxwrxft9a8vmghk2ruxlwxtzfhmkwjnyv4qhqkdj7
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1404,7 +1406,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p4djjspuxad7ncxgytuee73rsfw7r22ad8lcl4f99zpqlg8v4z0ssdl8hua
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1424,7 +1426,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1plcdtecxjzevg6e6derscsktsru6rv9uyjmeezg8275srpn94ep7s37v4rz
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1444,7 +1446,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl2ak5e8yypkrl8895p8m8pnfw42watw7lqvw0lwcftgm5h5j630qfkk5xy
   metadata:
     source: 5f53dd709a8d2e350674d86679ff550763502a0ff8c2b567cefa4b52f736aa7fi0
     title: Triumph of Bitcoin
@@ -1464,7 +1466,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pjfzhdzkur07tll60hw6qgge9hppnls7t9nnmxmv00azujd4vy9hqykelwl
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1484,7 +1486,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pd6elm5dqgvnkeyqt58jue5jv2k7ey6rtr6nxn99g0ugtxkdx6rpq0jqkmf
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1504,7 +1506,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pd79pp3580fgfta4t6mev8rhq5p0k8lrhk3uvrc7nlswn4ya7wpcqeua9sy
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1524,7 +1526,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1544,7 +1546,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p44ka9smp276xevqj6h3gmc89euykwzqzrzf88ry6cc8a7cvs0weqag9t59
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1564,7 +1566,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p44ka9smp276xevqj6h3gmc89euykwzqzrzf88ry6cc8a7cvs0weqag9t59
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1584,7 +1586,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pfrvtm4h90urk37y6xymr6rnr26d0yppxfld6hztyqj9c5klc7wyq68w2a4
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1604,7 +1606,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1plx7mqev8fyvz7kavtca48w3yqzvq3yez26s4myfv6ckgkhdvwqzq4wwpdk
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1624,7 +1626,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pvdemkgh3wvjlmah78prly7lma0t23sw3sc34gar3rrrm7sc8repqv9yyr6
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1644,7 +1646,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p44ka9smp276xevqj6h3gmc89euykwzqzrzf88ry6cc8a7cvs0weqag9t59
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1664,7 +1666,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pkhqckmxdh3mz7yld9p34w5vvzadn9y0rfa7hhqhwdpv9248hnk3se7gj32
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1684,7 +1686,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1plx7mqev8fyvz7kavtca48w3yqzvq3yez26s4myfv6ckgkhdvwqzq4wwpdk
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1704,7 +1706,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl2ak5e8yypkrl8895p8m8pnfw42watw7lqvw0lwcftgm5h5j630qfkk5xy
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1724,7 +1726,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl7wf98kc437cge0acar5ykqfsq3r5r5uva50uuatru22azyd9xmsufxze4
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1744,7 +1746,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pnrmu8tnyf7gglqqfuqdft7yu27nza2hj6y0fa5t3697mqu7wur6sedjxhs
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1764,7 +1766,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pu9ux2ct3hkm82thft9nujs8hyphh2gcym4cxfwxjxkuhvu62gnmq22klku
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1784,7 +1786,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1patr7sp077efhhns87lm394fspv6c488exjcp6uy6lch7kaheusaq6svksx
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1804,7 +1806,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p7rje652hsx2qm5epe63hej7t0vgxl7k08z34mt826fk62e88w3fqdedmlt
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1824,7 +1826,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pu3uct2yz0xgs0nm7uudhycfdjhkffv3092avmnfw35mq4ja240yspdq5q0
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1844,7 +1846,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pa3cna7cwrr9ng0l72r2jwrtdmuag0v2eztau0anh7e0rjq74eanqnclr2r
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1864,7 +1866,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p90dp8feewf7g5ydet5a8393ur6umg7xfzlvvkmt884fjn7sh94cqfl0a2c
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1884,7 +1886,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pnrmu8tnyf7gglqqfuqdft7yu27nza2hj6y0fa5t3697mqu7wur6sedjxhs
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1904,7 +1906,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdfun22zfw57d6pfezvk9wvcu7ugnaqx2jugqn4na4eku5cjzrnhs8nxqyl
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1924,7 +1926,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pwngd8xjsk75dragy27g9pnwu6rm5ahtp735fk6vfhagytkxf96nqzz5um0
   metadata:
     source: a4fca8cd68283460126b88cce9a4d7462917eae4e6c1a5f91300fb9280eae7dbi0
     title: Triumph of Bitcoin
@@ -1944,7 +1946,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pqw632rv082szfd763h0p5crucu5avv7g2atpgqyjkejapu90kxtqqvqsx3
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -1964,7 +1966,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p3xmcrupvhuthzzk2leuqza040jgekndvtdq3pykszqcg4ahr9q5qvx6c5s
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -1984,7 +1986,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pzvvl60kjpev9d4j25x5y27w4daedydn8xeck35cp8250yv9xjdmqylxpmn
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2004,7 +2006,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pjvu7q39nqcp9aas960vjcqxelqfaw5e8clv4qfxvu5hrlexkv5rqsavxhx
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2024,7 +2026,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pvdynw869nkx0uzpzd8jzd0z94nnjwaqcfqkp79vuuc5ek5et6cqqgqswuv
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2044,7 +2046,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pw9fpy7zg6j07e6ls0ne8l3637xa624n5wg48ztzfcfafx647y7uq3nxffz
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2064,7 +2066,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ptd54xkwukuqrkg7gxwuphvrvhpc5n05lzssksst9zu9728mgm3jqlvjzee
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2084,7 +2086,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: 12VuUfQHTGqWDvBzm8TBad1mZBm4hjGEzN
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2104,7 +2106,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pjpvqchjt2uvew985yanxhg32fuanjs2g4p4vhqvew9sjnuanywxse0ndvg
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2124,7 +2126,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9umk6wgj8cgjpqvzgdlgk8sk7h53vfdc53eay0eqtv93qfeuf38qz6n5ma
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2144,7 +2146,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pqlnkyagn94tzg8jf00dct97ws4nzw7g7p7mkn666u0prltwdy82q5vtv4c
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2164,7 +2166,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pt96m759lpr73dezh7lwv6speuq9d6lmvcelacq6yqld3vjeuvhqsu8a4zu
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2184,7 +2186,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pc3sanyz689aeg7xhtd3lex05wffpvd75ak00agejfvq3908ht5dqkrmdzj
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2204,7 +2206,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p44ka9smp276xevqj6h3gmc89euykwzqzrzf88ry6cc8a7cvs0weqag9t59
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2224,7 +2226,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p7mx2l7e9pclkxvuda2jaxl7qhtwtxqephuggeqxq84fvhwcjv38qp9707v
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2244,7 +2246,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1q4q3l5uyqc645q0tdgjggaxhqyzzm55gdh4nt3u
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2264,7 +2266,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1qmkljkm707y6kxj0jmvauz9r37az5q3xs9gv4pd
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2284,7 +2286,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prsqk3zn77zzn0ns7daxwrxft9a8vmghk2ruxlwxtzfhmkwjnyv4qhqkdj7
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2304,7 +2306,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pj8mtj0gjdfwfm8mgph0s5vdx5pge6yj05tfgm8kqm0xa0pcy98mq9ktjvm
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2324,7 +2326,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pau7h4m5h6gsctvglul5qf4dlmtadfa70kcrt0clr3xgkcawt930spnp2na
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2344,7 +2346,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pxah5a27p8f9n9tu485g2ytdheu4p7rqmdqf5rfazdw74lje9637qw4pkn6
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2364,7 +2366,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pp9ape78prng7l4pvnj42uy7gcrnkhaw6yslwal0easjw9kfllm6qj6l3yf
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2384,7 +2386,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p27mh9yxw4635fsun45nzwtcupq6wefucgnmep7f0h0tnaxhxzaeqcmzrzm
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2404,7 +2406,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pqtka4d37ak3xacrm3lztcp0zj9pan20jg5keruljj5vwznrh0pkse4gjll
   metadata:
     source: cf3ae616cfa57b2304a43445a0025e16d1c36943ed15cb1af5898185cf0d88efi0
     title: Triumph of Bitcoin
@@ -2424,7 +2426,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p04lws0f3c3t9eutkgu7p49rljf4dnd45mnu0was8vyprzgp7rjuqlk0r0k
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2444,7 +2446,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p5mccpy6h77zkx5h7lfx5e5xumjm5cq6djcvdhtkgll0z7yrtfals6u4s4t
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2464,7 +2466,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pjvaqkuxmdj8k9nptvghmfrey93nurzaurleggwtkww5ce4237vwq8jkczd
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2484,7 +2486,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p3pcymcnj7n5hzd7zgn6txqltut63zwc7q92ytct2mp2pn9vr588s09lqhh
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2504,7 +2506,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p7mx2l7e9pclkxvuda2jaxl7qhtwtxqephuggeqxq84fvhwcjv38qp9707v
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2524,7 +2526,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdv7mju0877dceysqk78cu68zle7dk957fd9rlh0ptyjd78f7jv0sue8kw6
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2544,7 +2546,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pcyludchdqyqpknyf858kqu76hl4u3h8ryexwyhtdzcuc24070s0sru6dmx
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2564,7 +2566,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pc30eprtrhhex9j78fujhnswv04snhgt769pvha7ul9cyq6qcnxrsvz5mk5
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2584,7 +2586,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1py8e2dpeu3vtsktkx96cyffmujvxy0n95ck9pmnjxel6m4e03v0tswwfmz7
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2604,7 +2606,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pfg6phqn3a78gv3qww28344jferey6n553grj49pdjjt5tqwz9jkspjkcg2
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2624,7 +2626,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pmzyy3g09lddjxx9vx8ed2yn7sgjap9uwqqaazuk68v5f9rg6wu5sh5ysr7
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2644,7 +2646,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pwcx778xa605ghvwkr2m46wynzqcf2m5h287nptggu67z2ksc68sqj2qjp3
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2664,7 +2666,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pqjaycjxd9fwnzu9vvf3lku0az6t6au7vg9r7r39ucphdfedxypps9sr6g5
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2684,7 +2686,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p73rvlam9djcwl0mnqwene7r5xg6j45hfqsw65ky9vyuzr4dcguwsyzj7wa
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2704,7 +2706,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pv2uldng3anknq8f4s8e402hz3nl8zqj74gx3khv25se8j64ru2pqs8wfvs
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2724,7 +2726,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pa3cna7cwrr9ng0l72r2jwrtdmuag0v2eztau0anh7e0rjq74eanqnclr2r
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2744,7 +2746,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prsqk3zn77zzn0ns7daxwrxft9a8vmghk2ruxlwxtzfhmkwjnyv4qhqkdj7
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2764,7 +2766,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdfmqcefzn3t28lzdvv8s5kv7t25pnq49t4sqtnkyujt5kytt4njqydkqup
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2784,7 +2786,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p3fa7mx4f3s9yyj6fcvcurw0qlk5h4nay0f9senqetcczfzpqjr2qq7znz0
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2804,7 +2806,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1plx7mqev8fyvz7kavtca48w3yqzvq3yez26s4myfv6ckgkhdvwqzq4wwpdk
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2824,7 +2826,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdfun22zfw57d6pfezvk9wvcu7ugnaqx2jugqn4na4eku5cjzrnhs8nxqyl
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2844,7 +2846,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdyhej2540wkfqy7j83ydd62xglu5445t7henp4dj0e665rex7x0qe2kmke
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2864,7 +2866,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl37zt6kpyfunufl5tvaenuh2e3hakrehnmdr4sjldmqjmj6fp6lq3mmpm8
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2884,7 +2886,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9uf47zq0uxgdnuljw3h3m857dxdkrkkk07rzpnvvaqgszhcrw3gslus4rp
   metadata:
     source: 11e0ab1f653675211944593bb87d1b875050c2f328ab175595d2e7189da9b2f8i0
     title: Triumph of Bitcoin
@@ -2904,7 +2906,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pfrvtm4h90urk37y6xymr6rnr26d0yppxfld6hztyqj9c5klc7wyq68w2a4
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -2924,7 +2926,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pe6htemyr8x8at43mpefnhl5eq2s5vpdmmatg0k90mng0267qg9as3rws05
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -2944,7 +2946,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p3g2gnhaj7l352ree7nzucgufp0q4nkr8x47elrh9srla74rdcv5qyedh66
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -2964,7 +2966,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl2ak5e8yypkrl8895p8m8pnfw42watw7lqvw0lwcftgm5h5j630qfkk5xy
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -2984,7 +2986,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3004,7 +3006,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1py6hdm3hra8julr7wm6ef2nz5yqegxx9q3cl9d95dcnp8mg9w52hq2gd5dv
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3024,7 +3026,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1peszxwt4yx7mty20a2dypz3wxt2qfm4m9mzt2cej7r8kyp6327xmshcpl4f
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3044,7 +3046,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p7rje652hsx2qm5epe63hej7t0vgxl7k08z34mt826fk62e88w3fqdedmlt
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3064,7 +3066,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1phu0eq92pplekcsd5cg7f2ktgz0p8k899qnakyzqlz62vpa2v9uys50gevk
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3084,7 +3086,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ppc54d2dru80awp03383p0nnrr5hu5ye9qtdh2xhtw57wpj7j4g6s9393k2
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3104,7 +3106,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ps8ydawnayjxjuldra3rk4ps5gqk4wzplnzdmt8g536h4jc690d7stysvl7
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3126,7 +3128,7 @@ inscriptions:
 
   # PLZ I'd like to have this one :smirk:
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9ys6u7rxd7v5xy43ylgsyyj2d3hte4v4j977x2z0lerp6ahy4rmqfshueh
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3147,7 +3149,7 @@ inscriptions:
     - 20000
     
 - file: ./inscribed.html
-  destination: null
+  destination: bc1puuv88vp73f9eehwtt3sfnkhtaey6fpvwad5kt0ywkwle3dsw52es0xyv7u
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3167,7 +3169,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pz20ragj9jvqaryj83qurmyysm42kuxk0z0c5jlrevmlga7583aksrcku6k
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3187,7 +3189,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p0l07pa9647cne2cfkqxv370qanzw836qzet4ce4l3x369wf3eq9sn86ql3
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3207,7 +3209,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3227,7 +3229,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pvutk2h95fv7vgtmgt4gsp5vcm92ae0tvsh0krxssetw45xvpas8q5u2cfn
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3247,7 +3249,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pcj88m90u3cq7mrgexz6n9ts37qhzdg5t8jsrdlhuuyjd4yrtqcnsyez6q6
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3267,7 +3269,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9n0d5e2wytdge08cfp8dkpfgl7yrma3md69uzfqezcgwxcgt72esj9gtgm
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3287,7 +3289,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl2ak5e8yypkrl8895p8m8pnfw42watw7lqvw0lwcftgm5h5j630qfkk5xy
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3307,7 +3309,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p7mx2l7e9pclkxvuda2jaxl7qhtwtxqephuggeqxq84fvhwcjv38qp9707v
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3327,7 +3329,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pvq34zt0af76ym3mljamyagdfsyr9n6yfgpj6xqcv57064p3tvvuqf43ptr
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3347,7 +3349,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pquuexdwk9gfkdexvyjvh6ar88ljpp59qjyhzqm7fxwlvdr9w8atsfrjkxh
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3367,7 +3369,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9lrphpr2k7ht7xxhtcj6ywkfst876chnycpyfn3whrmtga0wlcaspwua9r
   metadata:
     source: ec11a3e19cb22adf6a880c63b1daf19568cf5a6717572bfd123d91f15fe4d241i0
     title: Triumph of Bitcoin
@@ -3387,7 +3389,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pj05p5rr3gqnf0jlwpcg0raqqh95dplxf9ard5kfsytlgfmnqwhwq5qkxam
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3407,7 +3409,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pqan6l8pfktqjtajge7vtzy3e0vqlwgt0qqh2fltzg5rc88t4xgxqxt9f4e
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3427,7 +3429,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3447,7 +3449,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ppj9fafqqxd5g3n7xhms2c4y6apg957f25chyfd4ena23d4fl4qms04p75c
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3467,7 +3469,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p50r779pxjcq4j23k57kur6ruqm5dvf327ept9w8eahh90h4jskwqn8d8gn
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3487,7 +3489,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pcp0hg7gfn5sy5emmvdn5h0fzj0579v3jd0uhnryce5f4cnu4663qdg0ceg
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3507,7 +3509,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pu9ux2ct3hkm82thft9nujs8hyphh2gcym4cxfwxjxkuhvu62gnmq22klku
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3527,7 +3529,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pu2l3rgjhu9ltdutzca8rtcxcqunp74f6zp8w0hzqskd3eqxmnk2szdym4r
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3547,7 +3549,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prkyen9p8wr4tyrw7xp6de2sed2hxhy7msekhfhhf4h3fhk2azqhqj39j0a
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3567,7 +3569,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1plx7mqev8fyvz7kavtca48w3yqzvq3yez26s4myfv6ckgkhdvwqzq4wwpdk
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3587,7 +3589,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pqntg3dugammvnlmz94hwxnqzk2vwdrt2n8qmtxwp382gh3ekrheqp6de4x
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3607,7 +3609,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pu9ux2ct3hkm82thft9nujs8hyphh2gcym4cxfwxjxkuhvu62gnmq22klku
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3627,7 +3629,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p4wp2a82gr67mcxhjjjj2cadq4fw8kgl03levnyxuun7zeqwh3ggqhnezzn
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3647,7 +3649,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prsqk3zn77zzn0ns7daxwrxft9a8vmghk2ruxlwxtzfhmkwjnyv4qhqkdj7
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3667,7 +3669,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pjvaqkuxmdj8k9nptvghmfrey93nurzaurleggwtkww5ce4237vwq8jkczd
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3687,7 +3689,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p3fa7mx4f3s9yyj6fcvcurw0qlk5h4nay0f9senqetcczfzpqjr2qq7znz0
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3707,7 +3709,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1plx7mqev8fyvz7kavtca48w3yqzvq3yez26s4myfv6ckgkhdvwqzq4wwpdk
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3727,7 +3729,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdpatuq46dj9crqsrkzgunej2uema2duffsn5exku6z9zlqk989lqxs44ad
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3747,7 +3749,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pgxne7ukda4gzcwzh4tqsegrrm9kevcf0l5uttuh2464fywfwnzsssrur5v
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3767,7 +3769,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pv2uldng3anknq8f4s8e402hz3nl8zqj74gx3khv25se8j64ru2pqs8wfvs
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3787,7 +3789,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prsqk3zn77zzn0ns7daxwrxft9a8vmghk2ruxlwxtzfhmkwjnyv4qhqkdj7
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3807,7 +3809,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1puf2jjmr6uyevtvh8k9xz9vzkwc482q8g7flpc7ankca75s0d3dwsse9lvq
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3827,7 +3829,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p2qj242mjq4fglzfxfch4ggc8ew7cx56h2gz2ffgxgve3zy7scxkqer6ww5
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3847,7 +3849,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9ejq5jdn9xaemm4v24qn5rvrxjke56lqkcwn0f3ue35tmlzf2n2saaylxu
   metadata:
     source: ba4b86348a6e7bad9deeb21752cf790694355b639650c679ce5b1c61feeab004i0
     title: Triumph of Bitcoin
@@ -3867,7 +3869,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -3887,7 +3889,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1qjzp6famray92k8yag609584yeq0297jvrgmv4jw3qkk8fm988hqqvke9cr
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -3907,7 +3909,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p8ecl6477cuw2an5qhxn4a8kvwefjj7uh2smm70e96szlhugrgtwq8nljgp
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -3927,7 +3929,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdpatuq46dj9crqsrkzgunej2uema2duffsn5exku6z9zlqk989lqxs44ad
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -3947,7 +3949,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1plx7mqev8fyvz7kavtca48w3yqzvq3yez26s4myfv6ckgkhdvwqzq4wwpdk
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -3967,7 +3969,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pqan6l8pfktqjtajge7vtzy3e0vqlwgt0qqh2fltzg5rc88t4xgxqxt9f4e
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -3987,7 +3989,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9ky4tl0q6zke2ncu7cexc9s2tqzlcfuujnlplz3qhekl4s9ml39qlj5kmq
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4007,7 +4009,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pwp60dvz6al362ynk3n32yuvra6lc20kdpww4yxl89xjtv8mwxwjqfwf9vu
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4027,7 +4029,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p453y2uzhdy3cp2qmajqeaqzr57zdftxxljhs6g5nqpem62yjr7qsuetlkn
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4047,7 +4049,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pk4n0a574cx3rugrmr5m33yyxlmgdfaaucwva8l6j0lr4nypjafcslxmgcg
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4067,7 +4069,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pu2f502p7p2960xr4ad00cg4wf0xc094g7hr8d7ug5hq25j9exxys6cxhdl
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4087,7 +4089,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pfrvtm4h90urk37y6xymr6rnr26d0yppxfld6hztyqj9c5klc7wyq68w2a4
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4107,7 +4109,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1phu0eq92pplekcsd5cg7f2ktgz0p8k899qnakyzqlz62vpa2v9uys50gevk
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4127,7 +4129,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p560l4wjhvjgc48nnpfzzke2dehgx8djl9fmr3y4dhvdlheq23acqjqladx
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4147,7 +4149,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p7mx2l7e9pclkxvuda2jaxl7qhtwtxqephuggeqxq84fvhwcjv38qp9707v
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4167,7 +4169,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pddm3qth8u54p4k565uq7kndqwxpemsa9d6a5zypu4xa3q9q2022sq8y6j3
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4187,7 +4189,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pu4fr7duk5f8l7hyvu69vkwy4j5fxjy644v2869lvv0th9zpqyfcsv2vnln
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4207,7 +4209,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p453y2uzhdy3cp2qmajqeaqzr57zdftxxljhs6g5nqpem62yjr7qsuetlkn
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4227,7 +4229,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p8mxkyhgkngfyyp3fw2v0jnphwywt3epvdd6nk8se5w72k8pagcyqv55dxa
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4247,7 +4249,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pzpm3ytv6henpfw0y0s8vg2z6uqwzlmmec4wfa9kl82mt4n0x2cqszmm0n8
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4267,7 +4269,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pn7lsvs5tcc3txs86r4h9wruk25ugzu589taselndl78na54ftnasg7hjx0
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4287,7 +4289,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdfun22zfw57d6pfezvk9wvcu7ugnaqx2jugqn4na4eku5cjzrnhs8nxqyl
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4307,7 +4309,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pg7j3rwqnjfsrj66gcgtfx99c6l3vnrs9v7arx3kpjmh9ukmv47wq0jdgg0
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4327,7 +4329,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pjnvdjzchcqpypn0rqy8uadmkqc8r2asyylsp92v4c05477d33alqd0uwas
   metadata:
     source: fb9fad20ede2f27b013efe9b408e6be1b3ff546dfca53eac86c7e0f1a632d551i0
     title: Triumph of Bitcoin
@@ -4347,7 +4349,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pj2q5g20ynwceyvtxt32xzzc9f0rytqwyfuth32xh234jaz8j2lfqel2d0z
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4367,7 +4369,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1peszxwt4yx7mty20a2dypz3wxt2qfm4m9mzt2cej7r8kyp6327xmshcpl4f
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4387,7 +4389,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p8t05h9wrm45vpqwsyrakzd59yd7l3lhvl0aej8neps39d66g0w2qmdce2u
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4407,7 +4409,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pvcqwflng48ltzcq4jn7k2sthg9plu3ttrlh2zhl5p2pfc6m7z2uq0am7s6
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4427,7 +4429,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9uf47zq0uxgdnuljw3h3m857dxdkrkkk07rzpnvvaqgszhcrw3gslus4rp
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4447,7 +4449,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ph0zpx8vm260qz7hnalnvkp6y9tc340saggfuzfk5utqe2tahelqsmkx4ga
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4467,7 +4469,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p7rqw8f3se2m23hf50nulr4tfl0dw29vhmkn8m9gcpn8ldx24xzwqwcz5pp
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4487,7 +4489,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pg7j3rwqnjfsrj66gcgtfx99c6l3vnrs9v7arx3kpjmh9ukmv47wq0jdgg0
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4507,7 +4509,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prsqk3zn77zzn0ns7daxwrxft9a8vmghk2ruxlwxtzfhmkwjnyv4qhqkdj7
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4527,7 +4529,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1px8yd7ef9nd3d7jt6ccrgq2z3nwpdtka4mdj3f4w63tskyt7rh5fsvwm22e
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4547,7 +4549,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdnwlqky3tzk2ek2l5gyt3zaxmdpg6x9c83lekpjj0ygl37eq2nfqr4a9px
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4567,7 +4569,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1phyda8z8krxpq090ft87nq6mspjwwk04xfd2extcgnjfax349nhzq2mg5hn
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4587,7 +4589,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p6cz0vxxzz0ml383vkr6pdp9j2yf6flvlay724aqjf3pkwrq8zrfsrd0z8q
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4607,7 +4609,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdgjl49uy3er4rgrqxvw8uzpmjwev7zm2nkvd3n3cmllvsqfrsmksxu4lq6
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4627,7 +4629,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9umk6wgj8cgjpqvzgdlgk8sk7h53vfdc53eay0eqtv93qfeuf38qz6n5ma
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4647,7 +4649,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pr6wc6ty7r5x4x8nkav2n37a5l4cv30967y2xwk44f0fcf9alljyqp9wcf0
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4667,7 +4669,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pc30eprtrhhex9j78fujhnswv04snhgt769pvha7ul9cyq6qcnxrsvz5mk5
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4687,7 +4689,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pqgrylhqzy7ljzsfajp8rqkdrjlngcp6w8czy763d790tvk2gsdhqdq2juu
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4707,7 +4709,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pc30eprtrhhex9j78fujhnswv04snhgt769pvha7ul9cyq6qcnxrsvz5mk5
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4727,7 +4729,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pqlncqfmu4tx3tyqt7sqccyf0ycgfj6rqpurh2wls5zjpflx040uq94pyyx
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4747,7 +4749,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pfrvtm4h90urk37y6xymr6rnr26d0yppxfld6hztyqj9c5klc7wyq68w2a4
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4767,7 +4769,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdd5fjcuha3qpfz3lvggq6a4xv8mclnk2vq9w8u0wwmye8n4gxhjq3ezp4n
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4787,7 +4789,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdpljvkq0pwchkgjeh2m9q5nhstpe4pelq8hz8k4gustrajl2482sxt2f6s
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4807,7 +4809,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p676nws9vuk8nswhmwj9ank7yaaekrq72ckrltw464tedulxn0djswv0j25
   metadata:
     source: ff08f64a29c957c1f376ca1d35c2ccb5851379da3df9618b8108f55ed65dfb39i0
     title: Triumph of Bitcoin
@@ -4827,7 +4829,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prkyen9p8wr4tyrw7xp6de2sed2hxhy7msekhfhhf4h3fhk2azqhqj39j0a
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -4847,7 +4849,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pp6mg6wfxpzps4wsvyz27yj220vghwx0pw56fyvjqc8n9aqlxx6qqwddnck
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -4867,7 +4869,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdpatuq46dj9crqsrkzgunej2uema2duffsn5exku6z9zlqk989lqxs44ad
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -4887,7 +4889,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -4907,7 +4909,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdpatuq46dj9crqsrkzgunej2uema2duffsn5exku6z9zlqk989lqxs44ad
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -4927,7 +4929,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pjlxs8qtkhzmryvennpq0pl7mzh5kcw32wvfeqlnr60mqfsx05d0qh8latj
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -4947,7 +4949,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdgjl49uy3er4rgrqxvw8uzpmjwev7zm2nkvd3n3cmllvsqfrsmksxu4lq6
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -4967,7 +4969,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pkp6hw7gwlww2zrh39l7n2ccm68zm64dy4wecpymvhulx73u9he0sh6xe8d
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -4987,7 +4989,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pzk4hz0ulwp0r7u35926yd4gl05m59gn44ghksfty2pa3zq7wmtvsfpx457
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5007,7 +5009,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pst2vhnls0d0mc63ll00d69wku63knfvzwtgkk5u7m4jfvfwtdl0sz84e4e
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5027,7 +5029,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pk4n0a574cx3rugrmr5m33yyxlmgdfaaucwva8l6j0lr4nypjafcslxmgcg
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5047,7 +5049,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pxtcf4nfnzxyyzkasqewqcc3yacvu2654rxl88kcz4gmxv3r5xlgsaq0nhw
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5067,7 +5069,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p4usw5wmqqxn6q90sf2q2tlvjf4avv9zv4lzh4mzrdwuv2vq7tq2sq9kcq8
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5087,7 +5089,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pv6vt8kq99hlcd40x9stlf5vl3p6ry63fx0t28fw5pk8jzhlh0q6qnrap9d
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5107,7 +5109,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1px7l3yv8ntly9camz3cr0n0aw7zm8fd336n9946w0smpaf6nnhcqqszr9v9
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5127,7 +5129,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdv7mju0877dceysqk78cu68zle7dk957fd9rlh0ptyjd78f7jv0sue8kw6
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5147,7 +5149,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pp9ape78prng7l4pvnj42uy7gcrnkhaw6yslwal0easjw9kfllm6qj6l3yf
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5167,7 +5169,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p22gemly0gtgrfr4t35jzlzkhnpr8ujpmsghrrlrgadyt54u6y4nqh386xv
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5187,7 +5189,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pj9wl0skv0l8a0vujwqfhy4dp00j8jm6qsk50k4dyqdvvvwpvykdsr6nmv3
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5207,7 +5209,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pw63awggeypk4vdk2hzs5cdwn3508794e6fqpymyywggpn6a5g6dslewc6u
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5227,7 +5229,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pwadjlfre5ww9fkmp9cdeuv3a2z8tr9gtjnftvdgae76xm5n6x80q2mlwqp
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5247,7 +5249,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1qmkljkm707y6kxj0jmvauz9r37az5q3xs9gv4pd
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5267,7 +5269,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pwjkjpzwtm5uwqnmp7h052t9e98rwdkj88pp8n0sgm87wetq3u3ws6lqdsq
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5287,7 +5289,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdhgyyed2ddcj9yg8yqjshmalnvpdklhe5agknycfmlh2qnaaqygq9f7t5z
   metadata:
     source: 7fcc33c4cb0081cfa85c5d1d541aad5d8c631debbb29c65c95f4d30137ed2aa0i0
     title: Triumph of Bitcoin
@@ -5307,7 +5309,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1phy5jrqq3w2mxcnm0e9l7jc4yanwu0nhlajsnlu90qnpm836adndswt6yuf
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5327,7 +5329,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pvutk2h95fv7vgtmgt4gsp5vcm92ae0tvsh0krxssetw45xvpas8q5u2cfn
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5347,7 +5349,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5367,7 +5369,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1paq7agn8ev3jnesla3k5e0dec6q25qgf8t06s20qzpds8ga4rz2vss6m77u
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5387,7 +5389,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pkhqckmxdh3mz7yld9p34w5vvzadn9y0rfa7hhqhwdpv9248hnk3se7gj32
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5407,7 +5409,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pt46husnhdscj0jjdtyhd677ahpg0vkfxrf2gmzsp4uxsujxh89lqudn5fm
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5427,7 +5429,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pk4n0a574cx3rugrmr5m33yyxlmgdfaaucwva8l6j0lr4nypjafcslxmgcg
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5447,7 +5449,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9lrphpr2k7ht7xxhtcj6ywkfst876chnycpyfn3whrmtga0wlcaspwua9r
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5467,7 +5469,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl2ak5e8yypkrl8895p8m8pnfw42watw7lqvw0lwcftgm5h5j630qfkk5xy
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5487,7 +5489,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ph0zpx8vm260qz7hnalnvkp6y9tc340saggfuzfk5utqe2tahelqsmkx4ga
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5507,7 +5509,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pu9ux2ct3hkm82thft9nujs8hyphh2gcym4cxfwxjxkuhvu62gnmq22klku
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5527,7 +5529,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prjctkd6svw2ncllase350hp2ljqhjsr0v8uwaqfss9qaz0h0m6lsd47fhj
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5547,7 +5549,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pd0cramq5772md65c5d7zcfxrqslu78nknxh2tq4va8h2tvq5v5nq73u6ce
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5567,7 +5569,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pvegc63jhz4s4e44x0qvjlr3rd9ke09d66zn32wknrm22tg3n7xpqxlq3gs
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5587,7 +5589,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pg4x5eg7d46yyu2ju7sdehknfqyfugsz0u8f0tmkg6h9077dxps8sp5rgs7
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5607,7 +5609,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pd0u2uf0npd2urc5wt5r8wgkgn0scf3hxmf8snedqx0z6gfharwrsw8zjg3
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5627,7 +5629,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdfun22zfw57d6pfezvk9wvcu7ugnaqx2jugqn4na4eku5cjzrnhs8nxqyl
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5647,7 +5649,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pp9ape78prng7l4pvnj42uy7gcrnkhaw6yslwal0easjw9kfllm6qj6l3yf
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5667,7 +5669,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pxd8073s70zm80yq0ndkl27k0lj3407vgxyf2hml27hrtwn9n92wsl4yw5f
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5687,7 +5689,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pagzevpdm5d87lfzmk5wrxpur9xxncea3f3zwwt0g4fge60v9px0qtmufre
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5707,7 +5709,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pr5v6ql3yn6ls3hrl5r7c92f7ug6wf4u4p72x0v8ste5d0q0st33sztw9wy
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5727,7 +5729,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pu692d685wemyu2mgq6v75xda9f99zh9n6mpau4pvx74e03stffqq8zatyr
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5747,7 +5749,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p36t67y2t4wy4r2nvlzhuzd3ds3rpsdmpa8zhrljw0e4f2ndwuy0sss5m3r
   metadata:
     source: 6461c2a49eba6c8220bf472d9a504554a0592470f0cdddddb0969e896a1a6ca9i0
     title: Triumph of Science
@@ -5767,7 +5769,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pk7q6xseqlqhv60lg4rh0a9cu9zqnxalgfqmjmfa82tnlt68gd9dqskalrp
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -5787,7 +5789,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p44ka9smp276xevqj6h3gmc89euykwzqzrzf88ry6cc8a7cvs0weqag9t59
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -5807,7 +5809,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pqlnkyagn94tzg8jf00dct97ws4nzw7g7p7mkn666u0prltwdy82q5vtv4c
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -5827,7 +5829,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pcp0hg7gfn5sy5emmvdn5h0fzj0579v3jd0uhnryce5f4cnu4663qdg0ceg
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -5847,7 +5849,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p44ka9smp276xevqj6h3gmc89euykwzqzrzf88ry6cc8a7cvs0weqag9t59
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -5867,7 +5869,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p04lws0f3c3t9eutkgu7p49rljf4dnd45mnu0was8vyprzgp7rjuqlk0r0k
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -5887,7 +5889,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1py5u9jzf25k0kczsrj07guz9n0xkdfzrlcymuaau8chrhd379mvvsa5u5am
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -5907,7 +5909,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pvls9xra72mjjxxazdts6pu09w63eauqwshcmehkk96vgwzgnwp3sya2q48
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -5927,7 +5929,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1patr7sp077efhhns87lm394fspv6c488exjcp6uy6lch7kaheusaq6svksx
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -5947,7 +5949,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p7m6mpr6nkgz6w0w4hhrsyjl8gapax8grehkugf8gad6xvxypehlsv6rl3l
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -5967,7 +5969,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p676nws9vuk8nswhmwj9ank7yaaekrq72ckrltw464tedulxn0djswv0j25
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -5987,7 +5989,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pkgehtcrwku0l2zptwdwzl9kxkmjwq96hpyzpdx3l22h5h67tv0jqpq8298
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -6007,7 +6009,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pgan704ndvk4muwxn3k0llasqufnfazpl4azd6v9nknre03uvsdjsuvg4ju
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -6027,7 +6029,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1plkdalptrwdfps8znp32kuh8vvmnzcewsz7hvsm8cta6d5wqctutsly6fnt
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -6047,7 +6049,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p3l2ap6d2djawwt6zch7wzfpqrtvqx5k698x5m92puxvdas5ntf8sza4y7j
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -6067,7 +6069,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pujmjvr3emj3rvfw77wpnvkdvf97e88hmkjwvu88pttwrt5qwvq2swhzdxs
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -6087,7 +6089,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prsq35e890ksuymt2s269unt66d74nx0nx765ly2jxs6v6v7xucqq09dwcf
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -6107,7 +6109,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pk4n0a574cx3rugrmr5m33yyxlmgdfaaucwva8l6j0lr4nypjafcslxmgcg
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -6127,7 +6129,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1qmkljkm707y6kxj0jmvauz9r37az5q3xs9gv4pd
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -6147,7 +6149,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdg7q5kajvrfayftynwwwwl08w3scpacduj5eq4ck8dxejp66krmqr6gjx5
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -6167,7 +6169,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ptd54xkwukuqrkg7gxwuphvrvhpc5n05lzssksst9zu9728mgm3jqlvjzee
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -6187,7 +6189,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pyxuf5au7d740unrpmc6u6pl5af245tpfu7s08a0kjgg2zt8c4jxsj2gzk8
   metadata:
     source: b1ff3531357fc4703e14454c8cfc606c79f88f87f908ec0d34a3e7eb02a843adi0
     title: Triumph of Science
@@ -6207,7 +6209,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pgxne7ukda4gzcwzh4tqsegrrm9kevcf0l5uttuh2464fywfwnzsssrur5v
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6227,7 +6229,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1ptlszalwpdt4a8xwp24nwckmupznqsvhsknzxz2extjat959gddms74mtk2
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6247,7 +6249,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pahr5d6k2tkd5eglt7n6p32hwmyuw50pdw86jcu4akffsdvdg8efs4yg87q
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6267,7 +6269,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pcp0hg7gfn5sy5emmvdn5h0fzj0579v3jd0uhnryce5f4cnu4663qdg0ceg
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6287,7 +6289,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p9umk6wgj8cgjpqvzgdlgk8sk7h53vfdc53eay0eqtv93qfeuf38qz6n5ma
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6307,7 +6309,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p4wue2z2gx03zfn66as282ylsxs5z2nfwn6xvdetdemzw3uxqxs7s9w6nn2
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6327,7 +6329,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pkm60s7szsa4ne5v5kf596j3v2k22ucepuvru3jl757knvdxjcxpq648lvs
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6347,7 +6349,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p0dwn8rmxyhcl358lxwvg9qre4mj7sl2y49crv6xm29ggy7msm0nq94uj3z
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6367,7 +6369,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1psyfmvzmc5l7ak9hfe0065kz3nqkhwatc8qx0d5cd9u5k4654657syl5p9g
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6387,7 +6389,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p0tq4ule7kff2zmqx5dl8n074z0jl02fjmtuzzjcuxhtxgxaddkwqmcmt0a
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6407,7 +6409,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p22gemly0gtgrfr4t35jzlzkhnpr8ujpmsghrrlrgadyt54u6y4nqh386xv
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6427,7 +6429,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pn4ez5zc75pp7704d8h998qhjmrt9pcsq6an5a8u3z4fkgxgl035snqrsup
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6447,7 +6449,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pk4n0a574cx3rugrmr5m33yyxlmgdfaaucwva8l6j0lr4nypjafcslxmgcg
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6467,7 +6469,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pdnjqaxjzkpyjva3t4arkew73lghp9whn77uu3t4tyv86l88qg0gsx57yd4
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6487,7 +6489,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6507,7 +6509,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pj4xess460jhzcss0x9p6jsajz6ayr6rls2wu3nv66zl7jgk20wlsdufk5r
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6527,7 +6529,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1p4sg6ytesjgnrupgtrgwxdzlpp80zzy23mdeejltlnuvx575j6vjsd7awr4
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6547,7 +6549,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pmne3f5h8lmnppc33c394dwfade6pc2qdae5fcw5205x99k32gc5sgfep9k
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6567,7 +6569,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1psyfmvzmc5l7ak9hfe0065kz3nqkhwatc8qx0d5cd9u5k4654657syl5p9g
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6587,7 +6589,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pzk4hz0ulwp0r7u35926yd4gl05m59gn44ghksfty2pa3zq7wmtvsfpx457
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6607,7 +6609,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1prv66l96ku7uzytncs9ecpxye78savp4aaule6692nl4lz8z3lpds4lenlg
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6627,7 +6629,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pl85ak0sl8vrapv6pzjve8radjthfx6lkt0hcykdh0av9xmu6r2msncannc
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
@@ -6647,7 +6649,7 @@ inscriptions:
     - 20000
     - 20000
 - file: ./inscribed.html
-  destination: null
+  destination: bc1pmez2353anq7ela8ejtnx3qtex47jrk0erm3w6p93c8k8rxz2tq7s7mwg4l
   metadata:
     source: 806d80e7cf7f39208eccf59102e0086d6b593dbe3152777ef31dfc869a02340fi0
     title: Triumph of Science
