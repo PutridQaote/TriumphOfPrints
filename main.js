@@ -275,7 +275,7 @@ async function main(metadata) {
   const hasThumbnailRetryAttempt = new URLSearchParams(window.location.search).get('glretry') === '1';
   let thumbnailFailureHandled = false;
 
-  const canvas = setupDOM({
+  const { canvas, stopResizeTracking } = setupDOM({
     width: 900,
     height: 860,
     margin: isPreview ? 0 : 10,
@@ -288,6 +288,10 @@ async function main(metadata) {
   const thumbPxOverride = getThumbnailPixelOverride();
   const forceOnePixel = isThumbnail && isOnePixelThumbnailMode();
   const imageBitmapPromise = isThumbnail ? loadImageBitmap(metadata.source) : null;
+
+  // Ord preview thumbnails use a fixed, fill-the-frame layout. Avoid retaining
+  // a resize listener and observer (and their canvas closure) in every iframe.
+  if (isThumbnail && isPreview) stopResizeTracking();
 
   const swapCanvasWithImage = (src, forceImgTag = false) => {
     if (!canvas.parentNode) return;
@@ -479,12 +483,18 @@ async function main(metadata) {
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.LINEAR);
     gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.LINEAR);
-    gl.texImage2D(
-      gl.TEXTURE_2D, 0,
-      gl.RGBA, gl.RGBA,
-      gl.UNSIGNED_BYTE,
-      imgBitmap
-    );
+    try {
+      gl.texImage2D(
+        gl.TEXTURE_2D, 0,
+        gl.RGBA, gl.RGBA,
+        gl.UNSIGNED_BYTE,
+        imgBitmap
+      );
+    } finally {
+      // texImage2D copies the pixels synchronously, so the decoded source no
+      // longer needs to remain resident while the grid iframe stays alive.
+      if (typeof imgBitmap.close === 'function') imgBitmap.close();
+    }
 
     gl.viewport(0, 0, canvas.width, canvas.height);
     gl.uniform2f(uRes, canvas.width, canvas.height);
@@ -612,10 +622,17 @@ function setupDOM({ width = 512, height = 512, margin = 20, fill = false } = {})
     }
   }
 
+  const resizeObserver = new ResizeObserver(resizeCanvas);
   window.addEventListener('resize', resizeCanvas);
-  new ResizeObserver(resizeCanvas).observe(container);
+  resizeObserver.observe(container);
   resizeCanvas();
-  return canvas;
+  return {
+    canvas,
+    stopResizeTracking() {
+      window.removeEventListener('resize', resizeCanvas);
+      resizeObserver.disconnect();
+    }
+  };
 }
 
 getMetadata().then((metadata) => {
