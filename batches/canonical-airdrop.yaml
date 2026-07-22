@@ -1,9 +1,8 @@
 mode: separate-outputs
 parents:
-  # Existing mainnet parent. This inscription must be held by the ord wallet
-  # when the child batch is created.
+  # Existing mainnet parent
   - 23a6b16fc26b570b1669a9a1efdbab935fe524f2bbcc32504acfc65a1b0fb31bi0
-postage: 1000
+postage: 555
 
 inscriptions:
 - file: ./inscribed.html
@@ -3126,8 +3125,6 @@ inscriptions:
     kOffset:
     - 20000
     - 20000
-
-  # PLZ I'd like to have this one :smirk:
 - file: ./inscribed.html
   destination: null
   metadata:
